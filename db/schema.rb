@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20180405164158) do
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "password_digest", null: false
-    t.string "session_token"
+    t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_at"], name: "index_users_on_created_at", unique: true
