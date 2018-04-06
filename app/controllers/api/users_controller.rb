@@ -25,7 +25,7 @@ class Api::UsersController < ApplicationController
 
   end
 
-
+  # Method to see if the user can be found.
   def show
 
     # Create a variable to hold the user given the user id.

@@ -55,7 +55,8 @@ class User < ApplicationRecord
   # Method to check if the entered password matches the stored password.
   def is_password?(password)
 
-    #Turn the password_digest into the password and check against the password.
+    # Turn the password_digest into the password and check against the password.
+    # The is_password? method here is the one found from BCrypt, not the one from user.
     BCrypt::Password.new(self.password_digest).is_password?(password)
 
   end

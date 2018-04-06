@@ -31,7 +31,7 @@ class Api::SessionsController < ApplicationController
 
     # Call the logout method inherited from ApplicationController
     logout
-    
+
   end
 
 

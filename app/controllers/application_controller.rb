@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
 
     # Otherwise, return the stored current_user.  If this was lost,
     # find the user by session_token.
-    @current_user || User.find_by(session_token: session[:session_token])
+    @current_user ||= User.find_by(session_token: session[:session_token])
   end
 
   # Method to return true/false for a current_user.
@@ -51,13 +51,15 @@ class ApplicationController < ActionController::Base
   # Method to destroy the current session.
   def logout
 
-    # Execute the reset_session_token method on user from current_user.
-    # This alone will destroy the session since they do not match.
+    # Execute the reset_session_token method after finding current_user.
+    # This line alone will destroy the session since they do not match.
     current_user.reset_session_token!
 
     # Set the current session_token to nil
-    # This one alone can also destroy the session.
+    # This other line alone can also destroy the session.
     session[:session_token] = nil
+
+    # Both methods are done for best practices.
   end
 
 end
