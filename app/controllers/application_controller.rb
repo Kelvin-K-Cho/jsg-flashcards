@@ -43,7 +43,7 @@ class ApplicationController < ActionController::Base
   # Method to ensure the user is logged in.
   def require_login
 
-    # If the user is not logged in, they are redirected to the homepage.
+    # If the user is not logged in, they are redirected to the root.
     redirect_to root unless logged_in?
 
   end
