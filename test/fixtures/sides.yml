@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: sides
+#
+#  id         :integer          not null, primary key
+#  answer     :text             not null
+#  correct    :boolean          default(FALSE), not null
+#  card_id    :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  answer: MyText
+  correct: false
+  card_id: 1
+
+two:
+  answer: MyText
+  correct: false
+  card_id: 1

@@ -4,7 +4,7 @@ class Home extends React.Component {
 	render() {
 		const body = (
 			<div>
-				<h1>Job Search Study Guide Flashcards</h1>
+				<h1>Job Search Guide Flashcards</h1>
 				<h2>Want to hit the ground running?</h2>
 				<h3>
 					Study these flashcards and show employers you're more than just about
