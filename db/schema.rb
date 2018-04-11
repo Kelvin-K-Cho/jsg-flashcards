@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20180411194315) do
   create_table "decks", force: :cascade do |t|
     t.string "title", null: false
     t.text "notes"
+    t.string "image_url"
     t.integer "topic_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -73,6 +74,7 @@ ActiveRecord::Schema.define(version: 20180411194315) do
 
   create_table "topics", force: :cascade do |t|
     t.string "title", null: false
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_at"], name: "index_topics_on_created_at"

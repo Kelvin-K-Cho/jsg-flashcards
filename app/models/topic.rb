@@ -10,11 +10,11 @@
 
 class Topic < ApplicationRecord
 
-  validates title, presence: true, unique: true
+  validates :title, presence: true, uniqueness: true
 
   has_many :decks,
     primary_key: :id,
     foreign_key: :topic_id,
     class_name: :Deck
-    
+
 end

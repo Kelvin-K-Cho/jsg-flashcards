@@ -24,13 +24,13 @@ class Signup extends React.Component {
 		event.preventDefault();
 		this.props
 			.createNewUser(this.state)
-			.then(() => this.props.history.push(`/study`));
+			.then(() => this.props.history.push(`/topics`));
 	}
 
 	handleDemo(event) {
 		event.preventDefault();
 		const demo = { username: 'demo', password: 'secret' };
-		this.props.login(demo).then(() => this.props.history.push('/study'));
+		this.props.login(demo).then(() => this.props.history.push('/topics'));
 	}
 
 	render() {
