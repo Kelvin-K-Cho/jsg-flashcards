@@ -22,4 +22,17 @@ class Deck < ApplicationRecord
     through: :cards,
     source: :answers
 
+  has_many :topics,
+    primary_key: :id,
+    foreign_key: :deck_id,
+    class_name: :Topic
+
+  has_many :days,
+    through: :topics,
+    source: :day
+
+  has_many :weeks,
+    through: :days,
+    source: :week
+
 end
