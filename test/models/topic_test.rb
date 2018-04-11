@@ -3,9 +3,7 @@
 # Table name: topics
 #
 #  id         :integer          not null, primary key
-#  title      :string
-#  day_id     :integer          not null
-#  deck_id    :integer          not null
+#  title      :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

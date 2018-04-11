@@ -18,12 +18,12 @@ class Day < ApplicationRecord
     foreign_key: :week_id,
     class_name: :Week
 
-  has_many :topics,
+  has_many :dailies,
     primary_key: :id,
     foreign_key: :day_id,
-    class_name: :Topic
+    class_name: :Daily
 
   has_many :decks,
-    through: :topics,
+    through: :dailies,
     source: :deck
 end

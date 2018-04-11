@@ -3,25 +3,18 @@
 # Table name: topics
 #
 #  id         :integer          not null, primary key
-#  title      :string
-#  day_id     :integer          not null
-#  deck_id    :integer          not null
+#  title      :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 class Topic < ApplicationRecord
 
-  validates :day_id, :deck_id, presence: true
+  validates title, presence: true, unique: true
 
-  belongs_to :deck,
+  has_many :decks,
     primary_key: :id,
-    foreign_key: :deck_id,
+    foreign_key: :topic_id,
     class_name: :Deck
-
-  belongs_to :day,
-    primary_key: :id,
-    foreign_key: :day_id,
-    class_name: :Day
     
 end

@@ -1,9 +1,11 @@
 # == Schema Information
 #
-# Table name: topics
+# Table name: dailies
 #
 #  id         :integer          not null, primary key
-#  title      :string           not null
+#  title      :string
+#  deck_id    :integer          not null
+#  day_id     :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -12,6 +14,10 @@
 
 one:
   title: MyString
+  deck_id: 
+  day_id: 1
 
 two:
   title: MyString
+  deck_id: 
+  day_id: 1

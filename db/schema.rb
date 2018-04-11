@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411191355) do
+ActiveRecord::Schema.define(version: 20180411194315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(version: 20180411191355) do
     t.index ["created_at"], name: "index_cards_on_created_at"
     t.index ["deck_id"], name: "index_cards_on_deck_id"
     t.index ["updated_at"], name: "index_cards_on_updated_at"
+  end
+
+  create_table "dailies", force: :cascade do |t|
+    t.string "title"
+    t.integer "deck_id", null: false
+    t.integer "day_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_dailies_on_created_at"
+    t.index ["day_id"], name: "index_dailies_on_day_id"
+    t.index ["deck_id"], name: "index_dailies_on_deck_id"
+    t.index ["updated_at"], name: "index_dailies_on_updated_at"
   end
 
   create_table "days", force: :cascade do |t|
@@ -38,10 +50,12 @@ ActiveRecord::Schema.define(version: 20180411191355) do
   create_table "decks", force: :cascade do |t|
     t.string "title", null: false
     t.text "notes"
+    t.integer "topic_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_at"], name: "index_decks_on_created_at"
     t.index ["title"], name: "index_decks_on_title", unique: true
+    t.index ["topic_id"], name: "index_decks_on_topic_id"
     t.index ["updated_at"], name: "index_decks_on_updated_at"
   end
 
@@ -58,14 +72,11 @@ ActiveRecord::Schema.define(version: 20180411191355) do
   end
 
   create_table "topics", force: :cascade do |t|
-    t.string "title"
-    t.integer "day_id", null: false
-    t.integer "deck_id", null: false
+    t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_at"], name: "index_topics_on_created_at"
-    t.index ["day_id"], name: "index_topics_on_day_id"
-    t.index ["deck_id"], name: "index_topics_on_deck_id"
+    t.index ["title"], name: "index_topics_on_title", unique: true
     t.index ["updated_at"], name: "index_topics_on_updated_at"
   end
 

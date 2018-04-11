@@ -14,11 +14,11 @@ class Week < ApplicationRecord
     foreign_key: :week_id,
     class_name: :Day
 
-  has_many :topics,
+  has_many :dailies,
     through: :days,
-    source: :topics
+    source: :dailies
 
   has_many :decks,
-    through: :topics,
+    through: :dailies,
     source: :deck
 end

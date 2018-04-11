@@ -5,13 +5,19 @@
 #  id         :integer          not null, primary key
 #  title      :string           not null
 #  notes      :text
+#  topic_id   :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 class Deck < ApplicationRecord
-  
+
   validates :title, presence: true, uniqueness: true
+
+  belongs_to :topic,
+    primary_key: :id,
+    foreign_key: :topic_id,
+    class_name: :Topic
 
   has_many :cards,
     primary_key: :id,
@@ -23,13 +29,13 @@ class Deck < ApplicationRecord
     through: :cards,
     source: :answers
 
-  has_many :topics,
+  has_many :dailies,
     primary_key: :id,
     foreign_key: :deck_id,
-    class_name: :Topic
+    class_name: :Daily
 
   has_many :days,
-    through: :topics,
+    through: :dailies,
     source: :day
 
   has_many :weeks,
