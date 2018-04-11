@@ -10,6 +10,9 @@
 #
 
 class Day < ApplicationRecord
+
+  validates :week_id, presence: true
+
   belongs_to :week,
     primary_key: :id,
     foreign_key: :week_id,

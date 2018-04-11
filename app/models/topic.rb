@@ -11,6 +11,9 @@
 #
 
 class Topic < ApplicationRecord
+
+  validates :day_id, :deck_id, presence: true
+
   belongs_to :deck,
     primary_key: :id,
     foreign_key: :deck_id,
@@ -20,4 +23,5 @@ class Topic < ApplicationRecord
     primary_key: :id,
     foreign_key: :day_id,
     class_name: :Day
+    
 end

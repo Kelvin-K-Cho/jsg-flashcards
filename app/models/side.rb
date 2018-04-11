@@ -11,6 +11,7 @@
 #
 
 class Side < ApplicationRecord
+  
   validates :answer, :card_id, presence: true
   validates :correct, presence: true, inclusion: { in: [true, false] }
 
