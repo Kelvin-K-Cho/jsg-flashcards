@@ -11,7 +11,7 @@
 #
 
 class Side < ApplicationRecord
-  
+
   validates :answer, :card_id, presence: true
   validates :correct, presence: true, inclusion: { in: [true, false] }
 
@@ -21,7 +21,7 @@ class Side < ApplicationRecord
     class_name: :Card,
     inverse_of: :answers
 
-  has_one :topic,
+  has_one :idea,
     through: :question,
     source: :deck
 

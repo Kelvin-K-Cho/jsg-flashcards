@@ -5,6 +5,7 @@
 #  id         :integer          not null, primary key
 #  title      :string           not null
 #  notes      :text
+#  image_url  :string
 #  topic_id   :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -13,6 +14,7 @@
 class Deck < ApplicationRecord
 
   validates :title, presence: true, uniqueness: true
+  validates :topic_id, presence: true;
 
   belongs_to :topic,
     primary_key: :id,
