@@ -54,7 +54,7 @@ class Navbar extends React.Component {
 					</div>
 				);
 			}
-			display = <div>{link}</div>;
+			display = link;
 		}
 
 		if (!this.props.currentUser) {
