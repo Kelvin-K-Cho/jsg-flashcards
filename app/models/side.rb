@@ -21,7 +21,7 @@ class Side < ApplicationRecord
     class_name: :Card,
     inverse_of: :answers
 
-  has_one :idea,
+  has_one :subject,
     through: :question,
     source: :deck
 
