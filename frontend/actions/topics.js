@@ -1,7 +1,7 @@
 import * as TopicAPIUtil from '../utils/topics';
 
-export const RECEIVE_ALL_TOPICS = 'RECEIVE_ALL_TOPICS';
-export const RECEIVE_TOPIC = 'RECEIVE_TOPIC';
+const RECEIVE_ALL_TOPICS = 'RECEIVE_ALL_TOPICS';
+const RECEIVE_TOPIC = 'RECEIVE_TOPIC';
 
 const receiveAllTopics = topics => ({
 	type: RECEIVE_ALL_TOPICS,
@@ -22,3 +22,5 @@ const fetchTopic = id => dispatch =>
 	TopicAPIUtil.fetchTopic(id).then(topic => {
 		dispatch(receiveTopic(topic[id]));
 	});
+
+export { RECEIVE_ALL_TOPICS, RECEIVE_TOPIC, fetchTopics, fetchTopic };
