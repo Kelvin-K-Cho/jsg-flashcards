@@ -13,7 +13,7 @@ class Api::SessionsController < ApplicationController
     if @user
 
       # Login the user.
-      login(@user)
+      login!(@user)
 
       # Return the user.
       render @user
@@ -30,7 +30,7 @@ class Api::SessionsController < ApplicationController
   def destroy
 
     # Call the logout method inherited from ApplicationController
-    logout
+    logout!
 
   end
 

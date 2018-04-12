@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
 
   # Method to "login" the user by setting the user's session as the current session.
-  def login(user)
+  def login!(user)
 
     # Store the user as the current_user.
     @current_user = user
@@ -49,7 +49,7 @@ class ApplicationController < ActionController::Base
   end
 
   # Method to destroy the current session.
-  def logout
+  def logout!
 
     # Execute the reset_session_token method after finding current_user.
     # This line alone will destroy the session since they do not match.

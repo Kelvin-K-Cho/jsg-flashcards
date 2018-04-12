@@ -23,7 +23,7 @@ const login = formUser => dispatch =>
 	);
 
 const logout = () => dispatch =>
-	SessionAPIUtil.deleteSession().then(() => dispatch(logoutCurrentUser));
+	SessionAPIUtil.deleteSession().then(() => dispatch(logoutCurrentUser()));
 
 export {
 	RECEIVE_CURRENT_USER,

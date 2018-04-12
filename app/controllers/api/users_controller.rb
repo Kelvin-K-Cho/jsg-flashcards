@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
     if @user.save
 
       # Login the user as the current session.
-      login(@user)
+      login!(@user)
 
       # Return the user.
       render @user
