@@ -32,7 +32,7 @@ class Login extends React.Component {
 	render() {
 		return (
 			<div className="div-session">
-				<h1>Hit the ground running.</h1>
+				<h1>Hit the ground running</h1>
 				<form className="form-session">
 					<label id="username-session">
 						<input
