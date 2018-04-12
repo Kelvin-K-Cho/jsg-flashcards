@@ -61,15 +61,11 @@ class Navbar extends React.Component {
 			return (
 				<header className="nav-bar">
 					{logo}
-					<div>{display}</div>
+					{display}
 				</header>
 			);
 		} else {
-			return (
-				<header className="nav-bar">
-					<div>{display}</div>
-				</header>
-			);
+			return <header className="nav-bar">{display}</header>;
 		}
 	}
 }
