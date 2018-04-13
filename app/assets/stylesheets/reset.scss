@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,,700');
+
 html,
 body,
 div,
@@ -83,12 +85,15 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+input,
+button,
+textarea {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	/* font: inherit; */
+	font-family: 'Source Sans Pro', sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -107,6 +112,7 @@ section {
 }
 body {
 	line-height: 1;
+	background-color: $background-color;
 }
 ol,
 ul {
@@ -126,4 +132,45 @@ q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+input[type='submit'],
+button {
+	cursor: pointer;
+}
+
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='submit']:focus,
+button {
+	outline: none;
+	overflow: hidden;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+textarea {
+	border: none;
+	border-top: 1px solid $their-bubble-color;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+textarea,
+input,
+button {
+	font-weight: 300;
 }
