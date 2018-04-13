@@ -1,0 +1,34 @@
+$primary_color: #ff3850;
+$secondary_color: #f4f4ef;
+$tertiary_color: #acbebe;
+$quaternary_color: #20232a;
+
+$primary_font: 'Muli', sans-serif;
+$secondary_font: 'PT Sans', sans-serif;
+
+.app {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	height: 100vh;
+	background-color: $secondary_color;
+}
+
+.main {
+	margin-top: 14%;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	color: $quaternary_color;
+
+	h1 {
+		font-size: 350%;
+		font-weight: 650;
+	}
+
+	h2 {
+		margin-top: 1.5%;
+		font-size: 200%;
+		font-weight: 450;
+	}
+}

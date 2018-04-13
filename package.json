@@ -7,7 +7,6 @@
 		"babel-preset-env": "^1.6.1",
 		"babel-preset-react": "^6.24.1",
 		"lodash": "^4.17.5",
-		"popper.js": "^1.14.3",
 		"react": "^16.3.0",
 		"react-dom": "^16.3.0",
 		"react-redux": "^5.0.7",
@@ -15,7 +14,6 @@
 		"reactstrap": "^5.0.0-beta.3",
 		"redux": "^3.7.2",
 		"redux-thunk": "^2.2.0",
-		"tooltip.js": "^1.2.0",
 		"webpack": "3.10.0"
 	},
 	"description": "This README would normally document whatever steps are necessary to get the application up and running.",

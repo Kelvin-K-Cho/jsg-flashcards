@@ -34,6 +34,8 @@ gem 'aws-sdk', '< 3.0'
 gem 'bootstrap', '~> 4.0.0'
 gem 'sprockets-rails'
 gem 'autoprefixer-rails'
+gem 'popper_js'
+gem 'bootstrap-tooltip-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

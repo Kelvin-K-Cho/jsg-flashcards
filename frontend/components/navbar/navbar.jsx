@@ -1,66 +1,75 @@
 import React from 'react';
+import {
+	Collapse,
+	Navbar,
+	NavbarToggler,
+	NavbarBrand,
+	Nav,
+	NavItem,
+	NavLink,
+	UncontrolledDropdown,
+	DropdownToggle,
+	DropdownMenu,
+	DropdownItem,
+	Button
+} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-const Navbar = props => {
-	const { currentUser, path, logout } = props;
-	let display;
-	let logo = (
-		<Link to="/">
-			<img src={window.staticImages.home} />
-		</Link>
-	);
-	if (currentUser) {
-		display = (
-			<div id="container-nav">
-				<Link id="link-logo" to="/">
-					<img src={window.staticImages.home} />
-				</Link>
-				<Link to={'/'}>
-					<button id="button-logout" onClick={logout}>
-						Logout
-					</button>
-				</Link>
-			</div>
+class NavBar extends React.Component {
+	render() {
+		const { currentUser, path, logout } = this.props;
+		let logo = (
+			<NavbarBrand id="logo" href="/#">
+				<img src={window.staticImages.home} />
+			</NavbarBrand>
 		);
-	} else {
-		let link;
-		if (path === '/signup') {
-			link = (
-				<Link id="button-login" to={'/login'}>
+		let login = (
+			<NavLink href="#/login">
+				<Button outline size="sm">
 					Log In
-				</Link>
-			);
-		} else if (path === '/login') {
-			link = (
-				<Link id="button-signup" to={'/signup'}>
+				</Button>
+			</NavLink>
+		);
+		let signup = (
+			<NavLink href="#/signup">
+				<Button outline size="sm">
 					Sign Up
-				</Link>
+				</Button>
+			</NavLink>
+		);
+		let link;
+		if (currentUser) {
+			link = (
+				<NavLink to={'/'}>
+					<Button outline size="sm" onClick={logout}>
+						Logout
+					</Button>
+				</NavLink>
 			);
 		} else {
-			link = (
-				<div>
-					<Link id="button-signup" to="/signup">
-						Sign Up
-					</Link>
-					<Link id="button-login" to="/login">
-						Log In
-					</Link>
-				</div>
-			);
+			if (path === '/signup') {
+				link = login;
+			} else if (path === '/login') {
+				link = signup;
+			} else {
+				link = (
+					<div>
+						{login}
+						{signup}
+					</div>
+				);
+			}
 		}
-		display = link;
-	}
 
-	if (!currentUser) {
-		return (
-			<header className="nav-bar">
+		let display = (
+			<Navbar>
 				{logo}
-				{display}
-			</header>
+				{link}
+			</Navbar>
 		);
-	} else {
-		return <header className="nav-bar">{display}</header>;
-	}
-};
 
-export default Navbar;
+		return display;
+	}
+}
+
+export default NavBar;

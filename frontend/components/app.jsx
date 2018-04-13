@@ -9,7 +9,7 @@ import { AuthRoute, ProtectedRoute } from '../utils/route';
 import Home from './home/home';
 
 const App = () => (
-	<div>
+	<div className="app">
 		<header>
 			<Route path="/" component={NavbarContainer} />
 		</header>

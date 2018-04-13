@@ -1,0 +1,21 @@
+.navbar {
+	height: 5vh;
+	background-color: $primary_color;
+
+	img {
+		height: 4vh;
+	}
+
+	div {
+		display: flex;
+	}
+}
+
+.btn {
+	color: $secondary_color;
+	border-color: $secondary_color;
+}
+
+.btn:hover {
+	background-color: $quaternary_color;
+}
