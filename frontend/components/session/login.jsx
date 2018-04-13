@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
@@ -51,7 +52,7 @@ class Login extends React.Component {
 							placeholder="Password"
 						/>
 					</label>
-					<button onClick={this.handleSubmit}>Log In</button>
+					<Button onClick={this.handleSubmit}>Log In</Button>
 					<button id="button-demo" onClick={this.handleDemo}>
 						Demo User
 					</button>
