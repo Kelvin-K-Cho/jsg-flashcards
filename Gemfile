@@ -31,6 +31,9 @@ gem 'figaro'
 gem 'jquery-rails'
 gem "paperclip", '~> 5.0.0'
 gem 'aws-sdk', '< 3.0'
+gem 'bootstrap', '~> 4.0.0'
+gem 'sprockets-rails'
+gem 'autoprefixer-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

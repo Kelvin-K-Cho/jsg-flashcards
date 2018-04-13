@@ -44,6 +44,8 @@ GEM
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 13.0)
     arel (8.0.0)
+    autoprefixer-rails (8.2.0)
+      execjs
     aws-sdk (2.11.28)
       aws-sdk-resources (= 2.11.28)
     aws-sdk-core (2.11.28)
@@ -60,6 +62,10 @@ GEM
     bindex (0.5.0)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
+    bootstrap (4.0.0)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (>= 1.12.9, < 2)
+      sass (>= 3.5.2)
     builder (3.2.3)
     byebug (10.0.2)
     capybara (2.18.0)
@@ -130,6 +136,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
     pg (1.0.0)
+    popper_js (1.12.9)
     public_suffix (3.0.2)
     puma (3.11.3)
     rack (2.0.4)
@@ -213,10 +220,12 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  autoprefixer-rails
   aws-sdk (< 3.0)
   bcrypt (~> 3.1.7)
   better_errors
   binding_of_caller
+  bootstrap (~> 4.0.0)
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
@@ -232,6 +241,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
+  sprockets-rails
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)

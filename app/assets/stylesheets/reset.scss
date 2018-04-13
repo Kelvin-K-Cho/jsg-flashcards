@@ -112,7 +112,6 @@ section {
 }
 body {
 	line-height: 1;
-	background-color: $background-color;
 }
 ol,
 ul {
@@ -162,7 +161,6 @@ textarea:focus {
 
 textarea {
 	border: none;
-	border-top: 1px solid $their-bubble-color;
 }
 
 .hidden {
