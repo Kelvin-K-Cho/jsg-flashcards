@@ -40,7 +40,7 @@ class NavBar extends React.Component {
 		let link;
 		if (currentUser) {
 			link = (
-				<NavLink to={'/'}>
+				<NavLink href="#/">
 					<Button outline size="sm" onClick={logout}>
 						Logout
 					</Button>

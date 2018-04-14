@@ -1,5 +1,13 @@
 import React from 'react';
-import { Button } from 'reactstrap';
+import {
+	Button,
+	Form,
+	FormGroup,
+	Label,
+	Input,
+	FormText,
+	NavLink
+} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
@@ -32,35 +40,41 @@ class Login extends React.Component {
 
 	render() {
 		return (
-			<div className="div-session">
-				<h1>Hit the ground running</h1>
-				<form className="form-session">
-					<label id="username-session">
-						<input
-							type="text"
-							value={this.state.username}
-							onChange={this.handleInput('username')}
-							placeholder="Username"
-						/>
-					</label>
-
-					<label id="password-session">
-						<input
-							type="password"
-							value={this.state.password}
-							onChange={this.handleInput('password')}
-							placeholder="Password"
-						/>
-					</label>
-					<Button onClick={this.handleSubmit}>Log In</Button>
-					<button id="button-demo" onClick={this.handleDemo}>
-						Demo User
-					</button>
-				</form>
-				<div id="check-account">
-					Don't have an account? &nbsp;<Link id="link-session" to="/signup">
-						Sign Up
-					</Link>
+			<div className="main">
+				<h2>Hit the ground running!</h2>
+				<div className="session-container">
+					<Form>
+						<FormGroup>
+							Username: &nbsp;
+							<Label>
+								<Input
+									type="text"
+									name="username"
+									value={this.state.username}
+									onChange={this.handleInput('username')}
+								/>
+							</Label>
+						</FormGroup>
+						<FormGroup>
+							Password: &nbsp;
+							<Label>
+								<Input
+									type="password"
+									name="password"
+									value={this.state.password}
+									onChange={this.handleInput('password')}
+								/>
+							</Label>
+						</FormGroup>
+						<div className="session-buttons">
+							<Button onClick={this.handleSubmit}>Log In</Button>
+							<Button onClick={this.handleDemo}>Demo User</Button>
+						</div>
+					</Form>
+					<div className="session-account">
+						Don't have an account? &nbsp;
+						<NavLink href="#/signup">Sign Up</NavLink>
+					</div>
 				</div>
 			</div>
 		);

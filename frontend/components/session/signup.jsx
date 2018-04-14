@@ -1,4 +1,13 @@
 import React from 'react';
+import {
+	Button,
+	Form,
+	FormGroup,
+	Label,
+	Input,
+	FormText,
+	NavLink
+} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class Signup extends React.Component {
@@ -35,34 +44,41 @@ class Signup extends React.Component {
 
 	render() {
 		return (
-			<div className="div-session">
-				<h1>Hit the ground running</h1>
-				<form className="form-session">
-					<label id="username-session">
-						<input
-							type="text"
-							value={this.state.username}
-							onChange={this.handleInput('username')}
-							placeholder="Username"
-						/>
-					</label>
-					<label id="password-session">
-						<input
-							type="password"
-							value={this.state.password}
-							onChange={this.handleInput('password')}
-							placeholder="Password"
-						/>
-					</label>
-					<button onClick={this.handleSubmit}>Sign Up</button>
-					<button id="button-demo" onClick={this.handleDemo}>
-						Demo User
-					</button>
-				</form>
-				<div id="check-account">
-					Already have an account? &nbsp;<Link id="link-session" to="/login">
-						Log In
-					</Link>
+			<div className="main">
+				<h2>Hit the ground running!</h2>
+				<div className="session-container">
+					<Form>
+						<FormGroup>
+							Username: &nbsp;
+							<Label>
+								<Input
+									type="text"
+									name="username"
+									value={this.state.username}
+									onChange={this.handleInput('username')}
+								/>
+							</Label>
+						</FormGroup>
+						<FormGroup>
+							Password: &nbsp;
+							<Label>
+								<Input
+									type="password"
+									name="password"
+									value={this.state.password}
+									onChange={this.handleInput('password')}
+								/>
+							</Label>
+						</FormGroup>
+						<div className="session-buttons">
+							<Button onClick={this.handleSubmit}>Sign Up</Button>
+							<Button onClick={this.handleDemo}>Demo User</Button>
+						</div>
+					</Form>
+					<div className="session-account">
+						Already have an account? &nbsp;
+						<NavLink href="#/login">Log In</NavLink>
+					</div>
 				</div>
 			</div>
 		);
