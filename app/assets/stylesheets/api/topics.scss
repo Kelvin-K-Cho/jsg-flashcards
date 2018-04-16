@@ -1,3 +1,28 @@
 // Place all the styles related to the api/topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.topics-list {
+	padding: 0;
+	width: 100vw;
+	height: 90vh;
+	overflow: hidden;
+	list-style-type: none;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	grid-template-columns: repeat(2, 30vmin);
+	grid-template-rows: repeat(2, 30vmin);
+
+	li {
+		font-family: 'Jua';
+		font-size: 150%;
+		.topic-image {
+			padding: auto;
+			margin: auto;
+			height: 80%;
+			width: 80%;
+			border-radius: 4px;
+		}
+	}
+}

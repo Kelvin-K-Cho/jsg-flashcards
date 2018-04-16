@@ -36,6 +36,7 @@ gem 'sprockets-rails'
 gem 'autoprefixer-rails'
 gem 'popper_js'
 gem 'bootstrap-tooltip-rails'
+gem 'google-webfonts-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

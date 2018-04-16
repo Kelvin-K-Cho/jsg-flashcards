@@ -10,7 +10,7 @@ class TopicIndex extends React.Component {
 	render() {
 		let list = (
 			<section>
-				<ul className="container-image">
+				<ul className="topics-list">
 					{this.props.topics.map(topic => (
 						<TopicIndexItem key={topic.id} topic={topic} topicId={topic.id} />
 					))}

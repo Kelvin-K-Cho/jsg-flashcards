@@ -34,7 +34,7 @@ js.save!
 
 misc = Topic.create(
   title: "Miscellaneous",
-  image_url: "https://s3-us-west-1.amazonaws.com/hallyu-dev/images/jsg/Misc.png"
+  image_url: "https://s3-us-west-1.amazonaws.com/hallyu-dev/images/jsg/MiscBox.png"
 )
 
 misc.save!
