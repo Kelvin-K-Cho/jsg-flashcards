@@ -23,6 +23,13 @@ class NavBar extends React.Component {
 				<img src={window.staticImages.home} />
 			</NavbarBrand>
 		);
+		let topics = (
+			<NavLink href="#topics">
+				<Button outline size="sm">
+					Topics
+				</Button>
+			</NavLink>
+		);
 		let login = (
 			<NavLink href="#/login">
 				<Button outline size="sm">
@@ -38,6 +45,7 @@ class NavBar extends React.Component {
 			</NavLink>
 		);
 		let link;
+		let index = logo;
 		if (currentUser) {
 			link = (
 				<NavLink href="#/">
@@ -45,6 +53,12 @@ class NavBar extends React.Component {
 						Logout
 					</Button>
 				</NavLink>
+			);
+			index = (
+				<div>
+					{logo}
+					{topics}
+				</div>
 			);
 		} else {
 			if (path === '/signup') {
@@ -63,7 +77,7 @@ class NavBar extends React.Component {
 
 		let display = (
 			<Navbar>
-				{logo}
+				{index}
 				{link}
 			</Navbar>
 		);
