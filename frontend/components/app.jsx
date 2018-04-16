@@ -4,7 +4,7 @@ import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import NavbarContainer from './navbar/navbar_container';
 import TopicIndexContainer from './topic/topic_index_container';
-// import TopicShowContainer from './topic/topic_show_container';
+import TopicShowContainer from './topic/topic_show_container';
 import { AuthRoute, ProtectedRoute } from '../utils/route';
 import Home from './home/home';
 

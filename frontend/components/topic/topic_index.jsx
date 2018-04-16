@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import TopicIndexItem from './topic_index_item';
 
 class TopicIndex extends React.Component {
