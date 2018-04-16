@@ -18,6 +18,11 @@ const App = () => (
 			<AuthRoute path="/signup" component={SignupContainer} />
 			<AuthRoute path="/login" component={LoginContainer} />
 			<ProtectedRoute exact path="/topics" component={TopicIndexContainer} />
+			<ProtectedRoute
+				exact
+				path="/topics/:topicId"
+				component={TopicShowContainer}
+			/>
 			<Redirect to="/" />
 		</Switch>
 		<footer />
