@@ -1,7 +1,11 @@
 class Api::SubjectsController < ApplicationController
 
   def index
-    @subjects = Subject.all
+    if params[:topic_id]
+      @subjects = Subject.where('topic_id = ?', params[:topic_id]).order(id: :asc)
+    else
+      @subjects = Subject.all
+    end
   end
 
   def show
