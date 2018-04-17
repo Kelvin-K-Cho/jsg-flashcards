@@ -5,7 +5,7 @@ const TopicIndexItem = props => {
 	const { topicId, topic } = props;
 	let item = (
 		<li>
-			<div className="topic-title">{topic.title}</div>
+			<div>{topic.title}</div>
 			<Link to={`/topics/${topicId}`}>
 				<img className="topic-image" src={topic.image_url} />
 			</Link>
