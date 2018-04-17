@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  title      :string
-#  deck_id    :integer          not null
+#  subject_id :integer          not null
 #  day_id     :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null

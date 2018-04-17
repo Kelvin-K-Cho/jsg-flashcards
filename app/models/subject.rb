@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: decks
+# Table name: subjects
 #
 #  id         :integer          not null, primary key
 #  title      :string           not null
@@ -11,7 +11,7 @@
 #  updated_at :datetime         not null
 #
 
-class Deck < ApplicationRecord
+class Subject < ApplicationRecord
 
   validates :title, presence: true, uniqueness: true
   validates :topic_id, presence: true;
@@ -21,19 +21,19 @@ class Deck < ApplicationRecord
     foreign_key: :topic_id,
     class_name: :Topic
 
-  has_many :cards,
+  has_many :questions,
     primary_key: :id,
-    foreign_key: :card_id,
-    class_name: :Card,
-    inverse_of: :deck
+    foreign_key: :subject_id,
+    class_name: :Question,
+    inverse_of: :subject
 
-  has_many :details,
-    through: :cards,
+  has_many :answers,
+    through: :questions,
     source: :answers
 
   has_many :dailies,
     primary_key: :id,
-    foreign_key: :deck_id,
+    foreign_key: :subject_id,
     class_name: :Daily
 
   has_many :days,

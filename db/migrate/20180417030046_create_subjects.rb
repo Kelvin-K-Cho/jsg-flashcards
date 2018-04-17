@@ -1,6 +1,6 @@
-class CreateDecks < ActiveRecord::Migration[5.1]
+class CreateSubjects < ActiveRecord::Migration[5.1]
   def change
-    create_table :decks do |t|
+    create_table :subjects do |t|
       t.string :title, null: false, unique: true, index: { unique: true }
       t.text :notes
       t.string :image_url

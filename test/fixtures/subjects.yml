@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: decks
+# Table name: subjects
 #
 #  id         :integer          not null, primary key
 #  title      :string           not null
@@ -13,10 +13,12 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  notes: MyText
-
-two:
-  title: MyString
-  notes: MyText
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value

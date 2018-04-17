@@ -23,7 +23,7 @@ class Day < ApplicationRecord
     foreign_key: :day_id,
     class_name: :Daily
 
-  has_many :decks,
+  has_many :subjects,
     through: :dailies,
-    source: :deck
+    source: :subject
 end

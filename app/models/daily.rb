@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  title      :string
-#  deck_id    :integer          not null
+#  subject_id :integer          not null
 #  day_id     :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -13,10 +13,10 @@
 class Daily < ApplicationRecord
   validates :deck_id, :day_id, presence: true
 
-  belongs_to :deck,
+  belongs_to :subject,
     primary_key: :id,
-    foreign_key: :deck_id,
-    class_name: :Deck
+    foreign_key: :subject_id,
+    class_name: :Subject
 
   belongs_to :day,
     primary_key: :id,

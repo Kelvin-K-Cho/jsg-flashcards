@@ -1,18 +1,19 @@
 # == Schema Information
 #
-# Table name: sides
+# Table name: subjects
 #
 #  id         :integer          not null, primary key
-#  answer     :text             not null
-#  correct    :boolean          default(FALSE), not null
-#  card_id    :integer          not null
+#  title      :string           not null
+#  notes      :text
+#  image_url  :string
+#  topic_id   :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class SideTest < ActiveSupport::TestCase
+class SubjectTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

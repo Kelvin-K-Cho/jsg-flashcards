@@ -13,9 +13,9 @@ class Topic < ApplicationRecord
 
   validates :title, presence: true, uniqueness: true
 
-  has_many :decks,
+  has_many :subjects,
     primary_key: :id,
     foreign_key: :topic_id,
-    class_name: :Deck
+    class_name: :Subject
 
 end

@@ -18,6 +18,12 @@ algo = Topic.create(
 
 algo.save!
 
+heap = Subject.create(
+  title: "Heaps",
+  notes: "A heap is a data structure that is a complete binary tree and it satisfies the heap property. The heap property (in a max heap) is when the value of parent node is greater than or equal to its children and (in a min heap) the value of the parent is less than or equal to its children. Except the root node, the node at the 'top' of the heap, which has no parents.",
+  topic_id: algo.id
+)
+
 web = Topic.create(
   title: "World Wide Web",
   image_url: "https://s3-us-west-1.amazonaws.com/hallyu-dev/images/jsg/Web.jpg"
