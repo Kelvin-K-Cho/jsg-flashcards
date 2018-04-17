@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Loader from '../loader';
+import Loader from '../loader/loader';
 
 class TopicShow extends React.Component {
 	componentDidMount() {
