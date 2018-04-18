@@ -10,10 +10,10 @@ class TopicShow extends React.Component {
 			.then(this.props.fetchSubjectsByTopic(this.props.match.params.topicId));
 	}
 
-	componentWillReceiveProps(nextProps) {
-		if (this.props.match.params.topicId !== nextProps.match.params.topicId) {
+	componentDidUpdate(prevProps, prevState) {
+		if (prevProps.match.params.topicId !== this.props.match.params.topicId) {
 			this.props
-				.fetchTopic(nextProps.match.params.topicId)
+				.fetchTopic(this.props.match.params.topicId)
 				.then(this.props.fetchSubjectsByTopic(this.props.match.params.topicId));
 		}
 	}
