@@ -26,14 +26,10 @@ class TopicShow extends React.Component {
 			let title = <div className="topic-title">{topic.title}</div>;
 			let text = <div className="studyset-header">List of Study Sets:</div>;
 			let list = (
-				<Nav vertical>
+				<Nav vertical className="subject-list">
 					{this.props.subjects.map(subject => (
-						<NavItem>
-							<SubjectIndexItem
-								key={subject.id}
-								subject={subject}
-								subjectId={subject.id}
-							/>
+						<NavItem className="subject-item" key={subject.id}>
+							<SubjectIndexItem subject={subject} subjectId={subject.id} />
 						</NavItem>
 					))}
 				</Nav>
