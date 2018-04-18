@@ -3,12 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .subject-list {
-	margin-top: 1%;
+	margin-top: 0.5%;
 
 	.subject-item {
 		list-style: inside;
 		text-align: left;
 		margin-left: 4%;
+		padding: 0.25% 0%;
 
 		a {
 			display: inline;
