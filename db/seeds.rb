@@ -148,7 +148,7 @@ heap_runtime_max_q = Question.create(
 
 recursion_base_case_q = Question.create(
   sentence: "What is a base case?",
-  subject_id: heap.id
+  subject_id: recursion.id
 )
 
 dns_name_q = Question.create(

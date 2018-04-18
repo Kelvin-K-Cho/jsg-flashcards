@@ -6,11 +6,11 @@ class SubjectShow extends React.Component {
 		this.props.fetchSubject(this.props.match.params.subjectId);
 	}
 
-	componentWillReceiveProps(nextProps) {
+	componentDidUpdate(prevProps, prevState) {
 		if (
-			this.props.match.params.subjectId !== nextProps.match.params.subjectId
+			prevProps.match.params.subjectId !== this.props.match.params.subjectId
 		) {
-			this.props.fetchSubject(nextProps.match.params.subjectId);
+			this.props.fetchSubject(this.props.match.params.subjectId);
 		}
 	}
 
