@@ -12,13 +12,13 @@
 
 class Answer < ApplicationRecord
 
-  validates :answer, :question_id, presence: true
-  validates :correct, presence: true, inclusion: { in: [true, false] }
+  validates :sentence, :question_id, presence: true
+  validates :correct, inclusion: { in: [ true, false ] }
 
   belongs_to :question,
     primary_key: :id,
     foreign_key: :question_id,
-    class_name: :question,
+    class_name: :Question,
     inverse_of: :answers
 
   has_one :subject,
