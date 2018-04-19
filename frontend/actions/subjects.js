@@ -23,8 +23,8 @@ const fetchSubject = id => dispatch =>
 		dispatch(receiveSubject(subject[id]));
 	});
 
-const fetchSubjectsByTopic = (topicId, id) => dispatch =>
-	SubjectAPIUtil.fetchSubjectsByTopic(topicId, id).then(subjects => {
+const fetchSubjectsByTopic = topicId => dispatch =>
+	SubjectAPIUtil.fetchSubjectsByTopic(topicId).then(subjects => {
 		dispatch(receiveAllSubjects(subjects));
 	});
 

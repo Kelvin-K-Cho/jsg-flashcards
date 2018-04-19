@@ -3,14 +3,32 @@ import Loader from '../loader/loader';
 
 class SubjectShow extends React.Component {
 	componentDidMount() {
-		this.props.fetchSubject(this.props.match.params.subjectId);
+		this.props
+			.fetchSubject(this.props.match.params.subjectId)
+			.then(
+				this.props
+					.fetchQuestionsBySubject(this.props.match.params.subjectId)
+					.then(
+						this.props.fetchAnswersBySubject(this.props.match.params.subjectId)
+					)
+			);
 	}
 
 	componentDidUpdate(prevProps, prevState) {
 		if (
 			prevProps.match.params.subjectId !== this.props.match.params.subjectId
 		) {
-			this.props.fetchSubject(this.props.match.params.subjectId);
+			this.props
+				.fetchSubject(this.props.match.params.subjectId)
+				.then(
+					this.props
+						.fetchQuestionsBySubject(this.props.match.params.subjectId)
+						.then(
+							this.props.fetchAnswersBySubject(
+								this.props.match.params.subjectId
+							)
+						)
+				);
 		}
 	}
 

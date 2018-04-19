@@ -33,11 +33,23 @@ const fetchAnswerByQuestion = (questionId, id) => dispatch =>
 		dispatch(receiveAnswer(answer[id]));
 	});
 
+const fetchAnswersBySubject = subjectId => dispatch =>
+	AnswerAPIUtil.fetchAnswersBySubject(subjectId).then(answers => {
+		dispatch(receiveAllAnswers(answers));
+	});
+
+const fetchAnswerBySubject = (subjectId, id) => dispatch =>
+	AnswerAPIUtil.fetchAnswerBySubject(subjectId, id).then(answer => {
+		dispatch(receiveAnswer(answer[id]));
+	});
+
 export {
 	RECEIVE_ALL_ANSWERS,
 	RECEIVE_ANSWER,
 	fetchAnswers,
 	fetchAnswer,
 	fetchAnswersByQuestion,
-	fetchAnswerByQuestion
+	fetchAnswerByQuestion,
+	fetchAnswersBySubject,
+	fetchAnswerBySubject
 };

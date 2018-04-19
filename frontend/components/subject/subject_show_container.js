@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import SubjectShow from './subject_show';
 import { fetchSubject } from '../../actions/subjects';
 import { fetchQuestionsBySubject } from '../../actions/questions';
-import { fetchAnswersByQuestion } from '../../actions/answers';
+import { fetchAnswersBySubject } from '../../actions/answers';
 import { selectQuestions, selectAnswers } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -15,8 +15,7 @@ const mapDispatchToProps = dispatch => ({
 	fetchSubject: subjectId => dispatch(fetchSubject(subjectId)),
 	fetchQuestionsBySubject: subjectId =>
 		dispatch(fetchQuestionsBySubject(subjectId)),
-	fetchAnswersByQuestion: questionId =>
-		dispatch(fetchAnswersByQuestion(questionId))
+	fetchAnswersBySubject: subjectId => dispatch(fetchAnswersBySubject(subjectId))
 });
 
 const SubjectShowContainer = connect(mapStateToProps, mapDispatchToProps)(

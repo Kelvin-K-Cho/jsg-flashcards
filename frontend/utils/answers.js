@@ -22,9 +22,23 @@ const fetchAnswerByQuestion = (questionId, id) =>
 		url: `api/questions/${questionId}/answers/${id}`
 	});
 
+const fetchAnswersBySubject = subjectId =>
+	$.ajax({
+		method: 'GET',
+		url: `api/subjects/${subjectId}/answers`
+	});
+
+const fetchAnswerBySubject = (subjectId, id) =>
+	$.ajax({
+		method: 'GET',
+		url: `api/subjects/${subjectId}/answers/${id}`
+	});
+
 export {
 	fetchAnswers,
 	fetchAnswer,
 	fetchAnswersByQuestion,
-	fetchAnswerByQuestion
+	fetchAnswerByQuestion,
+	fetchAnswersBySubject,
+	fetchAnswerBySubject
 };

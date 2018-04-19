@@ -23,8 +23,8 @@ const fetchQuestion = id => dispatch =>
 		dispatch(receiveQuestion(question[id]));
 	});
 
-const fetchQuestionsBySubject = (subjectId, id) => dispatch =>
-	QuestionAPIUtil.fetchQuestionsBySubject(subjectId, id).then(questions => {
+const fetchQuestionsBySubject = subjectId => dispatch =>
+	QuestionAPIUtil.fetchQuestionsBySubject(subjectId).then(questions => {
 		dispatch(receiveAllQuestions(questions));
 	});
 

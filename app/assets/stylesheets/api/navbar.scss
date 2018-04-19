@@ -21,6 +21,10 @@
 	.btn-secondary:hover {
 		background-color: $quaternary_color;
 	}
+
+	button:active {
+		background-color: white;
+	}
 }
 
 .btn {
