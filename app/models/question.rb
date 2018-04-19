@@ -10,6 +10,7 @@
 #
 
 class Question < ApplicationRecord
+  
   validates :sentence, presence: true, uniqueness: true
   validates :subject_id, presence: true
 

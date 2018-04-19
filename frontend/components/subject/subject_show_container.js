@@ -3,12 +3,15 @@ import SubjectShow from './subject_show';
 import { fetchSubject } from '../../actions/subjects';
 import { fetchQuestionsBySubject } from '../../actions/questions';
 import { fetchAnswersBySubject } from '../../actions/answers';
-import { selectQuestions, selectAnswers } from '../../reducers/selectors';
+import {
+	selectQuestions,
+	selectCorrectAnswers
+} from '../../reducers/selectors';
+import zip from 'lodash/zip';
 
 const mapStateToProps = (state, ownProps) => ({
 	subject: state.entities.subjects[ownProps.match.params.subjectId],
-	questions: selectQuestions(state),
-	answers: selectAnswers(state)
+	questionsAndAnswers: zip(selectQuestions(state), selectCorrectAnswers(state))
 });
 
 const mapDispatchToProps = dispatch => ({

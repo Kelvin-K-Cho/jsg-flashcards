@@ -96,7 +96,7 @@ class NavBar extends React.Component {
 				link = signup;
 			} else {
 				link = (
-					<div>
+					<div className="navigation-container">
 						{login}
 						{signup}
 					</div>
