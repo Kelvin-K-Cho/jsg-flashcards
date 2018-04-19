@@ -7,15 +7,34 @@ import {
 	Nav,
 	NavItem,
 	NavLink,
-	UncontrolledDropdown,
+	Dropdown,
 	DropdownToggle,
 	DropdownMenu,
 	DropdownItem,
 	Button
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import TopicListItem from '../topic/topic_list_item';
 
 class NavBar extends React.Component {
+	constructor(props) {
+		super(props);
+		this.toggle = this.toggle.bind(this);
+		this.state = {
+			dropdownOpen: false
+		};
+	}
+
+	toggle() {
+		this.setState({
+			dropdownOpen: !this.state.dropdownOpen
+		});
+	}
+
+	componentDidMount() {
+		this.props.fetchTopics();
+	}
+
 	render() {
 		const { currentUser, path, logout } = this.props;
 		let logo = (
@@ -24,11 +43,21 @@ class NavBar extends React.Component {
 			</NavbarBrand>
 		);
 		let topics = (
-			<NavLink href="#topics">
-				<Button outline size="sm">
-					Topics
-				</Button>
-			</NavLink>
+			<Dropdown
+				group
+				isOpen={this.state.dropdownOpen}
+				toggle={this.toggle}
+				size="sm"
+			>
+				<DropdownToggle caret>Topics</DropdownToggle>
+				<DropdownMenu>
+					{this.props.topics.map(topic => (
+						<DropdownItem key={topic.id}>
+							<TopicListItem key={topic.id} topic={topic} topicId={topic.id} />
+						</DropdownItem>
+					))}
+				</DropdownMenu>
+			</Dropdown>
 		);
 		let login = (
 			<NavLink href="#/login">
@@ -55,7 +84,7 @@ class NavBar extends React.Component {
 				</NavLink>
 			);
 			index = (
-				<div>
+				<div className="navigation-container">
 					{logo}
 					{topics}
 				</div>
