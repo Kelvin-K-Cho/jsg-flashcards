@@ -1,23 +1,30 @@
-export const fetchQuestions = () =>
+const fetchQuestions = () =>
 	$.ajax({
 		method: 'GET',
 		url: `api/questions`
 	});
 
-export const fetchQuestion = id =>
+const fetchQuestion = id =>
 	$.ajax({
 		method: 'GET',
 		url: `api/questions/1`
 	});
 
-export const fetchQuestionsBySubject = subjectId =>
+const fetchQuestionsBySubject = subjectId =>
 	$.ajax({
 		method: 'GET',
 		url: `api/subjects/${subjectId}/questions`
 	});
 
-export const fetchQuestionBySubject = (subjectId, id) =>
+const fetchQuestionBySubject = (subjectId, id) =>
 	$.ajax({
 		method: 'GET',
 		url: `api/subjects/${subjectId}/questions/${id}`
 	});
+
+export {
+	fetchQuestions,
+	fetchQuestion,
+	fetchQuestionsBySubject,
+	fetchQuestionBySubject
+};

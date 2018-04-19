@@ -12,3 +12,8 @@ const receiveQuestion = question => ({
 	type: RECEIVE_QUESTION,
 	question
 });
+
+const fetchQuestions = () => dispatch =>
+	QuestionAPIUtil.fetchQuestions().then(questions => {
+		dispatch(receiveAllQuestions(questions));
+	});
