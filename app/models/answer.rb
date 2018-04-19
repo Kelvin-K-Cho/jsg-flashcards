@@ -10,8 +10,6 @@
 #  updated_at  :datetime         not null
 #
 
-
-
 class Answer < ApplicationRecord
 
   validates :sentence, :question_id, presence: true

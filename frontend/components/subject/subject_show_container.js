@@ -10,4 +10,8 @@ const mapDispatchToProps = dispatch => ({
 	fetchSubject: subjectId => dispatch(fetchSubject(subjectId))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SubjectShow);
+const SubjectShowContainer = connect(mapStateToProps, mapDispatchToProps)(
+	SubjectShow
+);
+
+export default SubjectShowContainer;

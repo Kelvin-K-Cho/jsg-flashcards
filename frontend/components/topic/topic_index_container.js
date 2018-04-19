@@ -11,4 +11,8 @@ const mapDispatchToProps = dispatch => ({
 	fetchTopics: () => dispatch(fetchTopics())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(TopicIndex);
+const TopicIndexContainer = connect(mapStateToProps, mapDispatchToProps)(
+	TopicIndex
+);
+
+export default TopicIndexContainer;

@@ -11,6 +11,7 @@
 #
 
 class Daily < ApplicationRecord
+  
   validates :deck_id, :day_id, presence: true
 
   belongs_to :subject,

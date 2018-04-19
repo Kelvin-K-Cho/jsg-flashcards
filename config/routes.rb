@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :questions, only: [:index, :show] do
       resources :answers, only: [:index, :show]
     end
+    resources :answers, only: [:index, :show]
   end
 
   root "static_pages#root"

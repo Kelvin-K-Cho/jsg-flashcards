@@ -7,7 +7,7 @@ const fetchQuestions = () =>
 const fetchQuestion = id =>
 	$.ajax({
 		method: 'GET',
-		url: `api/questions/1`
+		url: `api/questions/${id}`
 	});
 
 const fetchQuestionsBySubject = subjectId =>
