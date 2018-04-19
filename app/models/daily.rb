@@ -11,7 +11,7 @@
 #
 
 class Daily < ApplicationRecord
-  
+
   validates :deck_id, :day_id, presence: true
 
   belongs_to :subject,
@@ -23,4 +23,5 @@ class Daily < ApplicationRecord
     primary_key: :id,
     foreign_key: :day_id,
     class_name: :Day
+    
 end

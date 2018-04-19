@@ -26,4 +26,5 @@ class Day < ApplicationRecord
   has_many :subjects,
     through: :dailies,
     source: :subject
+    
 end

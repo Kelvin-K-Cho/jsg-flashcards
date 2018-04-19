@@ -9,6 +9,7 @@
 #
 
 class Week < ApplicationRecord
+  
   has_many :days,
     primary_key: :id,
     foreign_key: :week_id,
@@ -21,4 +22,5 @@ class Week < ApplicationRecord
   has_many :subjects,
     through: :dailies,
     source: :subject
+
 end
