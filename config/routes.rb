@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     end
     resources :subjects, only: [:index, :show] do
       resources :questions, only: [:index, :show]
+      resources :answers, only: [:index, :show]
     end
     resources :questions, only: [:index, :show] do
       resources :answers, only: [:index, :show]
