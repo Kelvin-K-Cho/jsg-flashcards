@@ -11,7 +11,7 @@ import zip from 'lodash/zip';
 
 const mapStateToProps = (state, ownProps) => ({
 	subject: state.entities.subjects[ownProps.match.params.subjectId],
-	questionsAndAnswers: zip(selectQuestions(state), selectCorrectAnswers(state))
+	cards: zip(selectQuestions(state), selectCorrectAnswers(state))
 });
 
 const mapDispatchToProps = dispatch => ({
