@@ -34,11 +34,17 @@ class TopicShow extends React.Component {
 					))}
 				</Nav>
 			);
+			let image = <img className="topic-image" src={topic.image_url} />;
 			return (
 				<div>
 					{title}
-					{text}
-					{list}
+					<div className="topic-container">
+						<div className="topics-list">
+							{text}
+							{list}
+						</div>
+						{image}
+					</div>
 				</div>
 			);
 		}

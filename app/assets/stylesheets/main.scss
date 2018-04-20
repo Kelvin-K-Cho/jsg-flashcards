@@ -8,7 +8,7 @@ $quaternary_color: #20232a;
 	text-align: center;
 	flex-direction: column;
 	height: 100vh;
-	background-color: rgba(238, 238, 238, 1);
+	background-color: $secondary_color;
 }
 
 .main {
@@ -60,9 +60,9 @@ $quaternary_color: #20232a;
 
 	background: linear-gradient(
 		0deg,
-		rgba(238, 238, 238, 1),
-		rgba(238, 238, 238, 1) 20%,
-		rgba(238, 238, 238, 0.3)
+		$secondary_color,
+		$secondary_color 20%,
+		$secondary_color
 	);
 }
 

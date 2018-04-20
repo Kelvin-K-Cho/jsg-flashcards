@@ -28,23 +28,23 @@ user = User.create(username: "demo", password: "secret")
 
 algorithms = Topic.create(
   title: "Algorithms",
-  image_url: "https://s3-us-west-1.amazonaws.com/hallyu-dev/images/jsg/Algorithms.jpg"
+  image_url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Algorithms.jpg"
 )
 
 world_wide_web = Topic.create(
   title: "World Wide Web",
-  image_url: "https://s3-us-west-1.amazonaws.com/hallyu-dev/images/jsg/Web.jpg"
+  image_url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/WorldWideWeb.jpg"
 )
 
 javascript = Topic.create(
   title: "JavaScript",
-  image_url: "https://s3-us-west-1.amazonaws.com/hallyu-dev/images/jsg/JavaScript.png"
+  image_url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/JavaScript.png"
 )
 
 
 miscellaneous = Topic.create(
   title: "Miscellaneous",
-  image_url: "https://s3-us-west-1.amazonaws.com/hallyu-dev/images/jsg/MiscBox.png"
+  image_url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Miscellaneous.png"
 )
 
 algorithms.save!
@@ -63,6 +63,7 @@ miscellaneous.save!
 heap = Subject.create(
   title: "Heap",
   notes: "A heap is a data structure that is a complete binary tree and it satisfies the heap property. The heap property (in a max heap) is when the value of parent node is greater than or equal to its children and (in a min heap) the value of the parent is less than or equal to its children. Except the root node, the node at the 'top' of the heap, which has no parents.",
+  image_url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/heapsort.gif",
   topic_id: algorithms.id
 )
 
