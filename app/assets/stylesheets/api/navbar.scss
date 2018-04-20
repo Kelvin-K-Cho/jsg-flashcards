@@ -4,6 +4,12 @@
 
 	img {
 		height: 4vh;
+		padding: 8%;
+		filter: invert(100%);
+	}
+
+	img:hover {
+		filter: invert(0);
 	}
 
 	.navigation-container {
