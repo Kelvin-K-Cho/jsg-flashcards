@@ -1,27 +1,34 @@
 import React from 'react';
-import { BarLoader } from 'react-spinners';
-
-class Loader extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			loading: true,
-			width: 1000,
-			height: 50
-		};
-	}
-
-	render() {
-		return (
+const Loader = props => {
+	return (
+		<div>
 			<div className="loader">
-				<BarLoader
-					loading={this.state.loading}
-					width={this.state.width}
-					height={this.state.height}
-				/>
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
 			</div>
-		);
-	}
-}
+
+			<div className="loader loader--reflect">
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+				<div className="bar" />
+			</div>
+		</div>
+	);
+};
 
 export default Loader;

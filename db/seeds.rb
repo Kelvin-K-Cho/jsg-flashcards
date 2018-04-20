@@ -347,7 +347,7 @@ event_loop_components_a2 = Answer.create(
 
 event_loop_components_a3 = Answer.create(
   sentence: "Call stack, Event Handlers Queue, Event Loop and JavaScript Web API's.",
-  correct: false,
+  correct: true,
   question_id: event_loop_components_q.id
 )
 
