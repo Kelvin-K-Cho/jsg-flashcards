@@ -34,10 +34,10 @@
 }
 
 .studyset-header {
-	font-family: 'Nunito';
 	text-align: left;
 	font-weight: 600;
 	font-size: 150%;
+	margin: 1% 0;
 }
 
 .topic-container {
@@ -48,12 +48,12 @@
 
 .topic-image {
 	margin-top: 10vh;
-	margin-right: 14vw;
-	height: 40vh;
-	width: 20vw;
+	margin-right: 12vw;
+	height: 40vmin;
+	width: 40vmin;
 	border-radius: 4px;
 }
 
-.topics-list {
+.studyset-list {
 	margin-left: 4vw;
 }
