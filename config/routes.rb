@@ -15,6 +15,9 @@ Rails.application.routes.draw do
       resources :answers, only: [:index, :show]
     end
     resources :answers, only: [:index, :show]
+    resources :weeks, only: [:index, :show] do
+      resources :days, only: [:index, :show]
+    end
   end
 
   root "static_pages#root"
