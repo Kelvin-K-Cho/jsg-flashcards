@@ -453,3 +453,107 @@ redux_context_a1.save!
 redux_context_a2.save!
 redux_context_a3.save!
 redux_context_a4.save!
+
+#=======
+# Weeks
+#=======
+
+week_one = Week.create(
+  title: "Week One"
+)
+
+week_two = Week.create(
+  title: "Week Two"
+)
+
+week_three = Week.create(
+  title: "Week Three"
+)
+
+week_four = Week.create(
+  title: "Week Four"
+)
+
+week_five = Week.create(
+  title: "Week Five"
+)
+
+week_six = Week.create(
+  title: "Week Six"
+)
+
+week_seven = Week.create(
+  title: "Week Seven"
+)
+
+week_eight = Week.create(
+  title: "Week Eight"
+)
+
+week_one.save!
+week_two.save!
+week_three.save!
+week_four.save!
+week_five.save!
+week_six.save!
+week_seven.save!
+week_eight.save!
+
+#======
+# Days
+#======
+
+day_one = Day.create(
+  title: "Day One",
+  week_id: week_one.id
+)
+
+day_two = Day.create(
+  title: "Day Two",
+  week_id: week_one.id
+)
+
+day_three = Day.create(
+  title: "Day Three",
+  week_id: week_one.id
+)
+
+day_four = Day.create(
+  title: "Day Four",
+  week_id: week_one.id
+)
+
+day_five = Day.create(
+  title: "Day Five",
+  week_id: week_one.id
+)
+
+day_six_and_seven = Day.create(
+  title: "Day Six/Seven",
+  week_id: week_one.id
+)
+
+day_eight = Day.create(
+  title: "Day One",
+  week_id: week_two.id
+)
+
+day_nine = Day.create(
+  title: "Day Two",
+  week_id: week_two.id
+)
+
+day_ten = Day.create(
+  title: "Day Three",
+  week_id: week_two.id
+)
+
+day_eleven = Day.create(
+  title: "Day Four",
+  week_id: week_two.id
+)
+
+day_twelve = Day.create(
+  title: "Day Five",
+  week_id: week_two.id
+)
