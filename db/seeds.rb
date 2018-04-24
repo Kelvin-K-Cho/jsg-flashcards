@@ -15,6 +15,8 @@ Topic.destroy_all
 Subject.destroy_all
 Question.destroy_all
 Answer.destroy_all
+Week.destroy_all
+Day.destroy_all
 
 #===========
 # Demo User
