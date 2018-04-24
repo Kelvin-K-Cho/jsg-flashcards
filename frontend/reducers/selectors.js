@@ -6,6 +6,7 @@ const selectSubjects = state => values(state.entities.subjects);
 const selectQuestions = state => values(state.entities.questions);
 const selectAnswers = state => values(state.entities.answers);
 const selectWeeks = state => values(state.entities.weeks);
+const selectDays = state => values(state.entities.days);
 
 const selectCorrectAnswers = state =>
 	values(state.entities.answers).filter(answer => answer.correct === true);
@@ -21,6 +22,7 @@ export {
 	selectQuestions,
 	selectAnswers,
 	selectWeeks,
+	selectDays,
 	selectCorrectAnswers,
 	checkCards
 };

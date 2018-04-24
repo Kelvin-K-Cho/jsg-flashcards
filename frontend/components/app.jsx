@@ -8,6 +8,7 @@ import NavbarContainer from './navbar/navbar_container';
 import TopicIndexContainer from './topic/topic_index_container';
 import TopicShowContainer from './topic/topic_show_container';
 import SubjectShowContainer from './subject/subject_show_container';
+import WeekShowContainer from './week/week_show_container';
 
 const App = () => (
 	<div className="app">
@@ -28,6 +29,11 @@ const App = () => (
 				exact
 				path="/subjects/:subjectId"
 				component={SubjectShowContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/weeks/:weekId"
+				component={WeekShowContainer}
 			/>
 			<Redirect to="/" />
 		</Switch>

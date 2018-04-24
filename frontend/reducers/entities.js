@@ -4,13 +4,15 @@ import SubjectsReducer from './subjects';
 import QuestionsReducer from './questions';
 import AnswersReducer from './answers';
 import WeeksReducer from './weeks';
+import DaysReducer from './days';
 
 const EntitiesReducer = combineReducers({
 	topics: TopicsReducer,
 	subjects: SubjectsReducer,
 	questions: QuestionsReducer,
 	answers: AnswersReducer,
-	weeks: WeeksReducer
+	weeks: WeeksReducer,
+	days: DaysReducer
 });
 
 export default EntitiesReducer;
