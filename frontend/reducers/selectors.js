@@ -5,8 +5,11 @@ const selectTopics = state => values(state.entities.topics);
 const selectSubjects = state => values(state.entities.subjects);
 const selectQuestions = state => values(state.entities.questions);
 const selectAnswers = state => values(state.entities.answers);
+const selectWeeks = state => values(state.entities.weeks);
+
 const selectCorrectAnswers = state =>
 	values(state.entities.answers).filter(answer => answer.correct === true);
+
 const checkCards = cards => {
 	let sides = flattenDeep(cards);
 	return sides.every(side => side !== undefined);
@@ -17,6 +20,7 @@ export {
 	selectSubjects,
 	selectQuestions,
 	selectAnswers,
+	selectWeeks,
 	selectCorrectAnswers,
 	checkCards
 };

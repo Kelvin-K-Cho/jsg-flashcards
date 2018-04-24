@@ -15,24 +15,34 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import TopicListItem from '../topic/topic_list_item';
+import WeekListItem from '../week/week_list_item';
 
 class NavBar extends React.Component {
 	constructor(props) {
 		super(props);
-		this.toggle = this.toggle.bind(this);
+		this.toggleTopics = this.toggleTopics.bind(this);
+		this.toggleWeeks = this.toggleWeeks.bind(this);
 		this.state = {
-			dropdownOpen: false
+			topicsAreOpen: false,
+			weeksAreOpen: false
 		};
 	}
 
-	toggle() {
+	toggleTopics() {
 		this.setState({
-			dropdownOpen: !this.state.dropdownOpen
+			topicsAreOpen: !this.state.topicsAreOpen
+		});
+	}
+
+	toggleWeeks() {
+		this.setState({
+			weeksAreOpen: !this.state.weeksAreOpen
 		});
 	}
 
 	componentDidMount() {
 		this.props.fetchTopics();
+		this.props.fetchWeeks();
 	}
 
 	render() {
@@ -45,8 +55,8 @@ class NavBar extends React.Component {
 		let topics = (
 			<Dropdown
 				group
-				isOpen={this.state.dropdownOpen}
-				toggle={this.toggle}
+				isOpen={this.state.topicsAreOpen}
+				toggle={this.toggleTopics}
 				size="sm"
 			>
 				<DropdownToggle caret>Topics</DropdownToggle>
@@ -59,6 +69,25 @@ class NavBar extends React.Component {
 				</DropdownMenu>
 			</Dropdown>
 		);
+
+		let weeks = (
+			<Dropdown
+				group
+				isOpen={this.state.weeksAreOpen}
+				toggle={this.toggleWeeks}
+				size="sm"
+			>
+				<DropdownToggle caret>Weeks</DropdownToggle>
+				<DropdownMenu>
+					{this.props.weeks.map(week => (
+						<DropdownItem key={week.id}>
+							<WeekListItem key={week.id} week={week} weekId={week.id} />
+						</DropdownItem>
+					))}
+				</DropdownMenu>
+			</Dropdown>
+		);
+
 		let login = (
 			<NavLink href="#/login">
 				<Button outline size="sm">
@@ -87,6 +116,7 @@ class NavBar extends React.Component {
 				<div className="navigation-container">
 					{logo}
 					{topics}
+					{weeks}
 				</div>
 			);
 		} else {
