@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const WeekListItem = props => {
 	const { weekId, week } = props;
 	let item = (
-		<li>
+		<li className="weeks-list">
 			<Link to={`/weeks/${weekId}`}>{week.title}</Link>
 		</li>
 	);

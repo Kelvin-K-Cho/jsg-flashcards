@@ -78,7 +78,7 @@ class NavBar extends React.Component {
 				size="sm"
 			>
 				<DropdownToggle caret>Weeks</DropdownToggle>
-				<DropdownMenu>
+				<DropdownMenu className="weeks-list">
 					{this.props.weeks.map(week => (
 						<DropdownItem key={week.id}>
 							<WeekListItem key={week.id} week={week} weekId={week.id} />
