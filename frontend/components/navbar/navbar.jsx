@@ -113,7 +113,7 @@ class NavBar extends React.Component {
 				</NavLink>
 			);
 			index = (
-				<div className="navigation-container">
+				<div className="nav-container" id="left-nav-container">
 					{logo}
 					{topics}
 					{weeks}
@@ -126,7 +126,7 @@ class NavBar extends React.Component {
 				link = signup;
 			} else {
 				link = (
-					<div className="navigation-container">
+					<div className="nav-container" id="right-nav-container">
 						{login}
 						{signup}
 					</div>

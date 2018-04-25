@@ -1,4 +1,4 @@
-import search from '../utils/search';
+import { searchSubjects } from '../utils/search';
 // import { receiveAllSubjects } from './subjects';
 //
 // const searchSubjects = value => dispatch =>

@@ -12,12 +12,15 @@
 		filter: invert(0);
 	}
 
-	.navigation-container {
-		width: 12vw;
-		min-width: 230px;
+	.nav-container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+
+	#left-nav-container {
+		width: 12vw;
+		min-width: 230px;
 	}
 
 	.btn-secondary {

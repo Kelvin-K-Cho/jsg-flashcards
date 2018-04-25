@@ -1,8 +1,8 @@
-const search = value =>
+const searchSubjects = value =>
 	$.ajax({
 		method: 'GET',
 		url: 'api/searches/',
 		data: { value }
 	});
 
-export default search;
+export { searchSubjects };
