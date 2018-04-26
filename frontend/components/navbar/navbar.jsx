@@ -13,6 +13,7 @@ import {
 	DropdownItem,
 	Button
 } from 'reactstrap';
+import SearchContainer from '../search/search_container';
 import { Link } from 'react-router-dom';
 import TopicListItem from '../topic/topic_list_item';
 import WeekListItem from '../week/week_list_item';
@@ -137,6 +138,7 @@ class NavBar extends React.Component {
 		let display = (
 			<Navbar>
 				{index}
+				<SearchContainer />
 				{link}
 			</Navbar>
 		);

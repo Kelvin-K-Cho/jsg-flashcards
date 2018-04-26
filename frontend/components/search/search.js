@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, FormGroup, Input, FormText } from 'reactstrap';
+import { Form, FormGroup, Input, FormText, Button } from 'reactstrap';
 
 class Search extends React.Component {
 	constructor(props) {
@@ -19,10 +19,10 @@ class Search extends React.Component {
 	}
 
 	handleSubmit(e) {
-		e.preventDeafult();
+		e.preventDefault();
 		this.props
 			.fetchResults(this.state)
-			.then(value => this.props.history.push(`/search?value=${value}`));
+			.then(value => this.props.history.push(`/results?value=${value}`));
 	}
 
 	render() {
