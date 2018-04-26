@@ -11,23 +11,21 @@ class Search extends React.Component {
 	}
 
 	handleInput(type) {
-		return e => {
+		return event => {
 			this.setState({
-				[type]: e.target.value
+				[type]: event.target.value
 			});
 		};
 	}
 
-	handleSubmit(e) {
-		e.preventDefault();
-		this.props
-			.fetchResults(this.state)
-			.then(value => this.props.history.push(`/results?value=${value}`));
+	handleSubmit(event) {
+		event.preventDefault();
+		this.props.history.push(`/results?=${this.state.value}`);
 	}
 
 	render() {
 		return (
-			<Form className="search-form">
+			<Form className="search-form" onSubmit={this.handleSubmit}>
 				<FormGroup>
 					<Input
 						bsSize="sm"
@@ -36,7 +34,7 @@ class Search extends React.Component {
 						id="search-bar"
 						value={this.state.value}
 						onChange={this.handleInput('value')}
-						placeholder="Search By Subject"
+						placeholder="Search by Subject"
 					/>
 				</FormGroup>
 

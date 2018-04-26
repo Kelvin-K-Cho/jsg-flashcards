@@ -105,6 +105,7 @@ class NavBar extends React.Component {
 		);
 		let link;
 		let index = logo;
+		let search;
 		if (currentUser) {
 			link = (
 				<NavLink href="#/">
@@ -120,6 +121,7 @@ class NavBar extends React.Component {
 					{weeks}
 				</div>
 			);
+			search = <SearchContainer />;
 		} else {
 			if (path === '/signup') {
 				link = login;
@@ -138,7 +140,7 @@ class NavBar extends React.Component {
 		let display = (
 			<Navbar>
 				{index}
-				<SearchContainer />
+				{search}
 				{link}
 			</Navbar>
 		);

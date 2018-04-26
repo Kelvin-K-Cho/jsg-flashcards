@@ -9,6 +9,7 @@ import TopicIndexContainer from './topic/topic_index_container';
 import TopicShowContainer from './topic/topic_show_container';
 import SubjectShowContainer from './subject/subject_show_container';
 import WeekShowContainer from './week/week_show_container';
+import ResultContainer from './result/result_container';
 
 const App = () => (
 	<div className="app">
@@ -35,6 +36,7 @@ const App = () => (
 				path="/weeks/:weekId"
 				component={WeekShowContainer}
 			/>
+			<ProtectedRoute path="/results" component={ResultContainer} />
 			<Redirect to="/" />
 		</Switch>
 		<footer />

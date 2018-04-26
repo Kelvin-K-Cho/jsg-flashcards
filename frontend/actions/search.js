@@ -9,7 +9,7 @@ const receiveAllResults = results => ({
 
 const fetchResults = value => dispatch =>
 	SearchAPIUtil.searchSubjects(value).then(results => {
-		dispatch(receiveAllResults(value));
+		dispatch(receiveAllResults(results));
 	});
 
 export { RECEIVE_ALL_RESULTS, fetchResults };

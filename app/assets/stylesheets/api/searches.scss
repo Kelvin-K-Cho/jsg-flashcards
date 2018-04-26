@@ -24,8 +24,36 @@
 
 #search-button {
 	border-style: none;
+	padding: 0;
+	margin-left: 1vw;
 
 	img {
 		height: 3.6vh;
+	}
+}
+
+.result-title {
+	margin: 1% 0;
+	font-family: 'Jua';
+	font-size: 300%;
+}
+
+#found-nothing {
+	margin-left: -3vw;
+	font-size: 300%;
+}
+
+.result-item {
+	list-style: inside;
+	text-align: left;
+	margin-left: 2%;
+	padding: 0.25% 0%;
+
+	a {
+		display: inline;
+	}
+
+	a:hover {
+		text-decoration: underline;
 	}
 }

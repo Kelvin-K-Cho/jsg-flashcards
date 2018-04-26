@@ -29,7 +29,6 @@ class WeekShow extends React.Component {
 					))}
 				</div>
 			);
-			console.log(this.props.days);
 			return (
 				<div>
 					{title}
