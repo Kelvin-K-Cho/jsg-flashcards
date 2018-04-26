@@ -12,7 +12,7 @@ import WeekShowContainer from './week/week_show_container';
 import ResultContainer from './result/result_container';
 
 const App = () => (
-	<div className="app">
+	<div id="app">
 		<header>
 			<Route path="/" component={NavbarContainer} />
 		</header>

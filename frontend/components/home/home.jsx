@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = props => {
 	const body = (
-		<div className="main">
+		<div id="main">
 			<h1>Job Search Guide Flashcards</h1>
 			<h2>Want to hit the ground running?</h2>
 			<h2>
