@@ -27,19 +27,22 @@ class Search extends React.Component {
 
 	render() {
 		return (
-			<Form>
+			<Form className="search-form">
 				<FormGroup>
 					<Input
+						bsSize="sm"
 						type="text"
 						name="search"
-						id="search"
+						id="search-bar"
 						value={this.state.value}
 						onChange={this.handleInput('value')}
 						placeholder="Search By Subject"
 					/>
 				</FormGroup>
 
-				<Button onClick={this.handleSubmit} />
+				<Button onClick={this.handleSubmit} size="sm">
+					Submit
+				</Button>
 			</Form>
 		);
 	}
