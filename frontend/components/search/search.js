@@ -40,8 +40,8 @@ class Search extends React.Component {
 					/>
 				</FormGroup>
 
-				<Button onClick={this.handleSubmit} size="sm">
-					Submit
+				<Button id="search-button" onClick={this.handleSubmit} size="sm">
+					<img src={window.staticImages.search} />
 				</Button>
 			</Form>
 		);

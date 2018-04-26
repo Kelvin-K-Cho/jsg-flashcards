@@ -11,8 +11,21 @@
 	align-items: center;
 	align-content: center;
 	justify-content: space-around;
+
+	.btn-secondary:hover {
+		background-color: inherit;
+	}
 }
 
 #search-bar {
 	margin-top: 1.7vh;
+	width: 20vw;
+}
+
+#search-button {
+	border-style: none;
+
+	img {
+		height: 3.6vh;
+	}
 }
