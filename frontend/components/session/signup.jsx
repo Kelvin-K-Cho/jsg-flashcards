@@ -75,7 +75,7 @@ class Signup extends React.Component {
 							<Button onClick={this.handleDemo}>Demo User</Button>
 						</div>
 					</Form>
-					<div className="session-account">
+					<div>
 						Already have an account? &nbsp;
 						<NavLink href="#/login">Log In</NavLink>
 					</div>

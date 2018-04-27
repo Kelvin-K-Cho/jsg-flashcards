@@ -25,7 +25,7 @@ class Search extends React.Component {
 
 	render() {
 		return (
-			<Form className="search-form" onSubmit={this.handleSubmit}>
+			<Form id="search-form" onSubmit={this.handleSubmit}>
 				<FormGroup>
 					<Input
 						bsSize="sm"

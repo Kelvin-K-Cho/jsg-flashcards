@@ -1,7 +1,7 @@
 import React from 'react';
 import Loader from '../loader/loader';
 import { Container, Row, Col } from 'reactstrap';
-import CardListItem from '../card/card_list_item';
+import Card from '../miscellaneous/card';
 import { checkCards } from '../../reducers/selectors';
 
 class SubjectShow extends React.Component {
@@ -34,7 +34,7 @@ class SubjectShow extends React.Component {
 						<Col>Answer</Col>
 					</Row>
 					{cards.map(card => (
-						<CardListItem key={card[0].id} card={card} cardId={card[0].id} />
+						<Card key={card[0].id} card={card} cardId={card[0].id} />
 					))}
 				</Container>
 			);

@@ -18,7 +18,7 @@ class WeekShow extends React.Component {
 	render() {
 		const { week, days } = this.props;
 		if (week && days) {
-			let title = <div className="week-title">{week.title}</div>;
+			let title = <div className="show-title">{week.title}</div>;
 			let text = <div className="studyset-header">List of Study Sets:</div>;
 			let list = (
 				<div>
@@ -32,7 +32,7 @@ class WeekShow extends React.Component {
 			return (
 				<div>
 					{title}
-					<div className="week-container">
+					<div className="show-container">
 						<div className="studyset-list">
 							{text}
 							{list}

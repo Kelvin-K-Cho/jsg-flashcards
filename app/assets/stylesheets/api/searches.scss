@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.search-form {
+#search-form {
 	margin-left: -7vw;
 	min-width: 270px;
 	width: 14vw;
@@ -29,31 +29,5 @@
 
 	img {
 		height: 3.6vh;
-	}
-}
-
-.result-title {
-	margin: 1% 0;
-	font-family: 'Jua';
-	font-size: 300%;
-}
-
-#found-nothing {
-	margin-left: -3vw;
-	font-size: 300%;
-}
-
-.result-item {
-	list-style: inside;
-	text-align: left;
-	margin-left: 2%;
-	padding: 0.25% 0%;
-
-	a {
-		display: inline;
-	}
-
-	a:hover {
-		text-decoration: underline;
 	}
 }

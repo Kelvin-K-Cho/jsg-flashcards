@@ -12,7 +12,7 @@ $quaternary_color: #20232a;
 	font-family: 'Nunito';
 }
 
-#main {
+.main {
 	margin-top: 12%;
 	display: flex;
 	text-align: center;
@@ -29,4 +29,22 @@ $quaternary_color: #20232a;
 		font-size: 200%;
 		font-weight: 450;
 	}
+}
+
+.title {
+	margin: 1% 0;
+	font-family: 'Jua';
+	font-size: 300%;
+}
+
+.show-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.show-title {
+	margin: 1% 0;
+	font-family: 'Jua';
+	font-size: 300%;
 }

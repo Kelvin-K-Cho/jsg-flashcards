@@ -8,7 +8,7 @@ class TopicIndex extends React.Component {
 
 	render() {
 		let list = (
-			<ul className="topics-list">
+			<ul className="topics-grid">
 				{this.props.topics.map(topic => (
 					<TopicIndexItem key={topic.id} topic={topic} topicId={topic.id} />
 				))}
