@@ -17,6 +17,8 @@ Question.destroy_all
 Answer.destroy_all
 Week.destroy_all
 Day.destroy_all
+Image.destroy_all
+Tag.destroy_all
 
 #===========
 # Demo User

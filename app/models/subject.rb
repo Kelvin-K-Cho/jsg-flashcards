@@ -18,4 +18,12 @@ class Subject < ApplicationRecord
     foreign_key: :subject_id,
     class_name: :Topic
 
+  has_many :tags,
+    through: :topics,
+    source: :tags
+
+  has_many :images,
+    through: :tags,
+    source: :image
+
 end
