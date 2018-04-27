@@ -5,7 +5,7 @@ import { NavLink } from 'reactstrap';
 const Item = props => {
 	const { itemId, item, path } = props;
 	let element = (
-		<NavLink tag={Link} to={`/subjects/${itemId}`}>
+		<NavLink tag={Link} to={`/${path}/${itemId}`}>
 			{item.title}
 		</NavLink>
 	);
