@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav, NavItem } from 'reactstrap';
+import Item from '../miscellaneous/item';
 import ResultIndexItem from './result_index_item';
 
 class ResultIndex extends React.Component {
@@ -27,11 +28,7 @@ class ResultIndex extends React.Component {
 				<Nav vertical>
 					{results.map(result => (
 						<NavItem className="show-item" key={result.id}>
-							<ResultIndexItem
-								result={result}
-								resultId={result.id}
-								path={'subjects'}
-							/>
+							<Item item={result} itemId={result.id} path={'subjects'} />
 						</NavItem>
 					))}
 				</Nav>
