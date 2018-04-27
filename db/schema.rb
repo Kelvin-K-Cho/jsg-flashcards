@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180417030430) do
+ActiveRecord::Schema.define(version: 20180427050931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,15 @@ ActiveRecord::Schema.define(version: 20180417030430) do
     t.index ["week_id"], name: "index_days_on_week_id"
   end
 
+  create_table "images", force: :cascade do |t|
+    t.text "url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_images_on_created_at"
+    t.index ["updated_at"], name: "index_images_on_updated_at"
+    t.index ["url"], name: "index_images_on_url"
+  end
+
   create_table "questions", force: :cascade do |t|
     t.string "sentence", null: false
     t.integer "topic_id", null: false
@@ -67,6 +76,17 @@ ActiveRecord::Schema.define(version: 20180417030430) do
     t.index ["created_at"], name: "index_subjects_on_created_at"
     t.index ["title"], name: "index_subjects_on_title", unique: true
     t.index ["updated_at"], name: "index_subjects_on_updated_at"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.integer "topic_id", null: false
+    t.integer "image_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_tags_on_created_at"
+    t.index ["image_id"], name: "index_tags_on_image_id"
+    t.index ["topic_id"], name: "index_tags_on_topic_id"
+    t.index ["updated_at"], name: "index_tags_on_updated_at"
   end
 
   create_table "topics", force: :cascade do |t|

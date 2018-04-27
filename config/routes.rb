@@ -14,7 +14,10 @@ Rails.application.routes.draw do
     resources :topics, only: [:index, :show] do
       resources :questions, only: [:index, :show]
       resources :answers, only: [:index, :show]
+      resources :images, only: [:index, :show]
     end
+
+    resources :images, only: [:index, :show]
 
     resources :questions, only: [:index, :show] do
       resources :answers, only: [:index, :show]

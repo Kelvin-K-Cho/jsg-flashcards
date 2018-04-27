@@ -1,19 +1,16 @@
 # == Schema Information
 #
-# Table name: topics
+# Table name: images
 #
 #  id         :integer          not null, primary key
-#  title      :string           not null
-#  notes      :text
-#  image_url  :string
-#  subject_id :integer          not null
+#  url        :text             not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class TopicTest < ActiveSupport::TestCase
+class ImageTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

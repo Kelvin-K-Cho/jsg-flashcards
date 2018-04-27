@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  sentence   :string           not null
-#  topic_id :integer          not null
+#  topic_id   :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

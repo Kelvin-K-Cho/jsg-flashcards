@@ -1,11 +1,10 @@
 # == Schema Information
 #
-# Table name: dailies
+# Table name: tags
 #
 #  id         :integer          not null, primary key
-#  title      :string
 #  topic_id   :integer          not null
-#  day_id     :integer          not null
+#  image_id   :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -13,11 +12,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  deck_id: 
-  day_id: 1
+  topic_id: 1
+  image_id: 1
 
 two:
-  title: MyString
-  deck_id: 
-  day_id: 1
+  topic_id: 1
+  image_id: 1

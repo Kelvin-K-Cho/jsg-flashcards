@@ -24,6 +24,8 @@ Day.destroy_all
 
 user = User.create(username: "demo", password: "secret")
 
+user.save!
+
 #========
 # Subjects
 #========

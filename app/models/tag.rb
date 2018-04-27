@@ -1,27 +1,26 @@
 # == Schema Information
 #
-# Table name: dailies
+# Table name: tags
 #
 #  id         :integer          not null, primary key
-#  title      :string
 #  topic_id   :integer          not null
-#  day_id     :integer          not null
+#  image_id   :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Daily < ApplicationRecord
+class Tag < ApplicationRecord
 
-  validates :deck_id, :day_id, presence: true
+  validates :topic_id, :image_id, presence: true
 
   belongs_to :topic,
     primary_key: :id,
     foreign_key: :topic_id,
     class_name: :Topic
 
-  belongs_to :day,
+  belongs_to :image,
     primary_key: :id,
-    foreign_key: :day_id,
-    class_name: :Day
+    foreign_key: :image_id,
+    class_name: :Image
     
 end

@@ -6,7 +6,7 @@
 #  title      :string           not null
 #  notes      :text
 #  image_url  :string
-#  subject_id   :integer          not null
+#  subject_id :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -43,5 +43,14 @@ class Topic < ApplicationRecord
   has_many :weeks,
     through: :days,
     source: :week
+
+  has_many :tags,
+    primary_key: :id,
+    foreign_key: :topic_id,
+    class_name: :Tag
+
+  has_many :images,
+    through: :tags,
+    source: :image
 
 end
