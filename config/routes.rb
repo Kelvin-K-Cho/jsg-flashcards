@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
     resources :subjects, only: [:index, :show] do
       resources :topics, only: [:index, :show]
+      resources :images, only: [:index, :show]
     end
 
     resources :topics, only: [:index, :show] do

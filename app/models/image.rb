@@ -24,7 +24,7 @@ class Image < ApplicationRecord
   has_many :labels,
     primary_key: :id,
     foreign_key: :image_id,
-    class_name: :labels
+    class_name: :Label
 
   has_many :subjects,
     through: :labels,
