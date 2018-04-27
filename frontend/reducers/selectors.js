@@ -1,8 +1,8 @@
 import values from 'lodash/values';
 import flattenDeep from 'lodash/flattenDeep';
 
-const selectTopics = state => values(state.entities.topics);
 const selectSubjects = state => values(state.entities.subjects);
+const selectTopics = state => values(state.entities.topics);
 const selectQuestions = state => values(state.entities.questions);
 const selectAnswers = state => values(state.entities.answers);
 const selectWeeks = state => values(state.entities.weeks);
@@ -18,8 +18,8 @@ const checkCards = cards => {
 };
 
 export {
-	selectTopics,
 	selectSubjects,
+	selectTopics,
 	selectQuestions,
 	selectAnswers,
 	selectWeeks,

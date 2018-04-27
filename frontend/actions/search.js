@@ -8,7 +8,7 @@ const receiveAllResults = results => ({
 });
 
 const fetchResults = value => dispatch =>
-	SearchAPIUtil.searchSubjects(value).then(results => {
+	SearchAPIUtil.searchTopics(value).then(results => {
 		dispatch(receiveAllResults(results));
 	});
 

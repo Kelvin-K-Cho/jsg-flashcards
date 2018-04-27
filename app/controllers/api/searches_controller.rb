@@ -3,9 +3,9 @@ class Api::SearchesController < ApplicationController
   def index
     value = params[:value]
     if value
-      @subjects = Subject.where("title ILIKE ?", "#{value}%")
+      @topics = Topic.where("title ILIKE ?", "#{value}%")
     else
-      @subjects = {}
+      @topics = {}
     end
   end
 

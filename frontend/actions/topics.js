@@ -23,4 +23,21 @@ const fetchTopic = id => dispatch =>
 		dispatch(receiveTopic(topic[id]));
 	});
 
-export { RECEIVE_ALL_TOPICS, RECEIVE_TOPIC, fetchTopics, fetchTopic };
+const fetchTopicsBySubject = subjectId => dispatch =>
+	TopicAPIUtil.fetchTopicsBySubject(subjectId).then(topics => {
+		dispatch(receiveAllTopics(topics));
+	});
+
+const fetchTopicBySubject = (subjectId, id) => dispatch =>
+	TopicAPIUtil.fetchTopicBySubject(subjectId, id).then(topic => {
+		dispatch(receiveTopic(topic[id]));
+	});
+
+export {
+	RECEIVE_ALL_TOPICS,
+	RECEIVE_TOPIC,
+	fetchTopics,
+	fetchTopic,
+	fetchTopicsBySubject,
+	fetchTopicBySubject
+};

@@ -27,7 +27,7 @@ class ResultIndex extends React.Component {
 				<Nav vertical>
 					{results.map(result => (
 						<NavItem className="show-item" key={result.id}>
-							<Item item={result} itemId={result.id} path={'subjects'} />
+							<Item item={result} itemId={result.id} path={'topics'} />
 						</NavItem>
 					))}
 				</Nav>

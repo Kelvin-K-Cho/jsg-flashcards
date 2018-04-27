@@ -19,8 +19,8 @@ class Week < ApplicationRecord
     through: :days,
     source: :dailies
 
-  has_many :subjects,
+  has_many :topics,
     through: :dailies,
-    source: :subject
+    source: :topic
 
 end

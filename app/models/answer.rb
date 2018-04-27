@@ -21,8 +21,8 @@ class Answer < ApplicationRecord
     class_name: :Question,
     inverse_of: :answers
 
-  has_one :subject,
+  has_one :topic,
     through: :question,
-    source: :subject
+    source: :topic
 
 end

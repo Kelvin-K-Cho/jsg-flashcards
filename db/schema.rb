@@ -29,13 +29,13 @@ ActiveRecord::Schema.define(version: 20180417030430) do
 
   create_table "dailies", force: :cascade do |t|
     t.string "title"
-    t.integer "subject_id", null: false
+    t.integer "topic_id", null: false
     t.integer "day_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_at"], name: "index_dailies_on_created_at"
     t.index ["day_id"], name: "index_dailies_on_day_id"
-    t.index ["subject_id"], name: "index_dailies_on_subject_id"
+    t.index ["topic_id"], name: "index_dailies_on_topic_id"
     t.index ["updated_at"], name: "index_dailies_on_updated_at"
   end
 
@@ -51,33 +51,33 @@ ActiveRecord::Schema.define(version: 20180417030430) do
 
   create_table "questions", force: :cascade do |t|
     t.string "sentence", null: false
-    t.integer "subject_id", null: false
+    t.integer "topic_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_at"], name: "index_questions_on_created_at"
-    t.index ["subject_id"], name: "index_questions_on_subject_id"
+    t.index ["topic_id"], name: "index_questions_on_topic_id"
     t.index ["updated_at"], name: "index_questions_on_updated_at"
   end
 
   create_table "subjects", force: :cascade do |t|
     t.string "title", null: false
-    t.text "notes"
     t.string "image_url"
-    t.integer "topic_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_at"], name: "index_subjects_on_created_at"
     t.index ["title"], name: "index_subjects_on_title", unique: true
-    t.index ["topic_id"], name: "index_subjects_on_topic_id"
     t.index ["updated_at"], name: "index_subjects_on_updated_at"
   end
 
   create_table "topics", force: :cascade do |t|
     t.string "title", null: false
+    t.text "notes"
     t.string "image_url"
+    t.integer "subject_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_at"], name: "index_topics_on_created_at"
+    t.index ["subject_id"], name: "index_topics_on_subject_id"
     t.index ["title"], name: "index_topics_on_title", unique: true
     t.index ["updated_at"], name: "index_topics_on_updated_at"
   end

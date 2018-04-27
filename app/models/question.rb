@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  sentence   :string           not null
-#  subject_id :integer          not null
+#  topic_id :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -12,12 +12,12 @@
 class Question < ApplicationRecord
   
   validates :sentence, presence: true, uniqueness: true
-  validates :subject_id, presence: true
+  validates :topic_id, presence: true
 
-  belongs_to :subject,
+  belongs_to :topic,
     primary_key: :id,
-    foreign_key: :subject_id,
-    class_name: :Subject,
+    foreign_key: :topic_id,
+    class_name: :Topic,
     inverse_of: :questions
 
   has_many :answers,

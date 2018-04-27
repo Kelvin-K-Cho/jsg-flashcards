@@ -34,7 +34,7 @@ class Search extends React.Component {
 						id="search-bar"
 						value={this.state.value}
 						onChange={this.handleInput('value')}
-						placeholder="Search by Subject"
+						placeholder="Search by Topic"
 					/>
 				</FormGroup>
 

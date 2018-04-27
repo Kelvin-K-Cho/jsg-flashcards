@@ -1,42 +1,49 @@
 import React from 'react';
-import { Nav, NavItem } from 'reactstrap';
-import Item from '../miscellaneous/item';
 import Loader from '../loader/loader';
+import { Container, Row, Col } from 'reactstrap';
+import Card from '../miscellaneous/card';
+import { checkCards } from '../../reducers/selectors';
 
 class TopicShow extends React.Component {
 	componentDidMount() {
 		this.props.fetchTopic(this.props.match.params.topicId);
-		this.props.fetchSubjectsByTopic(this.props.match.params.topicId);
+		this.props.fetchQuestionsByTopic(this.props.match.params.topicId);
+		this.props.fetchAnswersByTopic(this.props.match.params.topicId);
 	}
 
 	componentDidUpdate(prevProps, prevState) {
-		if (prevProps.match.params.topicId !== this.props.match.params.topicId) {
+		if (
+			prevProps.match.params.topicId !== this.props.match.params.topicId
+		) {
 			this.props.fetchTopic(this.props.match.params.topicId);
-			this.props.fetchSubjectsByTopic(this.props.match.params.topicId);
+			this.props.fetchQuestionsByTopic(this.props.match.params.topicId);
+			this.props.fetchAnswersByTopic(this.props.match.params.topicId);
 		}
 	}
 
 	render() {
-		const { topic, subjects } = this.props;
-		if (topic && subjects) {
+		const { topic, cards } = this.props;
+		if (topic && checkCards(cards)) {
 			let title = <div className="show-title">{topic.title}</div>;
-			let text = <div className="studyset-header">List of Study Sets:</div>;
-			let list = (
-				<Nav vertical>
-					{subjects.map(subject => (
-						<NavItem className="show-item" key={subject.id}>
-							<Item item={subject} itemId={subject.id} path={'subjects'} />
-						</NavItem>
-					))}
-				</Nav>
-			);
+			let notes = <div>{topic.notes}</div>;
 			let image = <img className="topic-image" src={topic.image_url} />;
+			let list = (
+				<Container>
+					<Row className="top-card">
+						<Col>Question</Col>
+						<Col>Answer</Col>
+					</Row>
+					{cards.map(card => (
+						<Card key={card[0].id} card={card} cardId={card[0].id} />
+					))}
+				</Container>
+			);
 			return (
 				<div>
 					{title}
 					<div className="show-container">
-						<div className="studyset-list">
-							{text}
+						<div className="details-container">
+							{notes}
 							{list}
 						</div>
 						{image}

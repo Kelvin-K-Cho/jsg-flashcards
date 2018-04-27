@@ -10,21 +10,21 @@ const fetchQuestion = id =>
 		url: `api/questions/${id}`
 	});
 
-const fetchQuestionsBySubject = subjectId =>
+const fetchQuestionsByTopic = topicId =>
 	$.ajax({
 		method: 'GET',
-		url: `api/subjects/${subjectId}/questions`
+		url: `api/topics/${topicId}/questions`
 	});
 
-const fetchQuestionBySubject = (subjectId, id) =>
+const fetchQuestionByTopic = (topicId, id) =>
 	$.ajax({
 		method: 'GET',
-		url: `api/subjects/${subjectId}/questions/${id}`
+		url: `api/topics/${topicId}/questions/${id}`
 	});
 
 export {
 	fetchQuestions,
 	fetchQuestion,
-	fetchQuestionsBySubject,
-	fetchQuestionBySubject
+	fetchQuestionsByTopic,
+	fetchQuestionByTopic
 };

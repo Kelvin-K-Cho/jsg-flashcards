@@ -1,8 +1,8 @@
 class Api::QuestionsController < ApplicationController
 
   def index
-    if params[:subject_id]
-      @questions = Question.where('subject_id = ?', params[:subject_id]).order(id: :asc)
+    if params[:topic_id]
+      @questions = Question.where('topic_id = ?', params[:topic_id]).order(id: :asc)
     else
       @questions = Question.all
     end

@@ -22,16 +22,16 @@ const fetchAnswerByQuestion = (questionId, id) =>
 		url: `api/questions/${questionId}/answers/${id}`
 	});
 
-const fetchAnswersBySubject = subjectId =>
+const fetchAnswersByTopic = topicId =>
 	$.ajax({
 		method: 'GET',
-		url: `api/subjects/${subjectId}/answers`
+		url: `api/topics/${topicId}/answers`
 	});
 
-const fetchAnswerBySubject = (subjectId, id) =>
+const fetchAnswerByTopic = (topicId, id) =>
 	$.ajax({
 		method: 'GET',
-		url: `api/subjects/${subjectId}/answers/${id}`
+		url: `api/topics/${topicId}/answers/${id}`
 	});
 
 export {
@@ -39,6 +39,6 @@ export {
 	fetchAnswer,
 	fetchAnswersByQuestion,
 	fetchAnswerByQuestion,
-	fetchAnswersBySubject,
-	fetchAnswerBySubject
+	fetchAnswersByTopic,
+	fetchAnswerByTopic
 };

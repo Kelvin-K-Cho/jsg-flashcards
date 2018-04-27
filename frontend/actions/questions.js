@@ -23,13 +23,13 @@ const fetchQuestion = id => dispatch =>
 		dispatch(receiveQuestion(question[id]));
 	});
 
-const fetchQuestionsBySubject = subjectId => dispatch =>
-	QuestionAPIUtil.fetchQuestionsBySubject(subjectId).then(questions => {
+const fetchQuestionsByTopic = topicId => dispatch =>
+	QuestionAPIUtil.fetchQuestionsByTopic(topicId).then(questions => {
 		dispatch(receiveAllQuestions(questions));
 	});
 
-const fetchQuestionBySubject = (subjectId, id) => dispatch =>
-	QuestionAPIUtil.fetchQuestionBySubject(subjectId, id).then(question => {
+const fetchQuestionByTopic = (topicId, id) => dispatch =>
+	QuestionAPIUtil.fetchQuestionByTopic(topicId, id).then(question => {
 		dispatch(receiveQuestion(question[id]));
 	});
 
@@ -38,6 +38,6 @@ export {
 	RECEIVE_QUESTION,
 	fetchQuestions,
 	fetchQuestion,
-	fetchQuestionsBySubject,
-	fetchQuestionBySubject
+	fetchQuestionsByTopic,
+	fetchQuestionByTopic
 };

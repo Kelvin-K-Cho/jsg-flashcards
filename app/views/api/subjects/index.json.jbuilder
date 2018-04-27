@@ -1,5 +1,5 @@
 @subjects.each do |subject|
   json.set! subject.id do
-    json.extract! subject, :id, :title, :notes, :image_url
+    json.extract! subject, :id, :title, :image_url
   end
 end

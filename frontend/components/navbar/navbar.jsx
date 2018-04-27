@@ -20,17 +20,17 @@ import Bullet from '../miscellaneous/bullet';
 class NavBar extends React.Component {
 	constructor(props) {
 		super(props);
-		this.toggleTopics = this.toggleTopics.bind(this);
+		this.toggleSubjects = this.toggleSubjects.bind(this);
 		this.toggleWeeks = this.toggleWeeks.bind(this);
 		this.state = {
-			topicsAreOpen: false,
+			subjectsAreOpen: false,
 			weeksAreOpen: false
 		};
 	}
 
-	toggleTopics() {
+	toggleSubjects() {
 		this.setState({
-			topicsAreOpen: !this.state.topicsAreOpen
+			subjectsAreOpen: !this.state.subjectsAreOpen
 		});
 	}
 
@@ -41,7 +41,7 @@ class NavBar extends React.Component {
 	}
 
 	componentDidMount() {
-		this.props.fetchTopics();
+		this.props.fetchSubjects();
 		this.props.fetchWeeks();
 	}
 
@@ -52,22 +52,22 @@ class NavBar extends React.Component {
 				<img src={window.staticImages.home} />
 			</NavbarBrand>
 		);
-		let topics = (
+		let subjects = (
 			<Dropdown
 				group
-				isOpen={this.state.topicsAreOpen}
-				toggle={this.toggleTopics}
+				isOpen={this.state.subjectsAreOpen}
+				toggle={this.toggleSubjects}
 				size="sm"
 			>
-				<DropdownToggle caret>Topics</DropdownToggle>
+				<DropdownToggle caret>Subjects</DropdownToggle>
 				<DropdownMenu>
-					{this.props.topics.map(topic => (
-						<DropdownItem key={topic.id}>
+					{this.props.subjects.map(subject => (
+						<DropdownItem key={subject.id}>
 							<Bullet
-								key={topic.id}
-								bullet={topic}
-								bulletId={topic.id}
-								path={'topics'}
+								key={subject.id}
+								bullet={subject}
+								bulletId={subject.id}
+								path={'subjects'}
 							/>
 						</DropdownItem>
 					))}
@@ -126,7 +126,7 @@ class NavBar extends React.Component {
 			index = (
 				<div className="nav-container" id="left-nav-container">
 					{logo}
-					{topics}
+					{subjects}
 					{weeks}
 				</div>
 			);

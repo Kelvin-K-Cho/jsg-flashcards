@@ -10,4 +10,21 @@ const fetchTopic = id =>
 		url: `api/topics/${id}`
 	});
 
-export { fetchTopics, fetchTopic };
+const fetchTopicsBySubject = subjectId =>
+	$.ajax({
+		method: 'GET',
+		url: `api/subjects/${subjectId}/topics`
+	});
+
+const fetchTopicBySubject = (subjectId, id) =>
+	$.ajax({
+		method: 'GET',
+		url: `api/subjects/${subjectId}/topics/${id}`
+	});
+
+export {
+	fetchTopics,
+	fetchTopic,
+	fetchTopicsBySubject,
+	fetchTopicBySubject
+};

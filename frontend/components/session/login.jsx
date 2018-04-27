@@ -31,13 +31,13 @@ class Login extends React.Component {
 		event.preventDefault();
 		this.props
 			.login(this.state)
-			.then(() => this.props.history.push('/topics/1'));
+			.then(() => this.props.history.push('/subjects/1'));
 	}
 
 	handleDemo(event) {
 		event.preventDefault();
 		const demo = { username: 'demo', password: 'secret' };
-		this.props.login(demo).then(() => this.props.history.push('/topics/1'));
+		this.props.login(demo).then(() => this.props.history.push('/subjects/1'));
 	}
 
 	render() {

@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  title      :string
-#  subject_id :integer          not null
+#  topic_id :integer          not null
 #  day_id     :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
