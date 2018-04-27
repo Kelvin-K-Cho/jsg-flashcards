@@ -24,8 +24,8 @@ class SubjectShow extends React.Component {
 	render() {
 		const { subject, cards } = this.props;
 		if (subject && checkCards(cards)) {
-			let title = <div className="subject-title">{subject.title}</div>;
-			let notes = <div className="subject-notes">{subject.notes}</div>;
+			let title = <div className="show-title">{subject.title}</div>;
+			let notes = <div>{subject.notes}</div>;
 			let image = <img className="subject-image" src={subject.image_url} />;
 			let list = (
 				<Container>
@@ -41,7 +41,7 @@ class SubjectShow extends React.Component {
 			return (
 				<div>
 					{title}
-					<div className="subject-container">
+					<div className="show-container">
 						<div className="details-container">
 							{notes}
 							{list}

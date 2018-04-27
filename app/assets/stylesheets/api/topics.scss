@@ -27,33 +27,10 @@
 	}
 }
 
-.topic-title {
-	margin: 1% 0;
-	font-family: 'Jua';
-	font-size: 300%;
-}
-
-.studyset-header {
-	text-align: left;
-	font-weight: 600;
-	font-size: 150%;
-	margin: 1% 0;
-}
-
-.topic-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-}
-
 .topic-image {
 	margin-top: 6vh;
 	margin-right: 12vw;
 	height: 40vmin;
 	width: 40vmin;
 	border-radius: 4px;
-}
-
-.studyset-list {
-	margin-left: 4vw;
 }

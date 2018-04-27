@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Row } from 'reactstrap';
-import QuestionListItem from '../question/question_list_item';
-import AnswerListItem from '../answer/answer_list_item';
 import Side from './side';
 import Loader from '../loader/loader';
 

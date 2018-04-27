@@ -48,3 +48,29 @@ $quaternary_color: #20232a;
 	font-family: 'Jua';
 	font-size: 300%;
 }
+
+.show-item {
+	list-style: inside;
+	text-align: left;
+	margin-left: 2%;
+	padding: 0.25% 0%;
+
+	a {
+		display: inline;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+.studyset-header {
+	text-align: left;
+	font-weight: 600;
+	font-size: 150%;
+	margin: 1% 0;
+}
+
+.studyset-list {
+	margin-left: 4vw;
+}

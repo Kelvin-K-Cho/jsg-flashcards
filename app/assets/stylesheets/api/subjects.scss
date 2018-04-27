@@ -2,41 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.subject-item {
-	list-style: inside;
-	text-align: left;
-	margin-left: 2%;
-	padding: 0.25% 0%;
-
-	a {
-		display: inline;
-	}
-
-	a:hover {
-		text-decoration: underline;
-	}
-}
-
-.subject-title {
-	margin-top: 1%;
-	font-family: 'Jua';
-	font-size: 300%;
-}
-
-.subject-notes {
-}
-
 .subject-image {
 	margin-right: 8vw;
 	height: 40vmin;
 	width: 40vmin;
 	border-radius: 4px;
-}
-
-.subject-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
 }
 
 .details-container {

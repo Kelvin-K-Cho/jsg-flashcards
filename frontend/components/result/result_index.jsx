@@ -26,8 +26,12 @@ class ResultIndex extends React.Component {
 			list = (
 				<Nav vertical>
 					{results.map(result => (
-						<NavItem className="result-item" key={result.id}>
-							<ResultIndexItem result={result} resultId={result.id} />
+						<NavItem className="show-item" key={result.id}>
+							<ResultIndexItem
+								result={result}
+								resultId={result.id}
+								path={'subjects'}
+							/>
 						</NavItem>
 					))}
 				</Nav>
