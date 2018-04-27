@@ -21,4 +21,13 @@ class Image < ApplicationRecord
     through: :tags,
     source: :topic
 
+  has_many :labels,
+    primary_key: :id,
+    foreign_key: :image_id,
+    class_name: :labels
+
+  has_many :subjects,
+    through: :labels,
+    source: :subject
+
 end

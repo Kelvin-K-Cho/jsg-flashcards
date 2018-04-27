@@ -23,5 +23,5 @@ class Daily < ApplicationRecord
     primary_key: :id,
     foreign_key: :day_id,
     class_name: :Day
-    
+
 end

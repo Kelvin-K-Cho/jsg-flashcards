@@ -17,7 +17,9 @@ Question.destroy_all
 Answer.destroy_all
 Week.destroy_all
 Day.destroy_all
+Daily.destroy_all
 Image.destroy_all
+Label.destroy_all
 Tag.destroy_all
 
 #===========
@@ -46,7 +48,6 @@ javascript = Subject.create(
   title: "JavaScript",
   image_url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/JavaScript.png"
 )
-
 
 miscellaneous = Subject.create(
   title: "Miscellaneous",
@@ -138,6 +139,87 @@ redux = Topic.create(
 
 grid.save!
 redux.save!
+
+#========
+# Images
+#========
+
+algorithms_image1 = Image.create(
+  url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Algorithms.jpg"
+)
+
+world_wide_web_image1 = Image.create(
+  url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/WorldWideWeb.jpg"
+)
+
+javascript_image1 = Image.create(
+  url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/JavaScript.png"
+)
+
+miscellaneous_image1 = Image.create(
+  url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Miscellaneous.png"
+)
+
+heap_image1 = Image.create(
+  url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/maxheap.png"
+)
+
+heap_image2 = Image.create(
+  url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/heapsort.gif"
+)
+
+algorithms_image1.save!
+world_wide_web_image1.save!
+javascript_image1.save!
+miscellaneous_image1.save!
+heap_image1.save!
+heap_image2.save!
+
+#========
+# Labels
+#========
+
+algorithms_label1 = Label.create(
+  subject_id: algorithms.id,
+  image_id: algorithms_image1.id
+)
+
+world_wide_web_label1 = Label.create(
+  subject_id: world_wide_web.id,
+  image_id: world_wide_web_image1.id
+)
+
+javascript_label1 = Label.create(
+  subject_id: javascript.id,
+  image_id: javascript_image1.id
+)
+
+miscellaneous_label1 = Label.create(
+  subject_id: miscellaneous.id,
+  image_id: miscellaneous_image1.id
+)
+
+algorithms_label1.save!
+world_wide_web_label1.save!
+javascript_label1.save!
+miscellaneous_label1.save!
+
+#======
+# Tags
+#======
+
+heap_tag1 = Tag.create(
+  topic_id: heap.id,
+  image_id: heap_image1.id
+)
+
+heap_tag2 = Tag.create(
+  topic_id: heap.id,
+  image_id: heap_image2.id
+)
+
+heap_tag1.save!
+heap_tag2.save!
 
 #===========
 # Questions

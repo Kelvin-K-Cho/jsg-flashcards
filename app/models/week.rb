@@ -9,7 +9,7 @@
 #
 
 class Week < ApplicationRecord
-  
+
   has_many :days,
     primary_key: :id,
     foreign_key: :week_id,

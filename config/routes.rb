@@ -19,6 +19,10 @@ Rails.application.routes.draw do
 
     resources :images, only: [:index, :show]
 
+    resources :tags, only: [:index, :show]
+
+    resources :labels, only: [:index, :show]
+
     resources :questions, only: [:index, :show] do
       resources :answers, only: [:index, :show]
     end

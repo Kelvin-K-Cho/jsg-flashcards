@@ -10,7 +10,7 @@
 #
 
 class Question < ApplicationRecord
-  
+
   validates :sentence, presence: true, uniqueness: true
   validates :topic_id, presence: true
 

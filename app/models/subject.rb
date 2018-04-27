@@ -18,12 +18,13 @@ class Subject < ApplicationRecord
     foreign_key: :subject_id,
     class_name: :Topic
 
-  has_many :tags,
-    through: :topics,
-    source: :tags
+  has_many :labels,
+    primary_key: :id,
+    foreign_key: :subject_id,
+    class_name: :Label
 
   has_many :images,
-    through: :tags,
+    through: :labels,
     source: :image
 
 end

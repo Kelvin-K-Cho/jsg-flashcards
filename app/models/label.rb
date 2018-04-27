@@ -1,22 +1,22 @@
 # == Schema Information
 #
-# Table name: tags
+# Table name: labels
 #
 #  id         :integer          not null, primary key
-#  topic_id   :integer          not null
+#  subject_id :integer          not null
 #  image_id   :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Tag < ApplicationRecord
+class Label < ApplicationRecord
 
-  validates :topic_id, :image_id, presence: true
+  validates :subject_id, :image_id, presence: true
 
-  belongs_to :topic,
+  belongs_to :subject,
     primary_key: :id,
-    foreign_key: :topic_id,
-    class_name: :Topic
+    foreign_key: :subject_id,
+    class_name: :Subject
 
   belongs_to :image,
     primary_key: :id,
