@@ -23,8 +23,8 @@ const fetchAnswer = id => dispatch =>
 		dispatch(receiveAnswer(answer[id]));
 	});
 
-const fetchAnswersByQuestion = (questionId, id) => dispatch =>
-	AnswerAPIUtil.fetchAnswersByQuestion(questionId, id).then(answers => {
+const fetchAnswersByQuestion = questionId => dispatch =>
+	AnswerAPIUtil.fetchAnswersByQuestion(questionId).then(answers => {
 		dispatch(receiveAllAnswers(answers));
 	});
 
