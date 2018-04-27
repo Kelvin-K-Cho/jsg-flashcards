@@ -1,7 +1,6 @@
 import React from 'react';
 import { Nav, NavItem } from 'reactstrap';
 import Item from '../miscellaneous/item';
-import ResultIndexItem from './result_index_item';
 
 class ResultIndex extends React.Component {
 	componentDidMount() {

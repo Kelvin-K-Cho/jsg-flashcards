@@ -15,8 +15,7 @@ import {
 } from 'reactstrap';
 import SearchContainer from '../search/search_container';
 import { Link } from 'react-router-dom';
-import TopicListItem from '../topic/topic_list_item';
-import WeekListItem from '../week/week_list_item';
+import Bullet from '../miscellaneous/bullet';
 
 class NavBar extends React.Component {
 	constructor(props) {
@@ -64,7 +63,12 @@ class NavBar extends React.Component {
 				<DropdownMenu>
 					{this.props.topics.map(topic => (
 						<DropdownItem key={topic.id}>
-							<TopicListItem key={topic.id} topic={topic} topicId={topic.id} />
+							<Bullet
+								key={topic.id}
+								bullet={topic}
+								bulletId={topic.id}
+								path={'topics'}
+							/>
 						</DropdownItem>
 					))}
 				</DropdownMenu>
@@ -82,7 +86,12 @@ class NavBar extends React.Component {
 				<DropdownMenu className="weeks-list">
 					{this.props.weeks.map(week => (
 						<DropdownItem key={week.id}>
-							<WeekListItem key={week.id} week={week} weekId={week.id} />
+							<Bullet
+								key={week.id}
+								bullet={week}
+								bulletId={week.id}
+								path={'weeks'}
+							/>
 						</DropdownItem>
 					))}
 				</DropdownMenu>

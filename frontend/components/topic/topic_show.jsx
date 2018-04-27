@@ -1,6 +1,6 @@
 import React from 'react';
 import { Nav, NavItem } from 'reactstrap';
-import SubjectIndexItem from '../subject/subject_index_item';
+import Item from '../miscellaneous/item';
 import Loader from '../loader/loader';
 
 class TopicShow extends React.Component {
@@ -25,7 +25,7 @@ class TopicShow extends React.Component {
 				<Nav vertical>
 					{subjects.map(subject => (
 						<NavItem className="show-item" key={subject.id}>
-							<SubjectIndexItem subject={subject} subjectId={subject.id} />
+							<Item item={subject} itemId={subject.id} path={'subjects'} />
 						</NavItem>
 					))}
 				</Nav>
