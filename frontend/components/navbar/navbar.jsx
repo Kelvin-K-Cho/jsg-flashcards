@@ -48,7 +48,7 @@ class NavBar extends React.Component {
 	render() {
 		const { currentUser, path, logout } = this.props;
 		let logo = (
-			<NavbarBrand id="logo" href="/#">
+			<NavbarBrand id="logo" href="/#/subjects">
 				<img src={window.staticImages.home} />
 			</NavbarBrand>
 		);
@@ -116,11 +116,6 @@ class NavBar extends React.Component {
 		let index = logo;
 		let search;
 		if (currentUser) {
-			logo = (
-				<NavbarBrand id="logo" href="/#/subjects">
-					<img src={window.staticImages.home} />
-				</NavbarBrand>
-			);
 			link = (
 				<NavLink href="#/">
 					<Button outline size="sm" onClick={logout}>
