@@ -2,6 +2,7 @@ import React from 'react';
 import Loader from '../loader/loader';
 import { Container, Row, Col } from 'reactstrap';
 import Card from '../miscellaneous/card';
+import Image from '../miscellaneous/image';
 import { checkCards } from '../../reducers/selectors';
 
 class TopicShow extends React.Component {
@@ -9,24 +10,29 @@ class TopicShow extends React.Component {
 		this.props.fetchTopic(this.props.match.params.topicId);
 		this.props.fetchQuestionsByTopic(this.props.match.params.topicId);
 		this.props.fetchAnswersByTopic(this.props.match.params.topicId);
+		this.props.fetchImagesByTopic(this.props.match.params.topicId);
 	}
 
 	componentDidUpdate(prevProps, prevState) {
-		if (
-			prevProps.match.params.topicId !== this.props.match.params.topicId
-		) {
+		if (prevProps.match.params.topicId !== this.props.match.params.topicId) {
 			this.props.fetchTopic(this.props.match.params.topicId);
 			this.props.fetchQuestionsByTopic(this.props.match.params.topicId);
 			this.props.fetchAnswersByTopic(this.props.match.params.topicId);
+			this.props.fetchImagesByTopic(this.props.match.params.topicId);
 		}
 	}
 
 	render() {
-		const { topic, cards } = this.props;
-		if (topic && checkCards(cards)) {
+		const { topic, images, cards } = this.props;
+		if (topic && images.length && checkCards(cards)) {
 			let title = <div className="show-title">{topic.title}</div>;
 			let notes = <div>{topic.notes}</div>;
-			let image = <img className="topic-image" src={topic.image_url} />;
+			// let image = <img className="topic-image" src={topic.image_url} />;
+			let visuals = (
+				<ul className="images-list">
+					{images.map(image => <Image key={image.id} image={image} />)}
+				</ul>
+			);
 			let list = (
 				<Container>
 					<Row className="top-card">
@@ -46,7 +52,7 @@ class TopicShow extends React.Component {
 							{notes}
 							{list}
 						</div>
-						{image}
+						{visuals}
 					</div>
 				</div>
 			);
