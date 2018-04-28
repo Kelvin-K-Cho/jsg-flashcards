@@ -1,7 +1,7 @@
 class Api::SubjectsController < ApplicationController
 
   def index
-    @subjects = Subject.all
+    @subjects = Subject.includes(:labels, :images).references(:images).all
   end
 
   def show
