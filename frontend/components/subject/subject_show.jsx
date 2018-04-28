@@ -27,7 +27,7 @@ class SubjectShow extends React.Component {
 			let title = <div className="show-title">{subject.title}</div>;
 			let text = <div className="studyset-header">List of Study Sets:</div>;
 			let visuals = (
-				<ul className="images-list">
+				<ul className="images-list" id="subject-images">
 					{images.map(image => <Image key={image.id} image={image} />)}
 				</ul>
 			);
@@ -40,7 +40,6 @@ class SubjectShow extends React.Component {
 					))}
 				</Nav>
 			);
-			// let image = <img className="subject-image" src={subject.image_url} />;
 			return (
 				<div>
 					{title}

@@ -81,7 +81,6 @@ ActiveRecord::Schema.define(version: 20180427182033) do
 
   create_table "subjects", force: :cascade do |t|
     t.string "title", null: false
-    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_at"], name: "index_subjects_on_created_at"
@@ -103,7 +102,6 @@ ActiveRecord::Schema.define(version: 20180427182033) do
   create_table "topics", force: :cascade do |t|
     t.string "title", null: false
     t.text "notes"
-    t.string "image_url"
     t.integer "subject_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

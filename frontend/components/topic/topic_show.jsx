@@ -27,9 +27,8 @@ class TopicShow extends React.Component {
 		if (topic && checkCards(cards)) {
 			let title = <div className="show-title">{topic.title}</div>;
 			let notes = <div>{topic.notes}</div>;
-			// let image = <img className="topic-image" src={topic.image_url} />;
 			let visuals = (
-				<ul className="images-list">
+				<ul className="images-list" id="topic-images">
 					{images.map(image => <Image key={image.id} image={image} />)}
 				</ul>
 			);

@@ -10,7 +10,11 @@ class SubjectIndex extends React.Component {
 		let list = (
 			<ul className="subjects-grid">
 				{this.props.subjects.map(subject => (
-					<SubjectIndexItem key={subject.id} subject={subject} subjectId={subject.id} />
+					<SubjectIndexItem
+						key={subject.id}
+						subject={subject}
+						subjectId={subject.id}
+					/>
 				))}
 			</ul>
 		);

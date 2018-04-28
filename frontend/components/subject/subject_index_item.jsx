@@ -5,7 +5,7 @@ const SubjectIndexItem = props => {
 	const { subjectId, subject } = props;
 	let item = (
 		<li>
-			<div>{subject.title}</div>
+			<div className="subject-name">{subject.title}</div>
 			<Link to={`/subjects/${subjectId}`}>
 				<img className="subject-image" src={subject.image_url} />
 			</Link>

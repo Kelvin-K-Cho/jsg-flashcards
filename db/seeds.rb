@@ -35,23 +35,19 @@ user.save!
 #========
 
 algorithms = Subject.create(
-  title: "Algorithms",
-  image_url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Algorithms.jpg"
+  title: "Algorithms"
 )
 
 world_wide_web = Subject.create(
-  title: "World Wide Web",
-  image_url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/WorldWideWeb.jpg"
+  title: "World Wide Web"
 )
 
 javascript = Subject.create(
-  title: "JavaScript",
-  image_url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/JavaScript.png"
+  title: "JavaScript"
 )
 
 miscellaneous = Subject.create(
-  title: "Miscellaneous",
-  image_url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Miscellaneous.png"
+  title: "Miscellaneous"
 )
 
 algorithms.save!
@@ -70,7 +66,6 @@ miscellaneous.save!
 heap = Topic.create(
   title: "Heap",
   notes: "A heap is a data structure that is a complete binary tree and it satisfies the heap property. The heap property (in a max heap) is when the value of parent node is greater than or equal to its children and (in a min heap) the value of the parent is less than or equal to its children. Except the root node, the node at the 'top' of the heap, which has no parents.",
-  image_url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/heapsort.gif",
   subject_id: algorithms.id
 )
 

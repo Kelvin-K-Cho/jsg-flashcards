@@ -8,6 +8,7 @@ $quaternary_color: #20232a;
 	text-align: center;
 	flex-direction: column;
 	height: 100vh;
+	overflow: auto;
 	background-color: $secondary_color;
 	font-family: 'Nunito';
 }
@@ -52,8 +53,8 @@ $quaternary_color: #20232a;
 .show-item {
 	list-style: inside;
 	text-align: left;
-	margin-left: 2%;
-	padding: 0.25% 0%;
+	margin-left: 1vw;
+	padding: 0.5vh 0;
 
 	a {
 		display: inline;
@@ -68,7 +69,7 @@ $quaternary_color: #20232a;
 	text-align: left;
 	font-weight: 600;
 	font-size: 150%;
-	margin: 1% 0;
+	margin: 1vh 0;
 }
 
 .studyset-list {

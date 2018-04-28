@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .subjects-grid {
+	margin-top: -2vh;
 	padding: 0;
 	width: 100vw;
 	height: 90vh;
@@ -17,20 +18,22 @@
 	li {
 		font-family: 'Jua';
 		font-size: 150%;
+
+		.subject-name {
+			padding: 1vh 0;
+		}
+
 		.subject-image {
 			padding: auto;
 			margin: auto;
 			height: 80%;
 			width: 80%;
 			border-radius: 4px;
+			transition: all 0.2s ease-in-out;
+		}
+
+		.subject-image:hover {
+			transform: scale(1.1);
 		}
 	}
-}
-
-.subject-image {
-	margin-top: 6vh;
-	margin-right: 12vw;
-	height: 40vmin;
-	width: 40vmin;
-	border-radius: 4px;
 }
