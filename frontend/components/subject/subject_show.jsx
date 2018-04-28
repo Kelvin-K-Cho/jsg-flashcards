@@ -1,26 +1,36 @@
 import React from 'react';
 import { Nav, NavItem } from 'reactstrap';
 import Item from '../miscellaneous/item';
+import Image from '../miscellaneous/image';
 import Loader from '../loader/loader';
 
 class SubjectShow extends React.Component {
 	componentDidMount() {
 		this.props.fetchSubject(this.props.match.params.subjectId);
 		this.props.fetchTopicsBySubject(this.props.match.params.subjectId);
+		this.props.fetchImagesBySubject(this.props.match.params.subjectId);
 	}
 
 	componentDidUpdate(prevProps, prevState) {
-		if (prevProps.match.params.subjectId !== this.props.match.params.subjectId) {
+		if (
+			prevProps.match.params.subjectId !== this.props.match.params.subjectId
+		) {
 			this.props.fetchSubject(this.props.match.params.subjectId);
 			this.props.fetchTopicsBySubject(this.props.match.params.subjectId);
+			this.props.fetchImagesBySubject(this.props.match.params.subjectId);
 		}
 	}
 
 	render() {
-		const { subject, topics } = this.props;
+		const { subject, topics, images } = this.props;
 		if (subject && topics) {
 			let title = <div className="show-title">{subject.title}</div>;
 			let text = <div className="studyset-header">List of Study Sets:</div>;
+			let visuals = (
+				<ul className="images-list">
+					{images.map(image => <Image key={image.id} image={image} />)}
+				</ul>
+			);
 			let list = (
 				<Nav vertical>
 					{topics.map(topic => (
@@ -30,7 +40,7 @@ class SubjectShow extends React.Component {
 					))}
 				</Nav>
 			);
-			let image = <img className="subject-image" src={subject.image_url} />;
+			// let image = <img className="subject-image" src={subject.image_url} />;
 			return (
 				<div>
 					{title}
@@ -39,7 +49,7 @@ class SubjectShow extends React.Component {
 							{text}
 							{list}
 						</div>
-						{image}
+						{visuals}
 					</div>
 				</div>
 			);

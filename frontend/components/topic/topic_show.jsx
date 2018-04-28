@@ -24,7 +24,7 @@ class TopicShow extends React.Component {
 
 	render() {
 		const { topic, images, cards } = this.props;
-		if (topic && images.length && checkCards(cards)) {
+		if (topic && checkCards(cards)) {
 			let title = <div className="show-title">{topic.title}</div>;
 			let notes = <div>{topic.notes}</div>;
 			// let image = <img className="topic-image" src={topic.image_url} />;
