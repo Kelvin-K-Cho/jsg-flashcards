@@ -1,66 +1,63 @@
-heap_why_q = Question.create(
+heap_id = Topic.where(title: "Heap").pluck(:id).first
+recursion_id = Topic.where(title: "Recursion").pluck(:id).first
+dns_id = Topic.where(title: "DNS").pluck(:id).first
+http_id = Topic.where(title: "HTTP").pluck(:id).first
+new_id = Topic.where(title: "new").pluck(:id).first
+event_loop_id = Topic.where(title: "event loop").pluck(:id).first
+grid_id = Topic.where(title: "grid").pluck(:id).first
+redux_id = Topic.where(title: "Redux").pluck(:id).first
+
+Question.create(
   sentence: "What real life problem does implementing a heap solve?",
-  topic_id: heap.id
+  topic_id: heap_id
 )
 
-heap_runtime_max_q = Question.create(
+Question.create(
   sentence: "What is the runtime of finding the max/min of a heap?",
-  topic_id: heap.id
+  topic_id: heap_id
 )
 
-recursion_base_case_q = Question.create(
+Question.create(
   sentence: "What is a base case?",
-  topic_id: recursion.id
+  topic_id: recursion_id
 )
 
-dns_name_q = Question.create(
+Question.create(
   sentence: "What is the full form of DNS?",
-  topic_id: dns.id
+  topic_id: dns_id
 )
 
-http_case_sensitive_q = Question.create(
+Question.create(
   sentence: "Are HTTP methods case-sensitive?",
-  topic_id: http.id
+  topic_id: http_id
 )
 
-new_keyword_kind_q = Question.create(
+Question.create(
   sentence: "What kind of function is 'new'?",
-  topic_id: new_keyword.id
+  topic_id: new_id
 )
 
-new_keyword_invoke_q = Question.create(
+Question.create(
   sentence: "What happens when you try to create a new object without the new keyword?",
-  topic_id: new_keyword.id
+  topic_id: new_id
 )
 
-event_loop_components_q = Question.create(
+Question.create(
   sentence: "What are the components that make up the event loop cycle?",
-  topic_id: event_loop.id
+  topic_id: event_loop_id
 )
 
-grid_why_q = Question.create(
+Question.create(
   sentence: "Why do people use grids to style websites?",
-  topic_id: grid.id
+  topic_id: grid_id
 )
 
-redux_store_methods_q = Question.create(
+Question.create(
   sentence: "What are the different redux store methods?",
-  topic_id: redux.id
+  topic_id: redux_id
 )
 
-redux_context_q = Question.create(
+Question.create(
   sentence: "How can you make the redux store available to all components?",
-  topic_id: redux.id
+  topic_id: redux_id
 )
-
-heap_why_q.save!
-heap_runtime_max_q.save!
-recursion_base_case_q.save!
-dns_name_q.save!
-http_case_sensitive_q.save!
-new_keyword_kind_q.save!
-new_keyword_invoke_q.save!
-event_loop_components_q.save!
-grid_why_q.save!
-redux_store_methods_q.save!
-redux_context_q.save!

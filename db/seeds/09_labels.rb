@@ -1,24 +1,19 @@
-algorithms_label1 = Label.create(
-  subject_id: algorithms.id,
-  image_id: algorithms_image1.id
+Label.create(
+  subject_id: Subject.where(title: "Algorithms").pluck(:id).first,
+  image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Algorithms.jpg").pluck(:id).first
 )
 
-world_wide_web_label1 = Label.create(
-  subject_id: world_wide_web.id,
-  image_id: world_wide_web_image1.id
+Label.create(
+  subject_id: Subject.where(title: "World Wide Web").pluck(:id).first,
+  image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/WorldWideWeb.jpg").pluck(:id).first
 )
 
-javascript_label1 = Label.create(
-  subject_id: javascript.id,
-  image_id: javascript_image1.id
+Label.create(
+  subject_id: Subject.where(title: "JavaScript").pluck(:id).first,
+  image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/JavaScript.png").pluck(:id).first
 )
 
-miscellaneous_label1 = Label.create(
-  subject_id: miscellaneous.id,
-  image_id: miscellaneous_image1.id
+Label.create(
+  subject_id: Subject.where(title: "Miscellaneous").pluck(:id).first,
+  image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Miscellaneous.png").pluck(:id).first
 )
-
-algorithms_label1.save!
-world_wide_web_label1.save!
-javascript_label1.save!
-miscellaneous_label1.save!

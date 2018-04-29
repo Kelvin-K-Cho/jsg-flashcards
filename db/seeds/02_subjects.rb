@@ -1,15 +1,7 @@
-Subject.create(
-  title: "Algorithms"
-)
+subjects = %w(Algorithms World\ Wide\ Web JavaScript Miscellaneous)
 
-Subject.create(
-  title: "World Wide Web"
-)
-
-Subject.create(
-  title: "JavaScript"
-)
-
-Subject.create(
-  title: "Miscellaneous"
-)
+subjects.each do |subject|
+  Subject.create(
+    title: subject
+  )
+end
