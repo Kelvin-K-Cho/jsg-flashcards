@@ -2,19 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.images-list {
-	list-style-type: none;
-}
-
 .image {
 	height: 40vmin;
 	width: 50vmin;
 	border-radius: 4px;
+	box-shadow: 4px 4px 4px black;
+}
+
+.images-list {
+	list-style-type: none;
+	li {
+		padding-top: 2vh;
+	}
 }
 
 #topic-images {
 	margin-top: -8vh;
 	margin-right: 7vw;
+	.image {
+		box-shadow: none;
+	}
 }
 
 #subject-images {

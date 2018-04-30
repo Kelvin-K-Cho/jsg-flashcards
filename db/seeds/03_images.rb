@@ -1,23 +1,13 @@
-Image.create(
-  url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Algorithms.jpg"
+images = %w(https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Algorithms.jpg
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/WorldWideWeb.jpg
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/JavaScript.png
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Miscellaneous.png
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/maxheap.png
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/heapsort.gif
 )
 
-Image.create(
-  url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/WorldWideWeb.jpg"
-)
-
-Image.create(
-  url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/JavaScript.png"
-)
-
-Image.create(
-  url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Miscellaneous.png"
-)
-
-Image.create(
-  url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/maxheap.png"
-)
-
-Image.create(
-  url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/heapsort.gif"
-)
+images.each do |image|
+  Image.create(
+    url: image
+  )
+end

@@ -15,6 +15,10 @@
 	grid-template-columns: repeat(2, 30vmin);
 	grid-template-rows: repeat(2, 30vmin);
 
+	img {
+		box-shadow: 4px 4px 4px black;
+	}
+
 	li {
 		font-family: 'Jua';
 		font-size: 150%;
