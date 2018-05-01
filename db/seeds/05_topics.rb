@@ -8,6 +8,43 @@ miscellaneous_id = Subject.where(title: "Miscellaneous").pluck(:id).first
 #============#
 
 Topic.create(
+  title: "Graph",
+  notes: "A graph is a non-linear abstract data type that is made up of several nodes linked by several connectors.  The nodes are called 'vertices' and connectors are called 'edges'.  Any two nodes that directly connected to each other are said to be adjacent.  Graphs are used to model social networks such as LinkedIn or Facebook.",
+  subject_id: algorithms_id
+)
+
+Topic.create(
+  title: "Adjacency Matrix",
+  notes: "An adjacency matrix is a matrix representaion of a graph where each coordinate designates whether there is an edge between two vertices.
+
+  •  Pros: Representation is easy to implement and follow.  Removal of an edge takes O(1) time.
+  •  Cons: The entire adjacency matrix consumes O(V^2) space where V denotes the number of vertices.  Adding a vertix takes O(V^2) time.
+  ",
+  subject_id: algorithms_id
+)
+
+Topic.create(
+  title: "Adjacency List",
+  notes: "An adjacency list is another approach to modeling a graph and all its edges.  In this case, a linked list is used where each vertix points to the next.  Weights can be stored in this representation.
+
+  •  Pros: Space Complexity on average is O(|V| + |E|).  Worst case scenario consumes an O(V^2) space.  Adding a new vertix takes O(1) time.
+  •  Cons: Searching an adjacency list takes O(V) time.
+  ",
+  subject_id: algorithms_id
+)
+
+Topic.create(
+  title: "Breadth First Search",
+  notes: "Breadth First Search is a search through a graph/tree.  The idea behind a BFS is to look at all the children of the current node, before moving on.  Implementation of a BFS requries the use of a Queue.  The difference between traversing a graph versus a tree is a graph does not visit a visited node twice.",
+  subject_id: algorithms_id
+)
+
+Topic.create(
+  title: "Depth First Search",
+  notes: "Depth First Search is a search through a graph/tree.  The idea behind a DFS is to continuously look through children of each node until no more children can be found.  Once a childless node has been reached, the DFS goes back up one parent and checks the next child until no children are found again.  The cycle repeats until the entire tree/graph is traversed.  Implementation of a DFS requires recursion.  The difference between traversing a graph versus a tree is a graph does not visit a visited node twice.  "
+)
+
+Topic.create(
   title: "Heap",
   notes: "A heap is a data structure that is a complete binary tree and it satisfies the heap property. The heap property (in a max heap) is when the value of parent node is greater than or equal to its children and (in a min heap) the value of the parent is less than or equal to its children. Except the root node, the node at the 'top' of the heap, which has no parents.",
   subject_id: algorithms_id
@@ -22,6 +59,12 @@ Topic.create(
 #================#
 # World Wide Web #
 #================#
+
+Topic.create(
+  title: "REST",
+  notes: "REST stands for Representational State Transfer.",
+  subject_id: world_wide_web_id
+)
 
 Topic.create(
   title: "DNS",
