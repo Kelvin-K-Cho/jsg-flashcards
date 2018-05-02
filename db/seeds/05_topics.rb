@@ -92,7 +92,13 @@ What are the steps of a Topological Sort on a graph?
   4. Start with another unvisited node and repeat until all nodes are visited
   5. Output stack
 
-Time Complexity O( V + E )"
+Time Complexity O( V + E )
+
+Use Cases:
+  • Build Systems
+  • Advanced Packaging Tool (npm, apt-get)
+  • Task Scheduling
+  • Pre-requisite problems"
 )
 
 Topic.create(
@@ -104,6 +110,22 @@ Topic.create(
 Topic.create(
   title: "Recursion",
   notes: "The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called as recursive function.",
+  subject_id: algorithms_id
+)
+
+Topic.create(
+  title: "Dijkastra's algorithm",
+  notes: "Dijsktra's algorithm calculates a list of the shortest distance from a given vertex to every other vertices in a graph.
+
+1. Initialize a set to track a shortest path tree set
+2. Assign distance given node as 0, to all other nodes as MAX_INT at first
+3. Until the set contains all vertices...
+    * Visit the next nearest (shortest distance) vertex, u
+    * Push u into the set
+    * Update the distance value of all adjecent vertices to u
+        * iterate through adj vertices
+        * if (distance from u + edge_u-v.weight) < distance v, then update distance of v
+4. Return the set when it contains all the vertices.",
   subject_id: algorithms_id
 )
 
@@ -165,6 +187,28 @@ When you type a user-friendly hostname into the address bar of a web browser (e.
 )
 
 Topic.create(
+  title: "TCP",
+  notes: "TCP stands for Transport Control Protocol.  When the computer sends or receives packets from or to different routes. One request or response can be delivered in multiple packets, to make sure that all the packets have been delivered, TCP controls it.  It specifies how data gets from its origin to its destination.
+
+• Data is subdivided into smaller packets
+• Each packet individually takes the fastest internet route to its destination
+• TCP attaches a header to each packet which contains instructions and error checking for how to assemble the packets back into the desired data at its destination",
+  subject_id: world_wide_web_id
+)
+
+Topic.create(
+  title: "UDP",
+  notes: "UDP stands for User Datagram Protocol.  It uses a simple connectionless communication model with a minimum of protocol mechanism. message-oriented:
+• Part of the transport layer of TCP/IP
+• Sends data in chunks
+• lightweight headers, no connection required, greater control on when data is sent
+• Often used in bandwidth-heavy, packet loss-tolerant apps, such as gaming and streaming video
+• Used in small transactions i.e. DNS lookup
+• Doesn't guarantee the packets are sent in order.",
+  subject_id: world_wide_web_id
+)
+
+Topic.create(
   title: "HTTP",
   notes: "HTTP stands for HyperText Transfer Protocol and it's the basis for sending data across the World Wide Web.",
   subject_id: world_wide_web_id
@@ -195,6 +239,44 @@ Topic.create(
 Topic.create(
   title: "event loop",
   notes: "The event loop is the process in charge of resolving the event handlers queue. It checks whether the call stack is empty. If it's empty, it then proceeds to resolve the event handlers queue one function at a time.  Commonly, this is done through callbacks, which end up scheduling a function to be executed later",
+  subject_id: javascript_id
+)
+
+Topic.create(
+  title: "IIFE",
+  notes: "Immediate Invoked Function Expression is a function expression which is called immediately after it's defined.
+
+•  Used to create new variable scope
+•  Enables you to attach private data to a function
+•  Creates fresh environments
+•  Avoids polluting the global namespace.",
+  subject_id: javascript_id
+)
+
+Topic.create(
+  title: "== vs. ===",
+  notes: "== checks for equality with coercion
+=== checks for equality ithout coercion == strict equality
+
+2 == '2' // True
+2 === '2' // False
+undefined == null // True
+undefined === null // False",
+  subject_id: javascript_id
+)
+
+Topic.create(
+  title: "this",
+  notes: "'this' is a runtime binding of context to a function call, based on how a function was invoked:
+
+    1. Called with new? Use the newly constructed object.
+    2. Called with call or apply (or bind)? Use the specified object.
+    3. Called with a context object owning the call? Use that context object.
+    4. Default: undefined in strict mode, global object otherwise.
+
+'this' is not a reference to the function nor a reference to lexical scope
+
+ES6 arrow functions pass in lexical scoping for 'this' binding",
   subject_id: javascript_id
 )
 
@@ -269,8 +351,14 @@ Topic.create(
     setState: Yes
 7. componentWillUnmount
     Use Case: Removing any leftover information from the component
-    setState: No
-"
+    setState: No",
+    subject_id: miscellaneous_id
+)
+
+Topic.create(
+  title: "React Overview",
+  notes: "React is a popular frontend library developed in 2013 by Facebook.  It's written in JavaScript and used in the development of single-page applications.",
+  subject_id: miscellaneous_id
 )
 
 Topic.create(
