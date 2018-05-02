@@ -34,26 +34,9 @@ class WeekShow extends React.Component {
 
 	render() {
 		const { week, days } = this.props;
-		if (week && days) {
+		if (week && days.length) {
 			let title = <div className="show-title">{week.title}</div>;
 			let text = <div className="studyset-header">List of Study Sets:</div>;
-			// let list = (
-			// 	<div>
-			// 		{days.map(day => (
-			// 			<Nav vertical key={day.id}>
-			// 				{day.title}
-			// 				{day.topics.map(topic => (
-			// 					<Bullet
-			// 						key={topic.id}
-			// 						bullet={topic}
-			// 						bulletId={topic.id}
-			// 						path={'topics'}
-			// 					/>
-			// 				))}
-			// 			</Nav>
-			// 		))}
-			// 	</div>
-			// );
 			let list = (
 				<div>
 					<Nav tabs>
@@ -72,6 +55,7 @@ class WeekShow extends React.Component {
 					<TabContent activeTab={this.state.activeTab}>
 						{days.map(day => (
 							<TabPane key={day.id} tabId={day.title}>
+								Algorithms
 								{day.topics.map(topic => (
 									<Bullet
 										key={topic.id}
@@ -80,28 +64,11 @@ class WeekShow extends React.Component {
 										path={'topics'}
 									/>
 								))}
+								World Wide Web JavaScript Miscellaneous
 							</TabPane>
 						))}
 					</TabContent>
 				</div>
-				// <Nav>
-				// 	<NavLink
-				// 		className={{ active: this.state.activeTab === '1' }}
-				// 		onClick={() => {
-				// 			this.toggle('1');
-				// 		}}
-				// 	>
-				// 		Tab1
-				// 	</NavLink>
-				// 	<NavLink
-				// 		className={{ active: this.state.activeTab === '2' }}
-				// 		onClick={() => {
-				// 			this.toggle('2');
-				// 		}}
-				// 	>
-				// 		Moar Tabs
-				// 	</NavLink>
-				// </Nav>
 			);
 			return (
 				<div>
