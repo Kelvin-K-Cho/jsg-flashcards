@@ -22,9 +22,4 @@ const fetchTopicBySubject = (subjectId, id) =>
 		url: `api/subjects/${subjectId}/topics/${id}`
 	});
 
-export {
-	fetchTopics,
-	fetchTopic,
-	fetchTopicsBySubject,
-	fetchTopicBySubject
-};
+export { fetchTopics, fetchTopic, fetchTopicsBySubject, fetchTopicBySubject };
