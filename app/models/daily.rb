@@ -3,7 +3,6 @@
 # Table name: dailies
 #
 #  id         :integer          not null, primary key
-#  title      :string
 #  topic_id   :integer          not null
 #  day_id     :integer          not null
 #  created_at :datetime         not null
@@ -12,7 +11,7 @@
 
 class Daily < ApplicationRecord
 
-  validates :deck_id, :day_id, presence: true
+  validates :topic_id, :day_id, presence: true
 
   belongs_to :topic,
     primary_key: :id,

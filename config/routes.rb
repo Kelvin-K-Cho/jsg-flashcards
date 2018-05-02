@@ -24,6 +24,9 @@ Rails.application.routes.draw do
 
     resources :labels, only: [:index, :show]
 
+    resources :dailies, only: [:index, :show]
+
+
     resources :questions, only: [:index, :show] do
       resources :answers, only: [:index, :show]
     end

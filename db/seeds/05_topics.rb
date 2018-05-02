@@ -45,8 +45,8 @@ Topic.create(
 )
 
 Topic.create(
-  title: "Breadth First Search",
-  notes: "Breadth First Search is a search through a graph/tree where all the children of the current node are viewed, before moving on.  Implementation of a BFS requries the use of a Queue.  The difference between traversing a graph versus a tree is a graph does not visit a visited node twice.
+  title: "BFS",
+  notes: "Breadth First Search (BFS) is a search through a graph/tree where all the children of the current node are viewed, before moving on.  Implementation of a BFS requries the use of a Queue.  The difference between traversing a graph versus a tree is a graph does not visit a visited node twice.
 
 What are the steps of a BFS on a graph?
   • Initialize a queue
@@ -63,8 +63,8 @@ What are the steps of a BFS on a graph?
 )
 
 Topic.create(
-  title: "Depth First Search",
-  notes: "Depth First Search is a search through a graph/tree where the first child of each node is searched until no more children can be found.  Once a childless node has been reached, the DFS goes back up one parent and checks the next child until no children are found again.  The cycle repeats until the entire tree/graph is traversed.  Implementation of a DFS requires recursion.  The difference between traversing a graph versus a tree is a graph does not visit a visited node twice.
+  title: "DFS",
+  notes: "Depth First Search (DFS) is a search through a graph/tree where the first child of each node is searched until no more children can be found.  Once a childless node has been reached, the DFS goes back up one parent and checks the next child until no children are found again.  The cycle repeats until the entire tree/graph is traversed.  Implementation of a DFS requires recursion.  The difference between traversing a graph versus a tree is a graph does not visit a visited node twice.
 
 What are the steps of a DFS on a graph?
   • Initialize a stack
@@ -356,7 +356,7 @@ Topic.create(
 )
 
 Topic.create(
-  title: "React Overview",
+  title: "React Review",
   notes: "React is a popular frontend library developed in 2013 by Facebook.  It's written in JavaScript and used in the development of single-page applications.",
   subject_id: miscellaneous_id
 )

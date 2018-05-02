@@ -2,9 +2,9 @@ class Api::DaysController < ApplicationController
 
   def index
     if params[:week_id]
-      @days = Day.where('week_id = ?', params[:week_id]).order(id: :asc)
+      @days = Day.includes(:dailies, :topics).references(:topics).where('week_id = ?', params[:week_id]).order(id: :asc)
     else
-      @days = Day.all
+      @days = Day.includes(:dailies, :topics).references(:topics).all
     end
   end
 

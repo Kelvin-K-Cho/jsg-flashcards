@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20180427182033) do
   end
 
   create_table "dailies", force: :cascade do |t|
-    t.string "title"
     t.integer "topic_id", null: false
     t.integer "day_id", null: false
     t.datetime "created_at", null: false
