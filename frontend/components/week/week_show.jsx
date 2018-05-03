@@ -1,5 +1,6 @@
 import React from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
+import isEmpty from 'lodash/isEmpty';
 import Loader from '../loader/loader';
 import Bullet from '../miscellaneous/bullet';
 
@@ -36,7 +37,7 @@ class WeekShow extends React.Component {
 
 	render() {
 		const { week, days, topics } = this.props;
-		if (week && days.length && topics) {
+		if (week && days.length && !isEmpty(topics)) {
 			let title = <div className="show-title">{week.title}</div>;
 			let text = <div className="studyset-header">List of Study Sets:</div>;
 			let list = (
@@ -45,7 +46,9 @@ class WeekShow extends React.Component {
 						{days.map(day => (
 							<NavLink
 								key={day.id}
-								className={{ active: this.state.activeTab === day.title }}
+								className={
+									this.state.activeTab === `${day.title}` ? 'active' : ''
+								}
 								onClick={() => {
 									this.toggle(day.title);
 								}}
@@ -58,52 +61,56 @@ class WeekShow extends React.Component {
 						{days.map(day => (
 							<TabPane key={day.id} tabId={day.title}>
 								Algorithms <br />
-								{day.topics.map(topic => {
-									if (topic.subject === 'Algorithms') {
+								{day.topics.map(topicId => {
+									let topic = topics[topicId];
+									if (topic && topic.subject === 'Algorithms') {
 										return (
 											<Bullet
-												key={topic.id}
+												key={topicId}
 												bullet={topic}
-												bulletId={topic.id}
+												bulletId={topicId}
 												path={'topics'}
 											/>
 										);
 									}
 								})}
-								World Wide Web
-								{day.topics.map(topic => {
-									if (topic.subject === 'World Wide Web') {
+								World Wide Web <br />
+								{day.topics.map(topicId => {
+									let topic = topics[topicId];
+									if (topic && topic.subject === 'World Wide Web') {
 										return (
 											<Bullet
-												key={topic.id}
+												key={topicId}
 												bullet={topic}
-												bulletId={topic.id}
+												bulletId={topicId}
 												path={'topics'}
 											/>
 										);
 									}
 								})}
-								JavaScript
-								{day.topics.map(topic => {
-									if (topic.subject === 'JavaScript') {
+								JavaScript <br />
+								{day.topics.map(topicId => {
+									let topic = topics[topicId];
+									if (topic && topic.subject === 'JavaScript') {
 										return (
 											<Bullet
-												key={topic.id}
+												key={topicId}
 												bullet={topic}
-												bulletId={topic.id}
+												bulletId={topicId}
 												path={'topics'}
 											/>
 										);
 									}
 								})}
-								Miscellaneous
-								{day.topics.map(topic => {
-									if (topic.subject === 'Miscellaneous') {
+								Miscellaneous <br />
+								{day.topics.map(topicId => {
+									let topic = topics[topicId];
+									if (topic && topic.subject === 'Miscellaneous') {
 										return (
 											<Bullet
-												key={topic.id}
+												key={topicId}
 												bullet={topic}
-												bulletId={topic.id}
+												bulletId={topicId}
 												path={'topics'}
 											/>
 										);

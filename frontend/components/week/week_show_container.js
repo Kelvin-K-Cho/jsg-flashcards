@@ -8,7 +8,7 @@ import { selectDays, selectTopics } from '../../reducers/selectors';
 const mapStateToProps = (state, ownProps) => ({
 	week: state.entities.weeks[ownProps.match.params.weekId],
 	days: selectDays(state),
-	topics: selectTopics(state)
+	topics: state.entities.topics
 });
 
 const mapDispatchToProps = dispatch => ({

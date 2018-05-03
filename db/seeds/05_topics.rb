@@ -12,9 +12,9 @@ Topic.create(
   notes: "A tree is a data structure composed of parent and child nodes. Each node contains a value and a list of references to its child nodes. Trees are particularly useful for storing sorted data that needs to be retrieved quickly, or for representing hierarchical data.
 
 When do you use a tree in interviews?
-•  You have data that is sorted in some way, and you want to do a lot of searches on it.
-•  You need to manage objects that are clustered or grouped by some attribute. File systems are a common hierarchy in which the nodes are either files or directories.
-•  You are trying to implement a search strategy such as backtracking.",
+  •  You have data that is sorted in some way, and you want to do a lot of searches on it.
+  •  You need to manage objects that are clustered or grouped by some attribute. File systems are a common hierarchy in which the nodes are either files or directories.
+  •  You are trying to implement a search strategy such as backtracking.",
 
   subject_id: algorithms_id
 )
