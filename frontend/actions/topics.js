@@ -33,11 +33,23 @@ const fetchTopicBySubject = (subjectId, id) => dispatch =>
 		dispatch(receiveTopic(topic[id]));
 	});
 
+const fetchTopicsByWeek = weekId => dispatch =>
+	TopicAPIUtil.fetchTopicsByWeek(weekId).then(topics => {
+		dispatch(receiveAllTopics(topics));
+	});
+
+const fetchTopicByWeek = (weekId, id) => dispatch =>
+	TopicAPIUtil.fetchTopicByWeek(weekId, id).then(topic => {
+		dispatch(receiveTopic(topic[id]));
+	});
+
 export {
 	RECEIVE_ALL_TOPICS,
 	RECEIVE_TOPIC,
 	fetchTopics,
 	fetchTopic,
 	fetchTopicsBySubject,
-	fetchTopicBySubject
+	fetchTopicBySubject,
+	fetchTopicsByWeek,
+	fetchTopicByWeek
 };

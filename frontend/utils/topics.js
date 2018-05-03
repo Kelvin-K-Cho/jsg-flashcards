@@ -22,4 +22,23 @@ const fetchTopicBySubject = (subjectId, id) =>
 		url: `api/subjects/${subjectId}/topics/${id}`
 	});
 
-export { fetchTopics, fetchTopic, fetchTopicsBySubject, fetchTopicBySubject };
+const fetchTopicsByWeek = weekId =>
+	$.ajax({
+		method: 'GET',
+		url: `api/weeks/${weekId}/topics`
+	});
+
+const fetchTopicByWeek = (weekId, id) =>
+	$.ajax({
+		method: 'GET',
+		url: `api/weeks/${weekId}/topics/${id}`
+	});
+
+export {
+	fetchTopics,
+	fetchTopic,
+	fetchTopicsBySubject,
+	fetchTopicBySubject,
+	fetchTopicsByWeek,
+	fetchTopicByWeek
+};

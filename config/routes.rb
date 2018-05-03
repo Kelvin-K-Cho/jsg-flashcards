@@ -35,6 +35,7 @@ Rails.application.routes.draw do
 
     resources :weeks, only: [:index, :show] do
       resources :days, only: [:index, :show]
+      resources :topics, only: [:index, :show]
     end
 
     resources :searches, only: [:index]

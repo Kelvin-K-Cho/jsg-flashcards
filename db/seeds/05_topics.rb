@@ -98,7 +98,8 @@ Use Cases:
   • Build Systems
   • Advanced Packaging Tool (npm, apt-get)
   • Task Scheduling
-  • Pre-requisite problems"
+  • Pre-requisite problems",
+  subject_id: algorithms_id
 )
 
 Topic.create(
