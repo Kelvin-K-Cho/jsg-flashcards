@@ -7,6 +7,7 @@ import WeeksReducer from './weeks';
 import DaysReducer from './days';
 import SearchesReducer from './search';
 import ImagesReducer from './images';
+import SuggestionsReducer from './suggestions';
 
 const EntitiesReducer = combineReducers({
 	subjects: SubjectsReducer,
@@ -16,7 +17,8 @@ const EntitiesReducer = combineReducers({
 	weeks: WeeksReducer,
 	days: DaysReducer,
 	results: SearchesReducer,
-	images: ImagesReducer
+	images: ImagesReducer,
+	suggestions: SuggestionsReducer
 });
 
 export default EntitiesReducer;

@@ -1,11 +1,7 @@
 import React from 'react';
 import {
-	Collapse,
 	Navbar,
-	NavbarToggler,
 	NavbarBrand,
-	Nav,
-	NavItem,
 	NavLink,
 	Dropdown,
 	DropdownToggle,
@@ -14,7 +10,6 @@ import {
 	Button
 } from 'reactstrap';
 import SearchContainer from '../search/search_container';
-import { Link } from 'react-router-dom';
 import Bullet from '../miscellaneous/bullet';
 
 class Navigation extends React.Component {
@@ -48,7 +43,7 @@ class Navigation extends React.Component {
 	render() {
 		const { currentUser, path, logout } = this.props;
 		let logo = (
-			<NavbarBrand id="logo" href="/#/">
+			<NavbarBrand id="home" href="/#/">
 				<img src={window.staticImages.home} />
 			</NavbarBrand>
 		);
