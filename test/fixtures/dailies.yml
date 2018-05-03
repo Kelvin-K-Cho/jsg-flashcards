@@ -3,7 +3,6 @@
 # Table name: dailies
 #
 #  id         :integer          not null, primary key
-#  title      :string
 #  topic_id   :integer          not null
 #  day_id     :integer          not null
 #  created_at :datetime         not null
