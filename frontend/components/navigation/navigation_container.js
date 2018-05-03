@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import NavBar from './navbar';
+import Navigation from './navigation';
 import { logout } from '../../actions/session';
 import { fetchSubjects } from '../../actions/subjects';
 import { fetchWeeks } from '../../actions/weeks';
@@ -18,6 +18,8 @@ const mapDispatchToProps = dispatch => ({
 	fetchWeeks: () => dispatch(fetchWeeks())
 });
 
-const NavbarContainer = connect(mapStateToProps, mapDispatchToProps)(NavBar);
+const NavigationContainer = connect(mapStateToProps, mapDispatchToProps)(
+	Navigation
+);
 
-export default NavbarContainer;
+export default NavigationContainer;

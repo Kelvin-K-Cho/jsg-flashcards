@@ -17,7 +17,7 @@ import SearchContainer from '../search/search_container';
 import { Link } from 'react-router-dom';
 import Bullet from '../miscellaneous/bullet';
 
-class NavBar extends React.Component {
+class Navigation extends React.Component {
 	constructor(props) {
 		super(props);
 		this.toggleSubjects = this.toggleSubjects.bind(this);
@@ -163,4 +163,4 @@ class NavBar extends React.Component {
 	}
 }
 
-export default NavBar;
+export default Navigation;
