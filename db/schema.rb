@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180427182033) do
+ActiveRecord::Schema.define(version: 20180503174812) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,14 @@ ActiveRecord::Schema.define(version: 20180427182033) do
     t.index ["created_at"], name: "index_days_on_created_at"
     t.index ["updated_at"], name: "index_days_on_updated_at"
     t.index ["week_id"], name: "index_days_on_week_id"
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.text "comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_feedbacks_on_created_at"
+    t.index ["updated_at"], name: "index_feedbacks_on_updated_at"
   end
 
   create_table "images", force: :cascade do |t|
@@ -85,6 +93,14 @@ ActiveRecord::Schema.define(version: 20180427182033) do
     t.index ["created_at"], name: "index_subjects_on_created_at"
     t.index ["title"], name: "index_subjects_on_title", unique: true
     t.index ["updated_at"], name: "index_subjects_on_updated_at"
+  end
+
+  create_table "suggestions", force: :cascade do |t|
+    t.text "comments", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_suggestions_on_created_at"
+    t.index ["updated_at"], name: "index_suggestions_on_updated_at"
   end
 
   create_table "tags", force: :cascade do |t|

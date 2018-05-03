@@ -5,7 +5,6 @@
 #  id         :integer          not null, primary key
 #  title      :string           not null
 #  notes      :text
-#  image_url  :string
 #  subject_id :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
