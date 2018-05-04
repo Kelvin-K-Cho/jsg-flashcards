@@ -43,3 +43,16 @@ Custom-made, secure user authentication implemented using BCrypt to provide a st
   <br />
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/user-authentication.gif">
 </p>
+
+<a name="organized-flashcards">
+<h4 align='center'>
+  <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/app/assets/images/favicon.png" height="30"> Organized Flashcards
+  </h4>
+</a>
+
+An extensive library of flashcards organized into **#topics** and categorized under **#subjects** or **#weeks**.
+
+<p align="center">
+  <br />
+  <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/organized-flashcards.gif">
+</p>
