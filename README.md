@@ -4,4 +4,4 @@
 
 ---
 
-[Job Search Guide](https://github.com/appacademy/job-search-guide) (Private Repo)
+## [Job Search Guide](https://github.com/appacademy/job-search-guide) (Private Repo)
