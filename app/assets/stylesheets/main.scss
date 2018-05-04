@@ -14,7 +14,7 @@ $quaternary_color: #20232a;
 }
 
 .main {
-	margin-top: 12%;
+	margin-top: 16vh;
 	display: flex;
 	text-align: center;
 	flex-direction: column;
@@ -39,6 +39,7 @@ $quaternary_color: #20232a;
 }
 
 .show-container {
+	margin-top: -2vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -73,5 +74,8 @@ $quaternary_color: #20232a;
 }
 
 .studyset-list {
-	margin-left: 4vw;
+	margin: -2vh 0 8vh 4vw;
+	max-height: 70vh;
+	display: flex;
+	flex-direction: column;
 }

@@ -9,7 +9,7 @@ import {
 	DropdownItem,
 	Button
 } from 'reactstrap';
-import SearchContainer from '../search/search_container';
+import Search from '../search/search';
 import Bullet from '../miscellaneous/bullet';
 
 class Navigation extends React.Component {
@@ -130,7 +130,7 @@ class Navigation extends React.Component {
 					{weeks}
 				</div>
 			);
-			search = <SearchContainer />;
+			search = <Search />;
 		} else {
 			if (path === '/signup') {
 				link = login;

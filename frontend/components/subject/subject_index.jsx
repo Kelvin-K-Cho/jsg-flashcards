@@ -8,6 +8,7 @@ class SubjectIndex extends React.Component {
 
 	render() {
 		const { subjects } = this.props;
+		let title = <div className="show-title">Subjects</div>;
 		let list = (
 			<ul className="subjects-grid">
 				{subjects.map(subject => (
@@ -19,7 +20,12 @@ class SubjectIndex extends React.Component {
 				))}
 			</ul>
 		);
-		return list;
+		return (
+			<div>
+				{title}
+				{list}
+			</div>
+		);
 	}
 }
 

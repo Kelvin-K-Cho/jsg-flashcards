@@ -11,7 +11,7 @@ class SuggestionIndex extends React.Component {
 		let list = (
 			<ul className="suggestions">
 				{suggestions.map(suggestion => (
-					<li>
+					<li key={suggestion.id}>
 						<div className="comments">{suggestion.comments}</div>
 					</li>
 				))}

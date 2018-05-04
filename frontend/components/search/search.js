@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, FormGroup, Input, FormText, Button } from 'reactstrap';
+import { withRouter } from 'react-router-dom';
 
 class Search extends React.Component {
 	constructor(props) {
@@ -46,4 +47,4 @@ class Search extends React.Component {
 	}
 }
 
-export default Search;
+export default withRouter(Search);
