@@ -24,4 +24,16 @@ Inspired by App Academy's Job Search Guide curriculum, the application aims to b
 | :----------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
 | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/PostgreSQL.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/Rails.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/jQuery.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/React.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/Redux.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/HTML5.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/CSS3.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/AWS.png" height="30"> |
 
-##
+## Features
+
+* [User Authentication](#user-auth)
+* [Organized Flashcards](#sorted-flashcards)
+* [Search by Topics](#search-topics)
+* [Leave Suggestions](#leave-suggestions)
+
+<a name="user-auth">
+  <h4 align='center'>
+    <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/app/assets/images/favicon.png" height="30">
+    User Authentication
+    </h4>
+</a>
