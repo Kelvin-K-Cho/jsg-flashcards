@@ -51,7 +51,7 @@ Custom-made, secure user authentication implemented using BCrypt to provide a st
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/app/assets/images/favicon.png" height="30"> Organized Flashcards
   </h4>
 </a>
-An extensive library of flashcards organized into __topics__ and categorized under __subjects__ or __weeks__.
+An extensive library of flashcards organized into *topics* and categorized under *subjects* or *weeks*.
 
 <p align="center">
   <br />
@@ -75,7 +75,7 @@ Developed a custom route utilizing Rails' ActiveRecord and PostgreSQL's syntax t
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/app/assets/images/favicon.png" height="30"> Leave Suggestions
   </h4>
 </a>
-In order to preserve the integrity of the flashcards' content and limit CSRF attacks, users can only __read__ flashcards.  Create/Update/Delete are disabled by default.  However, users can still contribute to the flashcards by leaving suggestions.  Suggestions are logged onto the application where they are reviewed and potentially incorporated into future versions of the application.
+In order to preserve the integrity of the flashcards' content and limit CSRF attacks, users can only *read* flashcards.  Create/Update/Delete are disabled by default.  However, users can still contribute to the flashcards by leaving suggestions.  Suggestions are logged onto the application where they are reviewed and potentially incorporated into future versions of the application.
 
 <p align="center">
   <br />
