@@ -48,8 +48,6 @@ Custom-made, secure user authentication implemented using BCrypt to provide a st
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/user-authentication.gif">
 </p>
 
----
-
 <a name="organized-flashcards">
 <h4 align='center'>
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/app/assets/images/favicon.png" height="30"> Organized Flashcards
@@ -62,8 +60,6 @@ An extensive library of flashcards organized into **topics** and categorized und
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/organized-flashcards.gif">
 </p>
 
----
-
 <a name="search-bar">
 <h4 align='center'>
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/app/assets/images/favicon.png" height="30"> Search By Topics
@@ -75,8 +71,6 @@ Developed a custom route utilizing Rails' ActiveRecord and PostgreSQL's syntax t
   <br />
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/search-bar.gif">
 </p>
-
----
 
 <a name="leave-suggestions">
 <h4 align='center'>
