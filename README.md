@@ -84,7 +84,7 @@ In order to preserve the integrity of the flashcards' content and limit CSRF att
 
 ## Future Plans
 
-* Host application on Heroku.
+* <strike>Host application on Heroku</strike>.
 * Finish seeding all eight weeks.
 * Host application on AWS.
 * Implement a study/test mode.
