@@ -26,12 +26,12 @@ Inspired by App Academy's Job Search Guide curriculum, the application aims to b
 
 ## Features
 
-* [User Authentication](#user-auth)
-* [Organized Flashcards](#sorted-flashcards)
-* [Search by Topics](#search-topics)
+* [User Authentication](#user-authentication)
+* [Organized Flashcards](#organized-flashcards)
+* [Search by Topics](#search-by-topics)
 * [Leave Suggestions](#leave-suggestions)
 
-<a name="user-auth">
+<a name="user-authentication">
   <h4 align='center'>
     <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/app/assets/images/favicon.png" height="30">
     User Authentication
