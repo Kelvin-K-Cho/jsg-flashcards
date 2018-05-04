@@ -10,7 +10,7 @@ Inspired by App Academy's Job Search Guide curriculum, the application aims to b
 
 ---
 
-## Technologies <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/PostgreSQL.png" height="30"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/RubyOnRails.png" height="37"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/jQuery.png" height="30"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/React.png" height="30"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/Redux.png" height="25"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/HTML5.png" height="40"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/CSS3.png" height="30">
+## Technologies <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/PostgreSQL.png"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/Rails.png"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/jQuery.png"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/React.png"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/Redux.png"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/HTML5.png"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/CSS3.png">
 
 * PostgreSQL
 * Ruby on Rails
