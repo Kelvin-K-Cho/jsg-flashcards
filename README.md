@@ -7,13 +7,13 @@
 ## Technology
 
 <h6>Built using...</h6>
-+ PostgreSQL 
-+ Ruby on Rails
-+ jQuery
-+ React
-+ Redux
-+ HTML5
-+ CSS3
++PostgreSQL 
++Ruby on Rails
++jQuery
++React
++Redux
++HTML5
++CSS3
 
 <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/PostgreSQL.png" height="50">
 <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/RubyOnRails.png" height="50">
