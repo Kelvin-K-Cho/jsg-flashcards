@@ -33,7 +33,13 @@ Inspired by App Academy's Job Search Guide curriculum, the application aims to b
 
 <a name="user-authentication">
   <h4 align='center'>
-    <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/app/assets/images/favicon.png" height="30">
-    User Authentication
+    <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/app/assets/images/favicon.png" height="30"> User Authentication
     </h4>
 </a>
+
+Custom-made, secure user authentication implemented using BCrypt to provide a stateful session across the client and server in this RESTful web architecture.
+
+<p align="center">
+  <br />
+  <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/user-authentication.gif">
+</p>
