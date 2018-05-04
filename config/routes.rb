@@ -32,7 +32,7 @@ Rails.application.routes.draw do
 
     resources :answers, only: [:index, :show]
 
-    resources :suggestions, only: [:index, :show]
+    resources :suggestions, only: [:index, :show, :create]
 
     resources :weeks, only: [:index, :show] do
       resources :days, only: [:index, :show]
