@@ -9,7 +9,7 @@ const Directory = props => {
 	);
 
 	let suggestions = (
-		<NavLink href="#/suggestions">
+		<NavLink href="#/suggestions/new">
 			<Button outline size="sm">
 				Suggestions ?
 			</Button>

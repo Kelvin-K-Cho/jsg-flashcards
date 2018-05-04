@@ -9,6 +9,7 @@ import {
 	NavLink
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class Signup extends React.Component {
 	constructor(props) {
@@ -46,7 +47,7 @@ class Signup extends React.Component {
 		return (
 			<div className="main">
 				<h2>Hit the ground running!</h2>
-				<div className="session-container">
+				<div className="form-container" id="signup-container">
 					<Form>
 						<FormGroup>
 							Username: &nbsp;
@@ -70,7 +71,7 @@ class Signup extends React.Component {
 								/>
 							</Label>
 						</FormGroup>
-						<div className="session-buttons">
+						<div className="form-buttons" id="signup-buttons">
 							<Button onClick={this.handleSubmit}>Sign Up</Button>
 							<Button onClick={this.handleDemo}>Demo User</Button>
 						</div>
@@ -85,4 +86,4 @@ class Signup extends React.Component {
 	}
 }
 
-export default Signup;
+export default withRouter(Signup);

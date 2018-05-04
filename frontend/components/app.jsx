@@ -11,7 +11,9 @@ import SubjectShowContainer from './subject/subject_show_container';
 import TopicShowContainer from './topic/topic_show_container';
 import WeekShowContainer from './week/week_show_container';
 import ResultContainer from './result/result_container';
-import SuggestionsIndexContainer from './suggestion/suggestion_index_container';
+import SuggestionIndexContainer from './suggestion/suggestion_index_container';
+import SuggestionFormContainer from './suggestion/suggestion_form_container';
+import Confirmation from './confirmation/confirmation';
 
 const App = () => (
 	<div id="app">
@@ -22,7 +24,13 @@ const App = () => (
 			<Route exact path="/" component={Home} />
 			<AuthRoute path="/signup" component={SignupContainer} />
 			<AuthRoute path="/login" component={LoginContainer} />
-			<Route path="/suggestions" component={SuggestionsIndexContainer} />
+			<Route exact path="/suggestions" component={SuggestionIndexContainer} />
+			<Route
+				exact
+				path="/suggestions/new"
+				component={SuggestionFormContainer}
+			/>
+			<Route exact path="/confirmation" component={Confirmation} />
 			<ProtectedRoute
 				exact
 				path="/subjects"

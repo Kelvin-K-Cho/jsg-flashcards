@@ -23,9 +23,9 @@ const fetchSuggestion = id => dispatch =>
 		dispatch(receiveSuggestion(suggestion[id]));
 	});
 
-const createSuggestion = id => dispatch =>
-	SuggestionAPIUtil.createSuggestion(id).then(suggestion => {
-		dispatch(receiveSuggestion(suggestion));
+const createSuggestion = suggestion => dispatch =>
+	SuggestionAPIUtil.createSuggestion(suggestion).then(payload => {
+		dispatch(receiveSuggestion(payload));
 	});
 
 export {
