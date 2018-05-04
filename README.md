@@ -16,6 +16,8 @@ Inspired by App Academy's Job Search Guide curriculum, the application aims to b
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/JSGF.gif">
 </p>
 
+---
+
 ## Technologies
 
 <h4>Built using...</h4>
@@ -24,11 +26,13 @@ Inspired by App Academy's Job Search Guide curriculum, the application aims to b
 | :----------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
 | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/PostgreSQL.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/Rails.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/jQuery.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/React.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/Redux.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/HTML5.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/CSS3.png" height="30"> | <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/AWS.png" height="30"> |
 
+---
+
 ## Features
 
 * [User Authentication](#user-authentication)
 * [Organized Flashcards](#organized-flashcards)
-* [Search by Topics](#search-by-topics)
+* [Search Bar](#search-bar)
 * [Leave Suggestions](#leave-suggestions)
 
 <a name="user-authentication">
@@ -44,15 +48,30 @@ Custom-made, secure user authentication implemented using BCrypt to provide a st
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/user-authentication.gif">
 </p>
 
+---
+
 <a name="organized-flashcards">
 <h4 align='center'>
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/app/assets/images/favicon.png" height="30"> Organized Flashcards
   </h4>
 </a>
-
-An extensive library of flashcards organized into **#topics** and categorized under **#subjects** or **#weeks**.
+An extensive library of flashcards organized into **topics** and categorized under **subjects** or **weeks**.
 
 <p align="center">
   <br />
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/organized-flashcards.gif">
+</p>
+
+---
+
+<a name="search-bar">
+<h4 align='center'>
+  <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/app/assets/images/favicon.png" height="30"> Search By Topics
+  </h4>
+</a>
+Developed a custom route utilizing Rails' ActiveRecord and PostgreSQL's syntax to implement a search bar that allows users to dynamically fetch different kinds of topics relating to the input query.
+
+<p align="center">
+  <br />
+  <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/search-bar.gif">
 </p>
