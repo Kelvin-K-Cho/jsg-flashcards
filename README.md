@@ -16,8 +16,6 @@ Inspired by App Academy's Job Search Guide curriculum, the application aims to b
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/JSGF.gif">
 </p>
 
----
-
 ## Technologies
 
 <h4>Built using...</h4>
@@ -84,8 +82,6 @@ In order to preserve the integrity of the flashcards' content and limit CSRF att
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/leave-suggestions.gif">
 </p>
 
----
-
 ## Future Plans
 
 * Cleaning up unnecessary code.
@@ -93,21 +89,15 @@ In order to preserve the integrity of the flashcards' content and limit CSRF att
 * Finish seeding all eight weeks.
 * Hosting on AWS.
 
----
-
 ## Author
 
 * Kelvin Cho - [GitHub](https://github.com/Kelvin-K-Cho)
-
----
 
 ## Acknowledgements
 
 * Andy Luo - [GitHub](https://github.com/GreenRabite)
 * Lu Fan - [GitHub](https://github.com/LuuuFan)
 * Rose Lee - [GitHub](https://github.com/r-lee1)
-
----
 
 ## Contributing
 
