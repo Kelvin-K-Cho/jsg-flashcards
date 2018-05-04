@@ -10,10 +10,11 @@ Inspired by App Academy's Job Search Guide curriculum, the application aims to b
 
 ---
 
-## Technologies <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/PostgreSQL.png"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/Rails.png"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/jQuery.png"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/React.png"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/Redux.png"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/HTML5.png"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/CSS3.png">
+## Technologies <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/jQuery.png" height="30"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/React.png" height="30"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/Redux.png" height="30"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/HTML5.png" height="30"> <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/CSS3.png" height="30">
 
-* PostgreSQL
-* Ruby on Rails
+<h5>Built using...</h5>
+
+* PostgreSQL <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/PostgreSQL.png" height="30"> + Ruby on Rails <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/Rails.png" height="30"> for the Back-End
 * jQuery
 * React
 * Redux
