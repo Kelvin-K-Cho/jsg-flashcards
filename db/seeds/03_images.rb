@@ -4,6 +4,8 @@ images = %w(https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Algorithms.
   https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/Miscellaneous.png
   https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/maxheap.png
   https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/heapsort.gif
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/graph.png
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/REST.jpeg
 )
 
 images.each do |image|
