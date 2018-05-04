@@ -6,8 +6,8 @@
 
 ## Technology (Built using...)
 
-* PostgreSQL - <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/PostgreSQL.png" height="50">
-* Ruby on Rails - <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/RubyOnRails.png" height="50">
+* <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/PostgreSQL.png" height="30">PostgreSQL
+* <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/RubyOnRails.png" height="30">Ruby on Rails
 
 * jQuery
 * React
