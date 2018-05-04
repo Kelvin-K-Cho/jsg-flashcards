@@ -75,3 +75,26 @@ Developed a custom route utilizing Rails' ActiveRecord and PostgreSQL's syntax t
   <br />
   <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/search-bar.gif">
 </p>
+
+---
+
+<a name="leave-suggestions">
+<h4 align='center'>
+  <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/app/assets/images/favicon.png" height="30"> Leave Suggestions
+  </h4>
+</a>
+In order to preserve the integrity of the flashcards' content and limit CSRF attacks, users can only __read__ flashcards.  Create/Update/Delete are disabled by default.  However, users can still contribute to the flashcards by leaving suggestions.  Suggestions are logged onto the application where they are reviewed and potentially incorporated into future versions of the application.
+
+<p align="center">
+  <br />
+  <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/leave-suggestions.gif">
+</p>
+
+---
+
+## Future Plans
+
+* Cleaning up unnecessary code.
+* Hosting on Heroku.
+* Finish seeding all eight weeks.
+* Hosting on AWS.

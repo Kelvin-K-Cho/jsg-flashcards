@@ -5,7 +5,7 @@ class Confirmation extends React.Component {
 	componentDidMount() {
 		window.setTimeout(() => {
 			this.props.history.go(-2);
-		}, 1000);
+		}, 1250);
 	}
 
 	render() {
