@@ -1,24 +1,7 @@
-# README
+<h1 align="center"><strong>Job Search Guide Flashcards</strong></h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<center>Inspired by App Academy's Job Search Guide curriculum, Job Search Guide Flashcards (or "JSG-Flashcards" for short) is a semi-original, single-page, full-stack web application.</center>
 
-Things you may want to cover:
+---
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Job Search Guide](https://github.com/appacademy/job-search-guide) Private Repo
