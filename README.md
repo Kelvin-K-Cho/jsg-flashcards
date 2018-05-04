@@ -6,16 +6,16 @@
 
 ## Technology
 
-* PostgreSQL
-* Ruby on Rails
+<h5>Built using...</h5>
+* <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/PostgreSQL.png" height="50"> PostgreSQL
+* <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/RubyOnRails.png" height="50"> Ruby on Rails
+
 * jQuery
 * React
 * Redux
 * HTML5
 * CSS3
 
-<img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/PostgreSQL.png" height="50">
-<img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/RubyOnRails.png" height="50">
 <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/jQuery.png" height="50">
 <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/Redux.png" height="50">
 <img src="https://raw.githubusercontent.com/Kelvin-K-Cho/jsg-flashcards/master/images/React.png" height="50">
