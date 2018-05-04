@@ -98,3 +98,23 @@ In order to preserve the integrity of the flashcards' content and limit CSRF att
 * Hosting on Heroku.
 * Finish seeding all eight weeks.
 * Hosting on AWS.
+
+---
+
+## Author
+
+* Kelvin Cho - [GitHub](https://github.com/Kelvin-K-Cho)
+
+---
+
+## Acknowledgements
+
+* Andy Luo - [GitHub](https://github.com/GreenRabite)
+* Lu Fan - [GitHub](https://github.com/LuuuFan)
+* Rose Lee - [GitHub](https://github.com/r-lee1)
+
+---
+
+## Contributing
+
+If you're interested in adding flashcards to the application, please contact the author.
