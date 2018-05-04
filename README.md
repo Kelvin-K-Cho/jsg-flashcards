@@ -84,10 +84,11 @@ In order to preserve the integrity of the flashcards' content and limit CSRF att
 
 ## Future Plans
 
-* Cleaning up unnecessary code.
-* Hosting on Heroku.
+* Host application on Heroku.
 * Finish seeding all eight weeks.
-* Hosting on AWS.
+* Host application on AWS.
+* Implement a study/test mode.
+* Clean up unnecessary code.
 
 ## Author
 
@@ -96,6 +97,7 @@ In order to preserve the integrity of the flashcards' content and limit CSRF att
 ## Acknowledgements
 
 * Andy Luo - [GitHub](https://github.com/GreenRabite)
+* Francesco Martinez - [GitHub](https://github.com/fmbf)
 * Lu Fan - [GitHub](https://github.com/LuuuFan)
 * Rose Lee - [GitHub](https://github.com/r-lee1)
 
