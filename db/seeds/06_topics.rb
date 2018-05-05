@@ -21,7 +21,29 @@ When do you use a tree in interviews?
 
 Topic.create(
   title: "Graph",
-  notes: "A graph is a non-linear abstract data type that is made up of several nodes linked by several connectors.  The nodes are called 'vertices' and connectors are called 'edges'.  Any two nodes that directly connected to each other are said to be adjacent.  Graphs are used to model social networks such as LinkedIn or Facebook.",
+  notes: "A graph is a non-linear data structure that is made up of several nodes linked by several connectors.  The nodes are called 'vertices' and connectors are called 'edges'.  Any two nodes that directly connected to each other are said to be adjacent.  Nodes are used to represent objects and the edges represent some kind of relationship between them.
+
+Graphs are used to model relationships across data such as:
+  •  Computer networks.
+  •  Transportation.
+  •  Compilers.
+  •  Scheduling tasks.
+  •  Matching problems.
+  •  Website links.
+  •  3D graphics.
+  •  Relationships between information.
+
+Directed Graph: A graph where the edges have a specific direction.
+
+Weighted Graph: A graph where the edges have some number, called a weight, associated with them. One example where weighted graphs are used is to represent paths between different locations, where the distances between are given as weights.
+
+Connected Graph: A graph where there is a path given any node to another.
+
+Complete Graph: A graph where there is an edge between every node.
+
+Cyclic Graph: A graph where there is a complete cycle.
+
+Acyclic Graph: A graph where there are no complete cycles.",
   subject_id: algorithms_id
 )
 
@@ -221,13 +243,61 @@ Topic.create(
 
 Topic.create(
   title: "prototype",
-  notes: "In JavaScript, every object can have another object as its prototype. Then the former object inherits all of its prototype’s properties. An object specifies its prototype via the internal property [[Prototype]]. The chain of objects connected by the [[Prototype]] property is called the prototype chain.
+  notes: "In the objected-oriented programming (OOP) paradigm, there exists classes and instances.  Classes serve as the blueprint for every instance and an instance is an object that is a single occurance of an existing class.
 
-The 'prototype' is a property on a constructor function that sets what will become the __proto__ property on the constructed object.
+In JavaScript, there is an in-between object known as the 'Prototype' object.  When you define a class in JavaScript, it comes with a constructor function that points to the Prototype object.  When you instantiate a new instance, it comes with a __proto__ function that points to the Prototype object.  The Prototype object is shared among all objects created using the constructor function.
 
-The __proto__ is an accessor property of the Object.prototype object.
+For the picture on the right, the following code is written:
+  let myVehicle = new Vehicle();
+  console.log(Vehicle.prototype === myVehicle.__proto__); // true
 
-The default 'prototype' is an object with the only property constructor that points back to the function itself.",
+What happens when the constructor is called?
+  1. It creates a new object myVehicle
+  2. It sets the constructor property of the object to Vehicle
+  3. It sets up the object to delegate to Vehicle.prototype
+  4. It calls Vehicle() in the context of the new object
+
+New functions and variables can be assigned to the Prototype object and will be inherited from all instances:
+  function Vehicle() {}
+  Vehicle.prototype.wheels = 4
+  let myVehicle = new Vehicle();
+  console.log(myVehicle.wheels); // 4
+
+Beware of pass by reference properties (such as an array):
+  function Vehicle() {}
+  Vehicle.prototype.passengers = ['a'];
+
+  let myVehicle1 = new Vehicle();
+  let myVehicle2 = new Vehicle();
+
+  myVehicle1.passengers.push('b');
+
+  console.log(myVehicle1.passengers); // ['a', 'b']
+  console.log(myVehicle2.passengers); // ['a', 'b']
+
+To overcome this, apply the passengers property inside the Vehicle class:
+  function Vehicle() {
+    this.passengers = ['a'];
+  }
+
+  let myVehicle1 = new Vehicle();
+  let myVehicle2 = new Vehicle();
+
+  myVehicle1.passengers.push('b');
+
+  console.log(myVehicle1.passengers); // ['a', 'b']
+  console.log(myVehicle2.passengers); // ['a']
+
+The prototype chain is where an object goes up its ancestors to retrieve an inherited property.  Consider the following:
+  var shape = {
+  border: ‘red’
+  };
+
+  var triangle = Object.create(shape); // prototype chain: null => Object => shape => triangle
+
+  triangle.border; // 'red'
+  triangle.area; // undefined
+",
   subject_id: javascript_id
 )
 
