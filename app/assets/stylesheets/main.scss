@@ -41,14 +41,16 @@ $quaternary_color: #20232a;
 }
 
 .show-container {
-	margin-top: -2vh;
+	margin-top: -2.5vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 }
 
 .show-title {
-	margin: 1% 0 0 0;
+	margin-top: 2vh;
+	margin-left: 2vw;
+	margin-right: 2vw;
 	font-family: 'Jua';
 	font-size: 300%;
 }

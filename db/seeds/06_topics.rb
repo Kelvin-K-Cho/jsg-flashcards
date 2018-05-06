@@ -183,8 +183,7 @@ The term, REST, was coined by Roy T. Fielding back in 2000 for his PhD dissertat
 
 Topic.create(
   title: "What happens when you type an URL in the browser and press enter?",
-  notes: "
-  1. Type it in.
+  notes: "1. Type it in.
   2. Lookup address in local DNS(Domain Name System) caches to find an IP address
     • First, it checks the browser cache. The browser maintains a repository of DNS records for a fixed duration for websites you have previously visited. So, it is the first place to run a DNS query.
     • Second, the browser checks the OS cache. If it is not found in the browser cache, the browser would make a system call (i.e. gethostname on Windows) to your underlying computer OS to fetch the record since the OS also maintains a cache of DNS records.
@@ -257,7 +256,7 @@ What happens when the constructor is called?
   3. It sets up the object to delegate to Vehicle.prototype
   4. It calls Vehicle() in the context of the new object
 
-New functions and variables can be assigned to the Prototype object and will be inherited from all instances:
+New functions and variables can be assigned to the Prototype object and will be inherited by all instances:
   function Vehicle() {}
   Vehicle.prototype.wheels = 4
   let myVehicle = new Vehicle();
@@ -290,7 +289,7 @@ To overcome this, apply the passengers property inside the Vehicle class:
 
 The prototype chain is where an object goes up its ancestors to retrieve an inherited property.  Consider the following:
   var shape = {
-  border: ‘red’
+    border: ‘red’
   };
 
   var triangle = Object.create(shape); // prototype chain: null => Object => shape => triangle
