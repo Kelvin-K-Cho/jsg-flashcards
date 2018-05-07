@@ -204,13 +204,16 @@ Topic.create(
     • Second, the browser checks the OS cache. If it is not found in the browser cache, the browser would make a system call (i.e. gethostname on Windows) to your underlying computer OS to fetch the record since the OS also maintains a cache of DNS records.
     • Third, it checks the router cache. If it’s not found on your computer, the browser would communicate with the router that maintains its’ own cache of DNS records.
     • Fourth, it checks the ISP cache. If all steps fail, the browser would move on to the ISP. Your ISP maintains its’ own DNS server which includes a cache of DNS records which the browser would check with the last hope of finding your requested URL.
-  3. Query address in ISP's DNS server
-  ## Return error if not found, else...
-  4. Browser starts a TCP/IP handshake with server
-  5. Browser makes HTTP request to server
-  6. Server handles request and responds
-  7. Server also sends HTTP response
-  8. Browser renders response",
+  3. Query address in ISP's DNS server: If we can't find the address in our cache, the ISP will perform a recursive search from one DNS server to another until the address is found.  These requests use up small packets to travel in the fastest possible way to reach the correct DNS server.
+    ## Return error if not found, else...
+  4. Browser starts a TCP/IP handshake with server: Once the browser has the correct IP address, it initiates a handshake using internet protocols to build a connection. TCP is the most common one used for any type of HTTP request.  This is a three step process where the client and the server exchange SYN(synchronize) and ACK(acknowledge) messages to establish a connection.
+    a) Client machine sends a SYN packet to the server over the internet asking if it is open for new connections.
+    b) If the server has open ports that can accept and initiate new connections, it’ll respond with an ACKnowledgment of the SYN packet using a SYN/ACK packet.
+    c) The client will receive the SYN/ACK packet from the server and will acknowledge it by sending an ACK packet.
+  5. Browser makes HTTP request to server: The Browser can now send any HTTP request from 'GET' to 'POST'
+  6. Server handles request and responds: The server takes the request and passes it to the information to the request handler (usually written in a language like Ruby or PHP) that reads the request/cookies/header to see what is being requested and pass updated information from the server.  The information is then assembled in a parsable format like JSON/XML/HTML.
+  7. Server also sends HTTP response: These HTTP response are usually status codes to indicate how the information was processed.  (e.g: status code 200 for OK)
+  8. Browser renders response: The browser renders in phases.  It first renders the bone HTML skeleton, then it caches any static images and then proceeds to render based on what was retrieved.",
   subject_id: world_wide_web_id
 )
 
