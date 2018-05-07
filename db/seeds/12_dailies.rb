@@ -13,7 +13,7 @@ Daily.create(
 )
 
 Daily.create(
-  topic_id: Topic.where(title: "prototype").pluck(:id).first,
+  topic_id: Topic.where(title: "Prototype").pluck(:id).first,
   day_id: Day.where(week_id: "1", title: "Day 1").pluck(:id).first
 )
 
@@ -23,7 +23,7 @@ Daily.create(
 )
 
 Daily.create(
-  topic_id: Topic.where(title: "How do media queries work?").pluck(:id).first,
+  topic_id: Topic.where(title: "Media Query").pluck(:id).first,
   day_id: Day.where(week_id: "1", title: "Day 1").pluck(:id).first
 )
 

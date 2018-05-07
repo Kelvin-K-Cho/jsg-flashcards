@@ -197,7 +197,7 @@ The term, REST, was coined by Roy T. Fielding back in 2000 for his PhD dissertat
 )
 
 Topic.create(
-  title: "What happens when you type an URL in the browser and press enter?",
+  title: "What happens when you type a URL in the browser and press enter?",
   notes: "1. Type it in.
   2. Lookup address in local DNS(Domain Name System) caches to find an IP address
     • First, it checks the browser cache. The browser maintains a repository of DNS records for a fixed duration for websites you have previously visited. So, it is the first place to run a DNS query.
