@@ -362,32 +362,24 @@ Topic.create(
 
 Topic.create(
   title: "Benefits of HTML5",
-  notes: "
-  1. Be more accessible (e.g. screenreaders with semantics)
-  2. Video and audio support
-  3. Doctype to clean up on unnecessary header clutter for compatibility between the different browsers
-  4. Can clear up code making it more readable by having more semantics (nav/header instead of div)
-  5. Smarter storage that allow for sessions to persist across different sessions and windows
-  6. Canvas introduced an easy way to interact and animate with the user
-  7. Allow for great game development
-  8. Great legacy and cross browser support
-  9. Mobile friendly - both to develop on and user",
+  notes: "Released back in October 2014 by the World Wide Web Consortium (W3C), HTML5 is the latest iteration of a markup language used for structuring and presenting content across the World Wide Web.  The benefits are:
+  1. Be more accessible (e.g. screenreaders with semantics): new page structure elements such as <main>, <section>, <article>, <header>, <footer>, <aside>, <nav> and <figure>, are added.
+  2. Video and audio support: <audio> and <video> tags were added to allow easy parsing of media files as if it were an image.
+  3. <!DOCTYPE> to clean up on unnecessary header clutter for compatibility between the different browsers: <!DOCTYPE> is the declaration made to at the top of any html file to instruct the web browser on how to render the content. <!DOCTYPE> in HTML5 simplifies the process as it's one line compared to the multi-line mess from older versions of HTML.
+  4. Can clear up code making it more readable by having more semantics (nav/header instead of div): More semantics such as <nav> were added to simplify having to write out <div id='nav'/> instead.
+  5. Smarter storage that allow for sessions to persist across different sessions and windows: Local storage allows users to store different information across different windows that will persist when the windows are closed.  This information is stored via client-side and can parsed with third-party plug-ins.
+  6. Canvas introduced an easy way to interact and animate with the user: The <canvas> tag draws interactive and animated content implemented with JavaScript.
+  7. Allow for great game development: In addition to the animated content, the <canvas> tag allows people to create games with it as well.
+  8. Great legacy and cross browser support: HTML5 is not only used by all the popular browsers, it can also be used by legacy browsers such as IE6.
+  9. Mobile friendly - both to develop on and user: Can be used to render content for mobile devices to allow for responsive design.",
   subject_id: miscellaneous_id
 )
 
 Topic.create(
   title: "How do media queries work?",
-  notes: "Media query is a CSS technique introduced in CSS3.
+  notes: "Media query is a CSS technique introduced in CSS3.  It uses the @media rule to include a block of CSS properties only if a certain condition is true.
 
-It uses the @media rule to include a block of CSS properties only if a certain condition is true.
-
-Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices).
-
-This means that we must make some changes in our CSS.
-
-Instead of changing styles when the width gets smaller than 768px, we should change the design when the width gets larger than 768px. This will make our design Mobile First.
-
-Usually broken up into different device sizes",
+Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices).",
   subject_id: miscellaneous_id
 )
 
