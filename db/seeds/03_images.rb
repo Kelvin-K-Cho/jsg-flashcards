@@ -15,6 +15,9 @@ images = %w(
   https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/prototype_chain.jpg
   https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/maxheap.png
   https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/heapsort.gif
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/HTML5.png
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/media_query.png
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_matrix.png
 )
 
 images.each do |image|

@@ -49,6 +49,21 @@ Tag.create(
 )
 
 Tag.create(
+  topic_id: Topic.where(title: "Benefits of HTML5").pluck(:id).first,
+  image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/HTML5.png").pluck(:id).first
+)
+
+Tag.create(
+  topic_id: Topic.where(title: "Media Query").pluck(:id).first,
+  image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/media_query.png").pluck(:id).first
+)
+
+Tag.create(
+  topic_id: Topic.where(title: "Adjacency Matrix").pluck(:id).first,
+  image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_matrix.png").pluck(:id).first
+)
+
+Tag.create(
   topic_id: Topic.where(title: "Heap").pluck(:id).first,
   image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/maxheap.png").pluck(:id).first
 )

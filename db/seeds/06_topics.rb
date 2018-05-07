@@ -49,10 +49,18 @@ Acyclic Graph: A graph where there are no complete cycles.",
 
 Topic.create(
   title: "Adjacency Matrix",
-  notes: "An adjacency matrix is a matrix representation of a graph where each coordinate designates whether there is an edge between two vertices.
-•  Pros: Representation is easy to implement and follow.  Removal of an edge takes O(1) time.
-•  Cons: The entire adjacency matrix consumes O(V^2) space where V denotes the number of vertices.
-      Adding a vertix takes O(V^2) time.
+  notes: "An adjacency matrix is a 2D array representation of a graph where each coordinate designates whether there is an edge between two vertices.  At each location in the matrix is stored the weight of the edge that connects those two nodes if there is one.  For the locations in the adjacency matrix where there is no edge, we can store a sentinel value such as 0 or -1. In most applications weights that are zero or less would not be used (such as for distances).  For unweighted graphs, the values stored in the matrix can just be true or false.
+
+  Big O Notation: where 'v' denotes vertices and 'e' denotes edges.
+    Storage: O(v²), a 2d matrix is made up of v arrays each of size v.
+    Add Vertix: O(v²), in order to add a new vertix to the matrix, the whole matrix has to be rebuilt.
+    Add Edge: O(1), given we know the two vertices we're trying to connect, we can easily key into the matrix to add edge.
+    Remove Vertix: O(v²), when we remove a vertix from the matrix, the whole matrix has to be rebuilt.
+    Remove Edge: O(1), given we know the two vertices we're trying to connect, we can easily key into the matrix to remove edge.
+    Query: O(1), we can key into the matrix to look up the relationship between any two vertices.
+
+  Pros: Representation is easy to implement and follow.  Removal of an edge takes O(1) time.
+  Cons: The entire adjacency matrix consumes O(v²) space where v denotes the number of vertices.  Adding a vertix takes O(v²) time.
   ",
   subject_id: algorithms_id
 )
@@ -376,7 +384,7 @@ Topic.create(
 )
 
 Topic.create(
-  title: "How do media queries work?",
+  title: "Media Query",
   notes: "Media query is a CSS technique introduced in CSS3.  It uses the @media rule to include a block of CSS properties only if a certain condition is true.
 
 Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices).",
