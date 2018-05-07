@@ -39,12 +39,12 @@ Tag.create(
 )
 
 Tag.create(
-  topic_id: Topic.where(title: "prototype").pluck(:id).first,
+  topic_id: Topic.where(title: "Prototype").pluck(:id).first,
   image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/prototype.jpg").pluck(:id).first
 )
 
 Tag.create(
-  topic_id: Topic.where(title: "prototype").pluck(:id).first,
+  topic_id: Topic.where(title: "Prototype").pluck(:id).first,
   image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/prototype_chain.jpg").pluck(:id).first
 )
 
@@ -61,6 +61,16 @@ Tag.create(
 Tag.create(
   topic_id: Topic.where(title: "Adjacency Matrix").pluck(:id).first,
   image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_matrix.png").pluck(:id).first
+)
+
+Tag.create(
+  topic_id: Topic.where(title: "Adjacency List").pluck(:id).first,
+  image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_list.png").pluck(:id).first
+)
+
+Tag.create(
+  topic_id: Topic.where(title: "Closure").pluck(:id).first,
+  image_id: Image.where(url: "https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/closure.png").pluck(:id).first
 )
 
 Tag.create(

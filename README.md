@@ -96,7 +96,7 @@ In order to preserve the integrity of the flashcards' content and limit CSRF att
 
 ## Acknowledgements
 
-* Alvin James Delos Santos [GitHub](https://github.com/ajdelossantos)
+* Alvin James Delos Santos - [GitHub](https://github.com/ajdelossantos)
 * Andy Luo - [GitHub](https://github.com/GreenRabite)
 * Francesco Martinez - [GitHub](https://github.com/fmbf)
 * Lu Fan - [GitHub](https://github.com/LuuuFan)

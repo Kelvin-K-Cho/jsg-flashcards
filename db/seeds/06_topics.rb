@@ -51,26 +51,33 @@ Topic.create(
   title: "Adjacency Matrix",
   notes: "An adjacency matrix is a 2D array representation of a graph where each coordinate designates whether there is an edge between two vertices.  At each location in the matrix is stored the weight of the edge that connects those two nodes if there is one.  For the locations in the adjacency matrix where there is no edge, we can store a sentinel value such as 0 or -1. In most applications weights that are zero or less would not be used (such as for distances).  For unweighted graphs, the values stored in the matrix can just be true or false.
 
-  Big O Notation: where 'v' denotes vertices and 'e' denotes edges.
-    Storage: O(v²), a 2d matrix is made up of v arrays each of size v.
-    Add Vertix: O(v²), in order to add a new vertix to the matrix, the whole matrix has to be rebuilt.
-    Add Edge: O(1), given we know the two vertices we're trying to connect, we can easily key into the matrix to add edge.
-    Remove Vertix: O(v²), when we remove a vertix from the matrix, the whole matrix has to be rebuilt.
-    Remove Edge: O(1), given we know the two vertices we're trying to connect, we can easily key into the matrix to remove edge.
-    Query: O(1), we can key into the matrix to look up the relationship between any two vertices.
+Big O Notation: where 'v' denotes vertices and 'e' denotes edges.
+  •  Storage: O(v²), a 2d matrix is made up of v arrays each of size v.
+  •  Add Vertix: O(v²), in order to add a new vertix to the matrix, the whole matrix has to be rebuilt.
+  •  Add Edge: O(1), given we know the two vertices we're trying to connect, we can easily key into the matrix to add edge.
+  •  Remove Vertix: O(v²), when we remove a vertix from the matrix, the whole matrix has to be rebuilt.
+  •  Remove Edge: O(1), given we know the two vertices we're trying to connect, we can easily key into the matrix to remove edge.
+  •  Query: O(1), we can key into the matrix to look up the relationship between any two vertices.
 
-  Pros: Representation is easy to implement and follow.  Removal of an edge takes O(1) time.
-  Cons: The entire adjacency matrix consumes O(v²) space where v denotes the number of vertices.  Adding a vertix takes O(v²) time.
-  ",
+Pros: Representation is easy to implement and follow.  Removal of an edge takes O(1) time.
+Cons: The entire adjacency matrix consumes O(v²) space where v denotes the number of vertices.  Adding a vertix takes O(v²) time.",
   subject_id: algorithms_id
 )
 
 Topic.create(
   title: "Adjacency List",
-  notes: "An adjacency list is another approach to modeling a graph and all its edges.  In this case, a linked list is used where each vertix points to the next.  Weights can be stored in this representation.
-•  Pros: Space Complexity on average is O(|V| + |E|).  Worst case scenario consumes an O(V^2) space.  Adding a new vertix takes O(1) time.
-•  Cons: Searching an adjacency list takes O(V) time.
-  ",
+  notes: "An adjacency list is another approach to modeling a graph and all its edges.  In this case, a linked list is used where each vertix points to all its connections.  Each element in the linked list represents one edge in the graph, and stores the target node and the weight (if any).  To add an edge to the graph, we would go to the linked list associated with the node the edge is coming from, and insert a new edge in that list. To find whether or not an edge connects two nodes, and what the weight is, we have to search the list of edges.
+
+Big O Notation: where 'v' denotes vertices and 'e' denotes edges.
+  •  Storage: O(|v|+|e|), each vertix and edge are stored only once.
+  •  Add Vertix: O(1), in order to add a new vertix, we just build a new entry.
+  •  Add Edge: O(1), given we know the vertix we're trying to connect, we can easily add an edge to the end of that linked list.
+  •  Remove Vertix: O(|v|+|e|), when we remove a vertix from the linked list, we need to go through each entry to ensure not only the vertix is removed, but all its edges are as well.
+  •  Remove Edge: O(|e|), given we know the edge we're trying to remove, we must traverse all the edges in a vertix in the worst case.
+  •  Query: O(|v|), we can find the information we're looking for quickly, but we must go through every vertix.
+
+Pros: Space Complexity on average is O(|v| + |e|).  Worst case scenario consumes an O(v²) space.  Adding a new vertix takes O(1) time.
+Cons: Searching an adjacency list takes O(v) time.",
   subject_id: algorithms_id
 )
 
@@ -249,7 +256,7 @@ Topic.create(
 #============#
 
 Topic.create(
-  title: "prototype",
+  title: "Prototype",
   notes: "In the objected-oriented programming (OOP) paradigm, there exists classes and instances.  Classes serve as the blueprint for every instance and an instance is an object that is a single occurance of an existing class.
 
 In JavaScript, there is an in-between object known as the 'Prototype' object.  When you define a class in JavaScript, it comes with a constructor function that points to the Prototype object.  When you instantiate a new instance, it comes with a __proto__ function that points to the Prototype object.  The Prototype object is shared among all objects created using the constructor function.
@@ -310,7 +317,16 @@ The prototype chain is where an object goes up its ancestors to retrieve an inhe
 
 Topic.create(
   title: "Closure",
-  notes: "Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope. Closures are used for data privacy, stateful functions, and (partial) application.  The biggest draw is that it allows data encapsulation. This refers to the idea that some data should not be directly exposed.  Here, bar() has a reference to the scope of foo() - closure.",
+  notes: "Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope. Closures are used for data privacy, stateful functions, and (partial) application.  The biggest draw is that it allows data encapsulation which refers to the idea that some data should not be directly exposed.
+
+Consider the following code:
+1.  let a = 3; // The variable 'a' is declared in the global scope.
+2.  function addTwo(x){ // The function addTwo is declared and defined.  Everything defined within the {} is known as the lexical scope.
+3.      let result = x + 2;  // The variable result is defined here.  It has access to the parameter 'x' since that was passed into the function.  This part is known as the closure.
+4.      return result; // The result is returned and execution of the function ends.
+5.  } // The function definition ends here.
+6.  let b = addTwo(a); // The variable 'b' is declared.  JavaScript looks for the function addTwo which was defined previously in the global scope and executes it.  This function now has access to the result variable which has been encapsulated inside the addTwo function.
+7.  console.log(b); // 5 is logged here.  If we were to try and log the result variable, we would get an error instead since it isn't defined.",
   subject_id: javascript_id
 )
 
@@ -385,7 +401,7 @@ Topic.create(
 
 Topic.create(
   title: "Media Query",
-  notes: "Media query is a CSS technique introduced in CSS3.  It uses the @media rule to include a block of CSS properties only if a certain condition is true.
+  notes: "Media query is a CSS technique introduced in CSS3.  It uses the @media rule to include a block of CSS properties only when a certain size of the window is true.
 
 Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices).",
   subject_id: miscellaneous_id

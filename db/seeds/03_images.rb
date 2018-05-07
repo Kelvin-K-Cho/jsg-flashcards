@@ -18,6 +18,8 @@ images = %w(
   https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/HTML5.png
   https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/media_query.png
   https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_matrix.png
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_list.png
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/closure.png
 )
 
 images.each do |image|
