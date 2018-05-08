@@ -71,12 +71,12 @@ Daily.create(
 )
 
 Daily.create(
-  topic_id: Topic.where(title: "What happens when you type an URL in the browser and press enter?").pluck(:id).first,
+  topic_id: Topic.where(title: "What happens when you type a URL in the browser and press enter?").pluck(:id).first,
   day_id: Day.where(week_id: "1", title: "Day 3").pluck(:id).first
 )
 
 Daily.create(
-  topic_id: Topic.where(title: "event loop").pluck(:id).first,
+  topic_id: Topic.where(title: "Event Loop").pluck(:id).first,
   day_id: Day.where(week_id: "1", title: "Day 3").pluck(:id).first
 )
 

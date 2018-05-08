@@ -94,8 +94,7 @@ What are the steps of a BFS on a graph?
   • Move to node at head of the queue
       - Dequeue node at head
       -  Repeat...(visit and mark all adjecent neighbors)
-  • If all neighbors visited, go to head of queue
-  ",
+  • If all neighbors visited, go to head of queue",
   subject_id: algorithms_id
 )
 
@@ -129,7 +128,7 @@ What are the steps of a Topological Sort on a graph?
   4. Start with another unvisited node and repeat until all nodes are visited
   5. Output stack
 
-Time Complexity O( V + E )
+Time Complexity O( v + e )
 
 Use Cases:
   • Build Systems
@@ -334,8 +333,30 @@ Consider the following code:
 )
 
 Topic.create(
-  title: "event loop",
-  notes: "The event loop is the process in charge of resolving the event handlers queue. It checks whether the call stack is empty. If it's empty, it then proceeds to resolve the event handlers queue one function at a time.  Commonly, this is done through callbacks, which end up scheduling a function to be executed later",
+  title: "Event Loop",
+notes: "JavaScript is single-threaded and asynchronous.  This means:
+•  Single-threaded: JavaScript can only execute one line of code at a time.
+•  Asynchronous: JavaScript can schedule code to execute at a later time.
+
+Consider the following code:
+```
+1.  console.log('Hello.');
+2.  setTimeout(function(){
+3.    console.log('Goodbye!');
+4.  }, 2000);
+5.  console.log('How are you doing?');
+```
+
+As with what you would expect, JavaScript like most languages can only read one line of code at a time.  It cannot read and perform lines 1 and 5 at the same time.  It would perform line 1 first, followed by line 2 and so on.  This is the single-threaded aspect of JavaScript.
+
+However, unlike what you might expect, the logs will not print out 'Hello. Goodbye! How are you?'.  Instead, it will print out 'Hello.  How are you?  Goodbye!'.  Even though 'Goodbye' shows up before 'How are you?', the function was thrown in an asynchronous function that was scheduled to perform at a later time.  This is what is meant when JavaScript is called asynchronous.
+
+The JavaScript runtime engine is made up of several different components:
+•  Heap: Objects created in the JavaScript are allocated here to memory.  (e.g: var num = 1;)
+•  Call Stack: The data structure which records function calls.  Every time we call a new function in our JavaScript program, we push that function on top of any function we're currently running.
+•  Web API's: The component that stores all our asynchronous functions which we can call at any time in our program.
+•  Callback Queue: The data structure which houses all the asynchronous functions we have called when we executed our program.
+•  Event Loop: The component responsible for ensuring the Call Stack is empty and dequeues each function in the Callback Queue in order one function at a time.",
   subject_id: javascript_id
 )
 

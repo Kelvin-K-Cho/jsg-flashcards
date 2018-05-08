@@ -21,6 +21,7 @@ images = %w(
   https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_list.png
   https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/closure.png
   https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/css_grid.png
+  https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/bfs.gif
 )
 
 images.each do |image|
