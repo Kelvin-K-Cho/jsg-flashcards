@@ -1,8 +1,10 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import sanitizeHTML from 'sanitize-html';
 import Loader from '../loader/loader';
 import { Container, Row, Col } from 'reactstrap';
 import Card from '../miscellaneous/card';
-import Image from '../miscellaneous/image';
+
 import { checkCards } from '../../reducers/selectors';
 
 class TopicShow extends React.Component {
@@ -10,7 +12,6 @@ class TopicShow extends React.Component {
 		this.props.fetchTopic(this.props.match.params.topicId);
 		this.props.fetchQuestionsByTopic(this.props.match.params.topicId);
 		this.props.fetchAnswersByTopic(this.props.match.params.topicId);
-		this.props.fetchImagesByTopic(this.props.match.params.topicId);
 	}
 
 	componentDidUpdate(prevProps, prevState) {
@@ -18,7 +19,6 @@ class TopicShow extends React.Component {
 			this.props.fetchTopic(this.props.match.params.topicId);
 			this.props.fetchQuestionsByTopic(this.props.match.params.topicId);
 			this.props.fetchAnswersByTopic(this.props.match.params.topicId);
-			this.props.fetchImagesByTopic(this.props.match.params.topicId);
 		}
 	}
 
@@ -26,11 +26,14 @@ class TopicShow extends React.Component {
 		const { topic, images, cards } = this.props;
 		if (topic && checkCards(cards)) {
 			let title = <div className="show-title">{topic.title}</div>;
-			let notes = <div>{topic.notes}</div>;
-			let visuals = (
-				<ul className="images-list" id="topic-images">
-					{images.map(image => <Image key={image.id} image={image} />)}
-				</ul>
+			let notes = sanitizeHTML(topic.notes);
+			let body = (
+				<ReactMarkdown
+					className="topic-notes"
+					skipHtml={false}
+					escapeHtml={false}
+					source={notes}
+				/>
 			);
 			let list = (
 				<Container>
@@ -48,10 +51,9 @@ class TopicShow extends React.Component {
 					{title}
 					<div className="show-container">
 						<div className="details-container">
-							{notes}
+							{body}
 							{list}
 						</div>
-						{visuals}
 					</div>
 				</div>
 			);

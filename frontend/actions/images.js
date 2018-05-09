@@ -23,16 +23,6 @@ const fetchImage = id => dispatch =>
 		dispatch(receiveImage(image[id]));
 	});
 
-const fetchImagesByTopic = topicId => dispatch =>
-	ImageAPIUtil.fetchImagesByTopic(topicId).then(images => {
-		dispatch(receiveAllImages(images));
-	});
-
-const fetchImageByTopic = (topicId, id) => dispatch =>
-	ImageAPIUtil.fetchImageByTopic(topicId, id).then(image => {
-		dispatch(receiveImage(image[id]));
-	});
-
 const fetchImagesBySubject = subjectId => dispatch =>
 	ImageAPIUtil.fetchImagesBySubject(subjectId).then(images => {
 		dispatch(receiveAllImages(images));
@@ -48,8 +38,6 @@ export {
 	RECEIVE_IMAGE,
 	fetchImages,
 	fetchImage,
-	fetchImagesByTopic,
-	fetchImageByTopic,
 	fetchImagesBySubject,
 	fetchImageBySubject
 };

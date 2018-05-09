@@ -19,7 +19,7 @@ class ResultIndex extends React.Component {
 
 	render() {
 		const { results } = this.props;
-		let title = <div className="result-title">Results</div>;
+		let title = <div className="show-title">Results</div>;
 		let text = <div className="studyset-header">List of Study Sets:</div>;
 		let list = <div id="found-nothing">No matches found!</div>;
 		if (results.length) {

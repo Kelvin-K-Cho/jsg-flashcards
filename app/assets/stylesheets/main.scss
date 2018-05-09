@@ -14,7 +14,7 @@ $quaternary_color: #20232a;
 }
 
 .main {
-	margin-top: 20vh;
+	margin-top: 26vh;
 	margin-left: 4vw;
 	margin-right: 4vw;
 	display: flex;
@@ -48,7 +48,7 @@ $quaternary_color: #20232a;
 }
 
 .show-title {
-	margin-top: 2vh;
+	margin-top: 8vh;
 	margin-left: 2vw;
 	margin-right: 2vw;
 	font-family: 'Jua';
@@ -70,16 +70,16 @@ $quaternary_color: #20232a;
 	}
 }
 
+.studyset-list {
+	margin: 2vh 0 8vh 4vw;
+	max-height: 70vh;
+	display: flex;
+	flex-direction: column;
+}
+
 .studyset-header {
 	text-align: left;
 	font-weight: 600;
 	font-size: 150%;
 	margin: 1vh 0;
-}
-
-.studyset-list {
-	margin: -2vh 0 8vh 4vw;
-	max-height: 70vh;
-	display: flex;
-	flex-direction: column;
 }
