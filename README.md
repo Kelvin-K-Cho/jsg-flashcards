@@ -87,6 +87,7 @@ In order to preserve the integrity of the flashcards' content and limit CSRF att
 * <strike>Host application on Heroku</strike>.
 * Finish seeding all eight weeks.
 * Deploy application on AWS.
+* Write my own tests.
 * Implement a study/test mode.
 * Clean up unnecessary code.
 

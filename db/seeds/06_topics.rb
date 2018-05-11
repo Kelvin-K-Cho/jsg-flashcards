@@ -21,9 +21,8 @@ When do you use a tree in interviews?
 
 Topic.create(
   title: "Graph",
-  notes: "![basic_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/basic_graph.png)
+  notes: "![basic_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/basic_graph.png)
 *A graph is a non-linear data structure that is made up of several nodes linked by several connectors.  The nodes are called 'vertices' and connectors are called 'edges'.  Any two nodes that directly connected to each other are said to be adjacent.  Nodes are used to represent objects and the edges represent some kind of relationship between them.*
-
 
 Graphs are used to model relationships across data such as:
   •  Computer networks.
@@ -36,35 +35,35 @@ Graphs are used to model relationships across data such as:
   •  Relationships between information.
 
 # Directed Graph
-![directed_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/directed_graph.png)
+![directed_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/directed_graph.png)
 *A graph where the edges have a specific direction.*
 
 
 # Weighted Graph
-![weighted_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/weighted_graph.png)
+![weighted_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/weighted_graph.png)
 *A graph where the edges have some number, called a weight, associated with them. One example where weighted graphs are used is to represent paths between different locations, where the distances between are given as weights.*
 
 # Connected Graph
-![connected_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/connected_graph.png)
+![connected_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/connected_graph.png)
 *A graph where there is a path given any node to another.*
 
 # Complete Graph
-![complete_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/complete_graph.png)
+![complete_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/complete_graph.png)
 *A graph where there is an edge between every node.*
 
 # Cyclic Graph
-![cyclic_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/cyclic_graph.png)
+![cyclic_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/cyclic_graph.png)
 *A graph where there is a complete cycle.*
 
 # Acyclic Graph
-![acyclic_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/acyclic_graph.png)
+![acyclic_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/acyclic_graph.png)
 *A graph where there are no complete cycles.*",
   subject_id: algorithms_id
 )
 
 Topic.create(
   title: "Adjacency Matrix",
-  notes: "![adjacency_matrix](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_matrix.png)
+  notes: "![adjacency_matrix {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_matrix.png)
 
 *An adjacency matrix is a 2D array representation of a graph where each coordinate designates whether there is an edge between two vertices.  At each location in the matrix is stored the weight of the edge that connects those two nodes if there is one.  For the locations in the adjacency matrix where there is no edge, we can store a sentinel value such as 0 or -1. In most applications weights that are zero or less would not be used (such as for distances).  For unweighted graphs, the values stored in the matrix can just be true or false.*
 
@@ -83,7 +82,7 @@ Cons: The entire adjacency matrix consumes O(v²) space where v denotes the numb
 
 Topic.create(
   title: "Adjacency List",
-  notes: "![adjacency_list](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_list.png)
+  notes: "![adjacency_list {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_list.png)
 
 *An adjacency list is another approach to modeling a graph and all its edges.  In this case, a linked list is used where each vertix points to all its connections.  Each element in the linked list represents one edge in the graph, and stores the target node and the weight (if any).  To add an edge to the graph, we would go to the linked list associated with the node the edge is coming from, and insert a new edge in that list. To find whether or not an edge connects two nodes, and what the weight is, we have to search the list of edges.*
 
@@ -102,9 +101,11 @@ Cons: Searching an adjacency list takes O(v) time.",
 
 Topic.create(
   title: "BFS",
-  notes: "![bfs](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/bfs.gif)
+  notes: "![bfs {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/bfs.gif)
 
 *Breadth First Search (BFS) is a search through a graph/tree where all the children of the current node are viewed, before moving on.  Implementation of a BFS requries the use of a Queue.  The difference between traversing a graph versus a tree is a graph does not visit a visited node twice.*
+
+![bfs_code {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/bfs_code.png)
 
 What are the steps of a BFS on a graph?
   • Initialize a queue
@@ -121,9 +122,11 @@ What are the steps of a BFS on a graph?
 
 Topic.create(
   title: "DFS",
-  notes: "![dfs](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/dfs.gif)
+  notes: "![dfs {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/dfs.gif)
 
 *Depth First Search (DFS) is a search through a graph/tree where the first child of each node is searched until no more children can be found.  Once a childless node has been reached, the DFS goes back up one parent and checks the next child until no children are found again.  The cycle repeats until the entire tree/graph is traversed.  Implementation of a DFS requires recursion.  The difference between traversing a graph versus a tree is a graph does not visit a visited node twice.*
+
+![dfs_code {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/dfs_code.png)
 
 What are the steps of a DFS on a graph?
   • Initialize a stack
@@ -184,7 +187,7 @@ Topic.create(
     * Push u into the set
     * Update the distance value of all adjecent vertices to u
         * iterate through adj vertices
-        * if (distance from u + edge_u-v.weight) < distance v, then update distance of v
+        * if (distance from u + edge_u-v.weight) &lt; distance v, then update distance of v
 4. Return the set when it contains all the vertices.",
   subject_id: algorithms_id
 )
@@ -195,13 +198,13 @@ Topic.create(
 
 Topic.create(
   title: "REST",
-  notes: "![REST](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/REST.jpeg)
+  notes: "![REST {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/REST.jpeg)
 
 *REST stands for Representational State Transfer.  It's a set of design principles used to make network communications scalable for the World Wide Web.  It can be applied to other kinds of networks such as embedded systems.*
 
 *The term, REST, was coined by Roy T. Fielding back in 2000 for his PhD dissertation, Architectural Styles and the Design of Network-based Software Architectures.  Any kind of system following a RESTful architecture is described to have several constraints known as the Fielding Constraints:*
 
-![uniform_interface](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/uniform_interface.jpg)
+![uniform_interface {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/uniform_interface.jpg)
 
 1. Uniform Interface: Any service described to be RESTful must utilize a common language between servers and clients.  This constraint is made up of four guiding principles:
 
@@ -213,23 +216,23 @@ Topic.create(
 
   •   Hypermedia as the engine of application state (HATEOAS): Users can make state transitions only through actions that are identified within hypermedia by the server. (i.e: When trying to persist state on an application, you can choose to login to an existing account or create a new account.  These are controlled by hypermedia links which are used as the engine of application state).
 
-![client_server](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/client_server.png)
+![client_server {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/client_server.png)
 
 2. Client-Server: A network must be made up of client(s) and server(s).  Clients are the computers that want to interact with the resources stored on the server and servers are the computers that have the resources of interest.
 
-![stateless](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/stateless.png)
+![stateless {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/stateless.png)
 
 3. Stateless: Servers and Clients do not need to keep track of state between each other. Each interaction is self-contained and no history is kept.  However, servers and clients can choose to be stateful.  When a user is logged in and wants to make an action that requires one to be logged in, that request is sent to the server with the appropriate authorization details.  The server does not know the user is logged in otherwise.
 
-![cacheable](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/cacheable.jpg)
+![cacheable {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/cacheable.jpg)
 
 4. Cacheable: Clients store information retrieved from the server in a cache for quick access.  Caching is used to improve performance and allow scalability for servers.
 
-![layered_system](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/layered_system.jpg)
+![layered_system {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/layered_system.jpg)
 
 5. Layered System: Server architecture can be composed of hierarchical layers to restrict knowledge of a system to a single layer.  This can be used to allows systems to house legacy services that are restricted to legacy clients and barred from new clients.  An example of this would be proxy servers which are used for load balancing and security checks.  A downside to using a layered system is the increase in overhead and latency, but this can be mitigated with caching.
 
-![code_on_demand](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/code_on_demand.png)
+![code_on_demand {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/code_on_demand.png)
 
 6. Code on demand (optional): Clients are allowed to download and execute code from the server as scripts or applets.  An example of this is a clock widget that is downloaded and ran on a home page.  This seems counter-intuitive to utilizing a RESTful architecture; however, it helps reduce using resources to implement features that can be done on the clients' end.",
   subject_id: world_wide_web_id
@@ -319,9 +322,9 @@ Topic.create(
 
 In JavaScript, there is an in-between object known as the 'Prototype' object.  When you define a class in JavaScript, it comes with a constructor function that points to the Prototype object.  When you instantiate a new instance, it comes with a `__proto__` function that points to the Prototype object.  The Prototype object is shared among all objects created using the constructor function.
 
-![prototype](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/prototype.jpg)
+![prototype }](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/prototype.jpg)
 
-*For the picture above, the following code is written:*
+*For the picture to the right, the following code is written:*
 ```javascript
   let myVehicle = new Vehicle();
   console.log(Vehicle.prototype === myVehicle.__proto__); // true
@@ -355,6 +358,8 @@ Beware of pass by reference properties (such as an array):
   console.log(myVehicle2.passengers); // ['a', 'b']
 ```
 
+![prototype_chain }](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/prototype_chain.jpg)
+
 To overcome this, apply the passengers property inside the Vehicle class:
 ```javascript
   function Vehicle() {
@@ -370,15 +375,13 @@ To overcome this, apply the passengers property inside the Vehicle class:
   console.log(myVehicle2.passengers); // ['a']
 ```
 
-![prototype_chain](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/prototype_chain.jpg)
-
 The prototype chain is where an object goes up its ancestors to retrieve an inherited property.  Consider the following:
 ```javascript
   var shape = {
     border: ‘red’
   };
 
-  var triangle = Object.create(shape); // prototype chain: null &rarr; Object &rarr; shape &rarr; triangle
+  var triangle = Object.create(shape); // prototype chain: null &larr; Object &larr; shape &larr; triangle
 
   triangle.border; // 'red'
   triangle.area; // undefined
@@ -388,7 +391,7 @@ The prototype chain is where an object goes up its ancestors to retrieve an inhe
 
 Topic.create(
   title: "Closure",
-  notes: "![closure](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/closure.png)
+  notes: "![closure {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/closure.png)
 
 *Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope. Closures are used for data privacy, stateful functions, and (partial) application.  The biggest draw is that it allows data encapsulation which refers to the idea that some data should not be directly exposed.*
 
@@ -408,7 +411,9 @@ Consider the following code:
 
 Topic.create(
   title: "Event Loop",
-notes: "JavaScript is single-threaded and asynchronous.  This means:
+notes: "![event_loop }](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/event_loop.gif)
+
+JavaScript is single-threaded and asynchronous.  This means:
 •  Single-threaded: JavaScript can only execute one line of code at a time.
 •  Asynchronous: JavaScript can schedule code to execute at a later time.
 
@@ -424,6 +429,8 @@ Consider the following code:
 As with what you would expect, JavaScript like most languages can only read one line of code at a time.  It cannot read and perform lines 1 and 5 at the same time.  It would perform line 1 first, followed by line 2 and so on.  This is the single-threaded aspect of JavaScript.
 
 However, unlike what you might expect, the logs will not print out 'Hello. Goodbye! How are you?'.  Instead, it will print out 'Hello.  How are you?  Goodbye!'.  Even though 'Goodbye' shows up before 'How are you?', the function was thrown in an asynchronous function that was scheduled to perform at a later time.  This is what is meant when JavaScript is called asynchronous.
+
+![javascript_engine](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/javascript_runtime.png)
 
 The JavaScript runtime engine is made up of several different components:
 •  Heap: Objects created in the JavaScript are allocated here to memory.  (e.g: var num = 1;)
@@ -484,43 +491,43 @@ Topic.create(
 
 Topic.create(
   title: "Benefits of HTML5",
-  notes: "![HTML5](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/HTML5.png)
+  notes: "![HTML5 {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/HTML5.png)
 
 *Released back in October 2014 by the World Wide Web Consortium (W3C), HTML5 is the latest iteration of a markup language used for structuring and presenting content across the World Wide Web.*
 
 The benefits are:
 
-![semantics](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/semantics.png)
+![semantics {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/semantics.png)
 
-1. Be more accessible (e.g. screenreaders with semantics): new page structure elements such as <main>, <section>, <article>, <header>, <footer>, <aside>, <nav> and <figure>, are added.
+1. Be more accessible (e.g. screenreaders with semantics): new page structure elements such as &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;aside&gt;, &lt;nav&gt; and &lt;figure&gt;, are added.
 
-![audio_tag](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/audio_tag.png)
+![audio_tag {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/audio_tag.png)
 
-2. Video and audio support: <audio> and <video> tags were added to allow easy parsing of media files as if it were an image.
+2. Video and audio support: &lt;audio&gt; and &lt;video&gt; tags were added to allow easy parsing of media files as if it were an image.
 
-![DOCTYPE](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/DOCTYPE.jpg)
+![DOCTYPE {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/DOCTYPE.jpg)
 
-3. <!DOCTYPE> to clean up on unnecessary header clutter for compatibility between the different browsers: <!DOCTYPE> is the declaration made to at the top of any html file to instruct the web browser on how to render the content. <!DOCTYPE> in HTML5 simplifies the process as it's one line compared to the multi-line mess from older versions of HTML.
+3. &lt;!DOCTYPE&gt; to clean up on unnecessary header clutter for compatibility between the different browsers: &lt;!DOCTYPE&gt; is the declaration made to at the top of any html file to instruct the web browser on how to render the content. &lt;!DOCTYPE&gt; in HTML5 simplifies the process as it's one line compared to the multi-line mess from older versions of HTML.
 
-![nav](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/nav.png)
+![nav {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/nav.png)
 
-4. Can clear up code making it more readable by having more semantics (nav/header instead of div): More semantics such as <nav> were added to simplify having to write out <div id='nav'/> instead.
+4. Can clear up code making it more readable by having more semantics (nav/header instead of div): More semantics such as &lt;nav&gt; were added to simplify having to write out &lt;div id='nav'/&gt; instead.
 
-![smarter_storage](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/smarter_storage.jpg)
+![smarter_storage {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/smarter_storage.jpg)
 
 5. Smarter storage that allow for sessions to persist across different sessions and windows: Local storage allows users to store different information across different windows that will persist when the windows are closed.  This information is stored via client-side and can parsed with third-party plug-ins.
 
-![canvas](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/canvas.png)
+![canvas {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/canvas.png)
 
-6. Canvas introduced an easy way to interact and animate with the user: The <canvas> tag draws interactive and animated content implemented with JavaScript.
+6. Canvas introduced an easy way to interact and animate with the user: The &lt;canvas&gt; tag draws interactive and animated content implemented with JavaScript.
 
-7. Allow for great game development: In addition to the animated content, the <canvas> tag allows people to create games with it as well.
+7. Allow for great game development: In addition to the animated content, the &lt;canvas&gt; tag allows people to create games with it as well.
 
-![ie6](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/ie6.png)
+![ie6 {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/ie6.png)
 
 8. Great legacy and cross browser support: HTML5 is not only used by all the popular browsers, it can also be used by legacy browsers such as IE6.
 
-![mobile_friendly](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/mobile_friendly.png)
+![mobile_friendly {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/mobile_friendly.png)
 
 9. Mobile friendly - both to develop on and user: Can be used to render content for mobile devices to allow for responsive design.",
 
@@ -529,7 +536,7 @@ The benefits are:
 
 Topic.create(
   title: "Media Query",
-  notes: "![media_query](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/media_query.png)
+  notes: "![media_query {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/media_query.png)
 
 *Media query is a CSS technique introduced in CSS3.  It uses the @media rule to include a block of CSS properties only when a certain size of the window is true.  Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices).*",
   subject_id: miscellaneous_id
@@ -537,7 +544,7 @@ Topic.create(
 
 Topic.create(
   title: "CSS Grid",
-  notes: "![css_grid](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/css_grid.png)
+  notes: "![css_grid {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/css_grid.png)
 *CSS Grid is a display property that allows you turn a container into a 2 dimensional layout separated by rows and columns. It is native to modern browsers(like Flexbox) and two-dimensional (unlike Flexbox, which is only one dimensional).*",
   subject_id: miscellaneous_id
 )
