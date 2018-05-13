@@ -176,7 +176,7 @@ Topic.create(
 
 Topic.create(
   title: "Dijkastra's algorithm",
-  notes: "![dijsktra_algorithm](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/dijkstra_algorithm.gif)
+  notes: "![dijsktra_algorithm &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/dijkstra_algorithm.gif)
 
 Dijsktra's algorithm calculates a list of the shortest distance from a given vertex to every other vertices in a graph.
 
