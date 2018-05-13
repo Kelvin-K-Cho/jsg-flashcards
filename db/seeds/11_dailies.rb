@@ -100,7 +100,7 @@ Daily.create(
 )
 
 Daily.create(
-  topic_id: Topic.where(title: "event loop").pluck(:id).first,
+  topic_id: Topic.where(title: "Event Loop").pluck(:id).first,
   day_id: Day.where(week_id: "1", title: "Day 4").pluck(:id).first
 )
 

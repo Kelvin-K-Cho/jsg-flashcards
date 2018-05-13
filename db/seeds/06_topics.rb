@@ -21,7 +21,7 @@ When do you use a tree in interviews?
 
 Topic.create(
   title: "Graph",
-  notes: "![basic_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/basic_graph.png)
+  notes: "![basic_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/basic_graph.png)
 *A graph is a non-linear data structure that is made up of several nodes linked by several connectors.  The nodes are called 'vertices' and connectors are called 'edges'.  Any two nodes that directly connected to each other are said to be adjacent.  Nodes are used to represent objects and the edges represent some kind of relationship between them.*
 
 Graphs are used to model relationships across data such as:
@@ -35,35 +35,35 @@ Graphs are used to model relationships across data such as:
   •  Relationships between information.
 
 # Directed Graph
-![directed_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/directed_graph.png)
+![directed_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/directed_graph.png)
 *A graph where the edges have a specific direction.*
 
 
 # Weighted Graph
-![weighted_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/weighted_graph.png)
+![weighted_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/weighted_graph.png)
 *A graph where the edges have some number, called a weight, associated with them. One example where weighted graphs are used is to represent paths between different locations, where the distances between are given as weights.*
 
 # Connected Graph
-![connected_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/connected_graph.png)
+![connected_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/connected_graph.png)
 *A graph where there is a path given any node to another.*
 
 # Complete Graph
-![complete_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/complete_graph.png)
+![complete_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/complete_graph.png)
 *A graph where there is an edge between every node.*
 
 # Cyclic Graph
-![cyclic_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/cyclic_graph.png)
+![cyclic_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/cyclic_graph.png)
 *A graph where there is a complete cycle.*
 
 # Acyclic Graph
-![acyclic_graph {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/acyclic_graph.png)
+![acyclic_graph](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/acyclic_graph.png)
 *A graph where there are no complete cycles.*",
   subject_id: algorithms_id
 )
 
 Topic.create(
   title: "Adjacency Matrix",
-  notes: "![adjacency_matrix {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_matrix.png)
+  notes: "![adjacency_matrix &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_matrix.png)
 
 *An adjacency matrix is a 2D array representation of a graph where each coordinate designates whether there is an edge between two vertices.  At each location in the matrix is stored the weight of the edge that connects those two nodes if there is one.  For the locations in the adjacency matrix where there is no edge, we can store a sentinel value such as 0 or -1. In most applications weights that are zero or less would not be used (such as for distances).  For unweighted graphs, the values stored in the matrix can just be true or false.*
 
@@ -82,7 +82,7 @@ Cons: The entire adjacency matrix consumes O(v²) space where v denotes the numb
 
 Topic.create(
   title: "Adjacency List",
-  notes: "![adjacency_list {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_list.png)
+  notes: "![adjacency_list &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/adjacency_list.png)
 
 *An adjacency list is another approach to modeling a graph and all its edges.  In this case, a linked list is used where each vertix points to all its connections.  Each element in the linked list represents one edge in the graph, and stores the target node and the weight (if any).  To add an edge to the graph, we would go to the linked list associated with the node the edge is coming from, and insert a new edge in that list. To find whether or not an edge connects two nodes, and what the weight is, we have to search the list of edges.*
 
@@ -101,11 +101,9 @@ Cons: Searching an adjacency list takes O(v) time.",
 
 Topic.create(
   title: "BFS",
-  notes: "![bfs {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/bfs.gif)
-
+  notes: "![bfs &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/bfs.gif)
+![bfs_code &gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/bfs_code.png)
 *Breadth First Search (BFS) is a search through a graph/tree where all the children of the current node are viewed, before moving on.  Implementation of a BFS requries the use of a Queue.  The difference between traversing a graph versus a tree is a graph does not visit a visited node twice.*
-
-![bfs_code {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/bfs_code.png)
 
 What are the steps of a BFS on a graph?
   • Initialize a queue
@@ -122,11 +120,9 @@ What are the steps of a BFS on a graph?
 
 Topic.create(
   title: "DFS",
-  notes: "![dfs {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/dfs.gif)
-
+  notes: "![dfs &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/dfs.gif)
+![dfs_code &gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/dfs_code.png)
 *Depth First Search (DFS) is a search through a graph/tree where the first child of each node is searched until no more children can be found.  Once a childless node has been reached, the DFS goes back up one parent and checks the next child until no children are found again.  The cycle repeats until the entire tree/graph is traversed.  Implementation of a DFS requires recursion.  The difference between traversing a graph versus a tree is a graph does not visit a visited node twice.*
-
-![dfs_code {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/dfs_code.png)
 
 What are the steps of a DFS on a graph?
   • Initialize a stack
@@ -143,9 +139,11 @@ What are the steps of a DFS on a graph?
 
 Topic.create(
   title: "Topological Sort",
-  notes: "The ordering of a directed graph in such a way that every edge with vertices (vertix u to vertix v) is done where vertix u always comes before vertix v.  Topological sort can only be done in a directed acyclic graph (DAG) where there is a start and an end.
+  notes: "The ordering of a directed graph in such a way that every edge (uv) is traversed where vertix u always comes before vertix v (u &rarr; v).  Topological sort can only be done in a directed acyclic graph (DAG) where there is a start and an end.
 
-What are the steps of a Topological Sort on a graph?
+![topological_sort &gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/topological_sort.png)
+
+What are the steps of a Topological Sort (DFS) on a graph?
   1. Initialize an empty stack. Keep track of visited and unvisited nodes
   2. For a given node, visit its neghbors 'in order' until a node is found with no unvisited neghbors. Push it into the stack.
   3. Move backwards from the pushed node:
@@ -178,7 +176,9 @@ Topic.create(
 
 Topic.create(
   title: "Dijkastra's algorithm",
-  notes: "Dijsktra's algorithm calculates a list of the shortest distance from a given vertex to every other vertices in a graph.
+  notes: "![dijsktra_algorithm](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/dijkstra_algorithm.gif)
+
+Dijsktra's algorithm calculates a list of the shortest distance from a given vertex to every other vertices in a graph.
 
 1. Initialize a set to track a shortest path tree set
 2. Assign distance given node as 0, to all other nodes as MAX_INT at first
@@ -198,13 +198,13 @@ Topic.create(
 
 Topic.create(
   title: "REST",
-  notes: "![REST {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/REST.jpeg)
+  notes: "![REST &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/REST.jpeg)
 
 *REST stands for Representational State Transfer.  It's a set of design principles used to make network communications scalable for the World Wide Web.  It can be applied to other kinds of networks such as embedded systems.*
 
 *The term, REST, was coined by Roy T. Fielding back in 2000 for his PhD dissertation, Architectural Styles and the Design of Network-based Software Architectures.  Any kind of system following a RESTful architecture is described to have several constraints known as the Fielding Constraints:*
 
-![uniform_interface {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/uniform_interface.jpg)
+![uniform_interface &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/uniform_interface.jpg)
 
 1. Uniform Interface: Any service described to be RESTful must utilize a common language between servers and clients.  This constraint is made up of four guiding principles:
 
@@ -216,23 +216,23 @@ Topic.create(
 
   •   Hypermedia as the engine of application state (HATEOAS): Users can make state transitions only through actions that are identified within hypermedia by the server. (i.e: When trying to persist state on an application, you can choose to login to an existing account or create a new account.  These are controlled by hypermedia links which are used as the engine of application state).
 
-![client_server {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/client_server.png)
+![client_server &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/client_server.png)
 
 2. Client-Server: A network must be made up of client(s) and server(s).  Clients are the computers that want to interact with the resources stored on the server and servers are the computers that have the resources of interest.
 
-![stateless {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/stateless.png)
+![stateless &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/stateless.png)
 
 3. Stateless: Servers and Clients do not need to keep track of state between each other. Each interaction is self-contained and no history is kept.  However, servers and clients can choose to be stateful.  When a user is logged in and wants to make an action that requires one to be logged in, that request is sent to the server with the appropriate authorization details.  The server does not know the user is logged in otherwise.
 
-![cacheable {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/cacheable.jpg)
+![cacheable &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/cacheable.jpg)
 
 4. Cacheable: Clients store information retrieved from the server in a cache for quick access.  Caching is used to improve performance and allow scalability for servers.
 
-![layered_system {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/layered_system.jpg)
+![layered_system &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/layered_system.jpg)
 
 5. Layered System: Server architecture can be composed of hierarchical layers to restrict knowledge of a system to a single layer.  This can be used to allows systems to house legacy services that are restricted to legacy clients and barred from new clients.  An example of this would be proxy servers which are used for load balancing and security checks.  A downside to using a layered system is the increase in overhead and latency, but this can be mitigated with caching.
 
-![code_on_demand {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/code_on_demand.png)
+![code_on_demand &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/code_on_demand.png)
 
 6. Code on demand (optional): Clients are allowed to download and execute code from the server as scripts or applets.  An example of this is a clock widget that is downloaded and ran on a home page.  This seems counter-intuitive to utilizing a RESTful architecture; however, it helps reduce using resources to implement features that can be done on the clients' end.",
   subject_id: world_wide_web_id
@@ -286,7 +286,8 @@ When you type a user-friendly hostname into the address bar of a web browser (e.
 
 Topic.create(
   title: "TCP",
-  notes: "TCP stands for Transport Control Protocol.  When the computer sends or receives packets from or to different routes. One request or response can be delivered in multiple packets, to make sure that all the packets have been delivered, TCP controls it.  It specifies how data gets from its origin to its destination.
+  notes: "![tcp &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/tcp.jpg)
+TCP stands for Transport Control Protocol.  When the computer sends or receives packets from or to different routes. One request or response can be delivered in multiple packets, to make sure that all the packets have been delivered, TCP controls it.  It specifies how data gets from its origin to its destination.
 
 • Data is subdivided into smaller packets
 • Each packet individually takes the fastest internet route to its destination
@@ -296,13 +297,17 @@ Topic.create(
 
 Topic.create(
   title: "UDP",
-  notes: "UDP stands for User Datagram Protocol.  It uses a simple connectionless communication model with a minimum of protocol mechanism. message-oriented:
+  notes: "![udp &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/udp.jpeg)
+
+UDP stands for User Datagram Protocol.  It uses a simple connectionless communication model with a minimum of protocol mechanism. message-oriented:
 • Part of the transport layer of TCP/IP
 • Sends data in chunks
 • lightweight headers, no connection required, greater control on when data is sent
 • Often used in bandwidth-heavy, packet loss-tolerant apps, such as gaming and streaming video
 • Used in small transactions i.e. DNS lookup
-• Doesn't guarantee the packets are sent in order.",
+• Doesn't guarantee the packets are sent in order.
+
+![tcp_vs_udp &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/tcp_vs_udp.jpeg)",
   subject_id: world_wide_web_id
 )
 
@@ -322,7 +327,7 @@ Topic.create(
 
 In JavaScript, there is an in-between object known as the 'Prototype' object.  When you define a class in JavaScript, it comes with a constructor function that points to the Prototype object.  When you instantiate a new instance, it comes with a `__proto__` function that points to the Prototype object.  The Prototype object is shared among all objects created using the constructor function.
 
-![prototype }](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/prototype.jpg)
+![prototype &gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/prototype.jpg)
 
 *For the picture to the right, the following code is written:*
 ```javascript
@@ -358,7 +363,7 @@ Beware of pass by reference properties (such as an array):
   console.log(myVehicle2.passengers); // ['a', 'b']
 ```
 
-![prototype_chain }](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/prototype_chain.jpg)
+![prototype_chain &gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/prototype_chain.jpg)
 
 To overcome this, apply the passengers property inside the Vehicle class:
 ```javascript
@@ -381,7 +386,8 @@ The prototype chain is where an object goes up its ancestors to retrieve an inhe
     border: ‘red’
   };
 
-  var triangle = Object.create(shape); // prototype chain: null &larr; Object &larr; shape &larr; triangle
+  var triangle = Object.create(shape);
+  // prototype chain: null &larr; Object &larr; shape &larr; triangle
 
   triangle.border; // 'red'
   triangle.area; // undefined
@@ -391,7 +397,7 @@ The prototype chain is where an object goes up its ancestors to retrieve an inhe
 
 Topic.create(
   title: "Closure",
-  notes: "![closure {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/closure.png)
+  notes: "![closure &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/closure.png)
 
 *Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope. Closures are used for data privacy, stateful functions, and (partial) application.  The biggest draw is that it allows data encapsulation which refers to the idea that some data should not be directly exposed.*
 
@@ -399,8 +405,8 @@ Consider the following code:
 ```javascript
 1.  let a = 3; // The variable 'a' is declared in the global scope.
 2.  function addTwo(x){ // The function addTwo is declared and defined.  Everything defined within the {} is known as the lexical scope.
-3.      let result = x + 2;  // The variable result is defined here.  It has access to the argument 'x'.  This part is known as the closure.
-4.      return result; // The result is returned and execution of the function ends.
+3.      let result = x + 2;  // The variable 'result' is defined here.  It has access to the argument 'x'.  This part is known as the closure.
+4.      return result; // The 'result' is returned and execution of the function ends.
 5.  } // The function definition ends here.
 6.  let b = addTwo(a); // The variable 'b' is declared.  JavaScript looks for addTwo defined in the global scope and executes it.
 7.  This function now has access to the result variable which has been encapsulated inside the addTwo function.
@@ -411,14 +417,14 @@ Consider the following code:
 
 Topic.create(
   title: "Event Loop",
-notes: "![event_loop }](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/event_loop.gif)
+notes: "![event_loop &gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/event_loop.gif)
 
 JavaScript is single-threaded and asynchronous.  This means:
 •  Single-threaded: JavaScript can only execute one line of code at a time.
 •  Asynchronous: JavaScript can schedule code to execute at a later time.
 
 Consider the following code:
-```js
+```javascript
 1.  console.log('Hello.');
 2.  setTimeout(function(){
 3.    console.log('Goodbye!');
@@ -443,12 +449,65 @@ The JavaScript runtime engine is made up of several different components:
 
 Topic.create(
   title: "IIFE",
-  notes: "Immediate Invoked Function Expression is a function expression which is called immediately after it's defined.
+  notes: "![IIFE &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/IIFE.png)
+
+Immediate Invoked Function Expression is a function expression which is called immediately after it's defined.
 
 •  Used to create new variable scope
 •  Enables you to attach private data to a function
 •  Creates fresh environments
-•  Avoids polluting the global namespace.",
+•  Avoids polluting the global namespace.
+
+![IIFE_example](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/IIFE_example.png)
+
+Consider the following code:
+```javascript
+1. var array = [1,2,3];
+2. for(var i = 0; i < array.length; i++) {
+3. console.log('inside ' + i);
+4. }
+5. console.log('outside ' + i);
+```
+
+If you run this code, it will print the following:
+inside 0
+inside 1
+inside 2
+outside 3
+
+The variable i was defined in the for loop block and was meant to just iterate through the loop. However, the variable i is still accessible outside the block.
+
+To fix this, one can utilize IIFE as the following:
+```javascript
+1. var array = [1,2,3];
+2. (function(){
+3. for(var i = 0; i < array.length; i++) {
+4. console.log('inside ' + i);
+5. }
+6. })();
+7. console.log('outside ' + i);
+```
+
+If you run this code, it will print the following:
+inside 0
+inside 1
+inside 2
+ReferenceError: i is not defined
+
+In the same example, just use ES6 syntax with let instead of var:
+```javascript
+1. var array = [1,2,3];
+2. for(let i = 0; i < array.length; i++) {
+3. console.log('inside ' + i);
+4. }
+5. console.log('outside ' + i);
+```
+
+If you run this code, it will print the following:
+inside 0
+inside 1
+inside 2
+ReferenceError: i is not defined",
   subject_id: javascript_id
 )
 
@@ -491,43 +550,43 @@ Topic.create(
 
 Topic.create(
   title: "Benefits of HTML5",
-  notes: "![HTML5 {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/HTML5.png)
+  notes: "![HTML5 &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/HTML5.png)
 
 *Released back in October 2014 by the World Wide Web Consortium (W3C), HTML5 is the latest iteration of a markup language used for structuring and presenting content across the World Wide Web.*
 
 The benefits are:
 
-![semantics {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/semantics.png)
+![semantics](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/semantics.png)
 
 1. Be more accessible (e.g. screenreaders with semantics): new page structure elements such as &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;aside&gt;, &lt;nav&gt; and &lt;figure&gt;, are added.
 
-![audio_tag {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/audio_tag.png)
+![audio_tag](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/audio_tag.png)
 
 2. Video and audio support: &lt;audio&gt; and &lt;video&gt; tags were added to allow easy parsing of media files as if it were an image.
 
-![DOCTYPE {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/DOCTYPE.jpg)
+![DOCTYPE](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/DOCTYPE.jpg)
 
 3. &lt;!DOCTYPE&gt; to clean up on unnecessary header clutter for compatibility between the different browsers: &lt;!DOCTYPE&gt; is the declaration made to at the top of any html file to instruct the web browser on how to render the content. &lt;!DOCTYPE&gt; in HTML5 simplifies the process as it's one line compared to the multi-line mess from older versions of HTML.
 
-![nav {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/nav.png)
+![nav](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/nav.png)
 
 4. Can clear up code making it more readable by having more semantics (nav/header instead of div): More semantics such as &lt;nav&gt; were added to simplify having to write out &lt;div id='nav'/&gt; instead.
 
-![smarter_storage {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/smarter_storage.jpg)
+![smarter_storage](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/smarter_storage.jpg)
 
 5. Smarter storage that allow for sessions to persist across different sessions and windows: Local storage allows users to store different information across different windows that will persist when the windows are closed.  This information is stored via client-side and can parsed with third-party plug-ins.
 
-![canvas {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/canvas.png)
+![canvas](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/canvas.png)
 
 6. Canvas introduced an easy way to interact and animate with the user: The &lt;canvas&gt; tag draws interactive and animated content implemented with JavaScript.
 
 7. Allow for great game development: In addition to the animated content, the &lt;canvas&gt; tag allows people to create games with it as well.
 
-![ie6 {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/ie6.png)
+![ie6](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/ie6.png)
 
 8. Great legacy and cross browser support: HTML5 is not only used by all the popular browsers, it can also be used by legacy browsers such as IE6.
 
-![mobile_friendly {](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/mobile_friendly.png)
+![mobile_friendly](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/mobile_friendly.png)
 
 9. Mobile friendly - both to develop on and user: Can be used to render content for mobile devices to allow for responsive design.",
 
@@ -536,7 +595,7 @@ The benefits are:
 
 Topic.create(
   title: "Media Query",
-  notes: "![media_query {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/media_query.png)
+  notes: "![media_query &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/media_query.png)
 
 *Media query is a CSS technique introduced in CSS3.  It uses the @media rule to include a block of CSS properties only when a certain size of the window is true.  Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices).*",
   subject_id: miscellaneous_id
@@ -544,14 +603,16 @@ Topic.create(
 
 Topic.create(
   title: "CSS Grid",
-  notes: "![css_grid {}](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/css_grid.png)
+  notes: "![css_grid &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/css_grid.png)
 *CSS Grid is a display property that allows you turn a container into a 2 dimensional layout separated by rows and columns. It is native to modern browsers(like Flexbox) and two-dimensional (unlike Flexbox, which is only one dimensional).*",
   subject_id: miscellaneous_id
 )
 
 Topic.create(
   title: "React Lifecycle Methods",
-  notes: "The React Lifecycle methods are as follows from birth to death:
+  notes: "![react_lifecycle &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/react_lifecycle_methods.png)
+
+The React Lifecycle methods are as follows from birth to death:
 
 1. componentWillMount
     Use Case: Configuring an app to render.

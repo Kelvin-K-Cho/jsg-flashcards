@@ -20,18 +20,17 @@
 		// height: 28vh;
 		// display: block;
 		max-height: 50vh;
-		margin: 2vh 0;
+		margin: 2vh 2vw;
 	}
-	img[alt$='}'] {
+	img[alt$='>'] {
 		float: right;
-		margin-left: 2vw;
 	}
 
-	img[alt$='{'] {
-		margin-left: 1vw;
+	img[alt$='<'] {
+		float: left;
 	}
 
-	img[alt$='{}'] {
+	img[alt$='<>'] {
 		display: block;
 		max-width: 100%;
 		height: auto;
@@ -52,6 +51,10 @@
 	// code {
 	// 	overflow: auto;
 	// }
+}
+
+.container {
+	margin-top: 12vh;
 }
 
 .top-card {
