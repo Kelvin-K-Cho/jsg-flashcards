@@ -145,7 +145,7 @@ Topic.create(
 
 What are the steps of a Topological Sort (DFS) on a graph?
   1. Initialize an empty stack. Keep track of visited and unvisited nodes
-  2. For a given node, visit its neghbors 'in order' until a node is found with no unvisited neghbors. Push it into the stack.
+  2. For a given node, visit its neighbors 'in order' until a node is found with no unvisited neghbors. Push it into the stack.
   3. Move backwards from the pushed node:
       * If all its neighbors are visited, push it onto the stack
       * If it has unvisited neighbors, visit them
