@@ -520,28 +520,58 @@ ReferenceError: i is not defined
 
 Topic.create(
   title: "== vs. ===",
-  notes: "== checks for equality with coercion
-=== checks for equality ithout coercion == strict equality
+  notes: "![coercion_examples &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/coercion_examples.png)
+== checks for equality with coercion
+=== checks for equality without coercion(strict equality)
 
-2 == '2' // True
-2 === '2' // False
-undefined == null // True
-undefined === null // False",
+When you use ==, JavaScript first coerces the variables it's comparing into types that can be easily parsed.
+
+Consider the following code:
+```javascript
+let a = '0';
+console.log(Boolean(a)); // True
+let b = false;
+console.log(Boolean(b)); // False
+
+console.log(a == b);     // True
+```
+
+Under the hood, JavaScript is executing the following coercion:
+```
+(1) '0' == false
+(2) '0' == 0
+(3)  0  == 0
+```
+
+The moral of the story is always use === unless you have a good reason to use ==.
+
+![==](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/%3D%3D.png)",
   subject_id: javascript_id
 )
 
 Topic.create(
   title: "this",
-  notes: "'this' is a runtime binding of context to a function call, based on how a function was invoked:
+  notes: "![this &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/this.png)
+'this' is a variable with the value of the object that invokes the function where 'this' is used.  The value for 'this' is not assigned until an object invokes the function where 'this' is defined.  'this' always refers to and holds the value of a singular object.
 
-    1. Called with new? Use the newly constructed object.
-    2. Called with call or apply (or bind)? Use the specified object.
-    3. Called with a context object owning the call? Use that context object.
-    4. Default: undefined in strict mode, global object otherwise.
+If we use strict mode and call this in the global scope, it returns undefined:
 
-'this' is not a reference to the function nor a reference to lexical scope
+![this_global](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/this_global.png)
 
-ES6 arrow functions pass in lexical scoping for 'this' binding",
+If we apply it to an object variable, it would look something like the following:
+
+![this_object](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/this_object.png)
+
+However, if we do something like this:
+
+![this_setTimeout](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/this_setTimeout.png)
+
+We ended up calling the window object during the setTimeout because 'this' in that context is the window object.  In order to rectify this problem, we need to bind it:
+
+![this_bind](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/this_bind.png)
+
+Lexical Scoping is a fancy way of saying you're passing the current context onto the function you're defining.  We can use a fat arrow function instead of bind to fix the above problem:
+![this_fat_arrow](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/this_fat_arrow.png)",
   subject_id: javascript_id
 )
 
