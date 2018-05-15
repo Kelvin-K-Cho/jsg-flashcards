@@ -20,7 +20,6 @@ Day.destroy_all
 Daily.destroy_all
 Image.destroy_all
 Label.destroy_all
-Tag.destroy_all
 
 Dir[File.join(Rails.root, 'db', 'seeds/*')].sort.each do |seed|
   load seed

@@ -43,13 +43,4 @@ class Topic < ApplicationRecord
     through: :days,
     source: :week
 
-  has_many :tags,
-    primary_key: :id,
-    foreign_key: :topic_id,
-    class_name: :Tag
-
-  has_many :images,
-    through: :tags,
-    source: :image
-
 end

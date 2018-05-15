@@ -12,15 +12,6 @@ class Image < ApplicationRecord
 
   validates :url, presence: true
 
-  has_many :tags,
-    primary_key: :id,
-    foreign_key: :image_id,
-    class_name: :Tag
-
-  has_many :topics,
-    through: :tags,
-    source: :topic
-
   has_many :labels,
     primary_key: :id,
     foreign_key: :image_id,
