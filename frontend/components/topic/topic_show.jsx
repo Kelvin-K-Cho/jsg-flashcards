@@ -27,14 +27,7 @@ class TopicShow extends React.Component {
 		if (topic && checkCards(cards)) {
 			let title = <div className="show-title">{topic.title}</div>;
 			let notes = sanitizeHTML(topic.notes);
-			let body = (
-				<ReactMarkdown
-					className="topic-notes"
-					skipHtml={false}
-					escapeHtml={false}
-					source={notes}
-				/>
-			);
+			let body = <ReactMarkdown className="topic-notes" source={notes} />;
 			let list = (
 				<Container>
 					<Row className="top-card">

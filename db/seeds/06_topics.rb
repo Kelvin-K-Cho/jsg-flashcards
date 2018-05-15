@@ -177,8 +177,9 @@ Topic.create(
 Topic.create(
   title: "Dijkastra's algorithm",
   notes: "![dijsktra_algorithm &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/dijkstra_algorithm.gif)
+Dijkstra's algorithm, conceived by Dutch computer scientist Edsger Dijkstra in 1956 and published in 1959, is a graph search algorithm that solves the single-source shortest path problem for a graph with nonnegative edge path costs, producing a shortest path tree.   This algorithm is often used in routing and as a subroutine in other graph algorithms.
 
-Dijsktra's algorithm calculates a list of the shortest distance from a given vertex to every other vertices in a graph.
+For a given source vertex (node) in the graph, the algorithm finds the path with lowest cost (i.e. the shortest path) between that vertex and every other vertex.   It can also be used for finding costs of shortest paths from a single vertex to a single destination vertex by stopping the algorithm once the shortest path to the destination vertex has been determined.
 
 1. Initialize a set to track a shortest path tree set
 2. Assign distance given node as 0, to all other nodes as MAX_INT at first
@@ -463,17 +464,19 @@ Immediate Invoked Function Expression is a function expression which is called i
 Consider the following code:
 ```javascript
 1. var array = [1,2,3];
-2. for(var i = 0; i < array.length; i++) {
+2. for(var i = 0; i ⟨ array.length; i++) {
 3. console.log('inside ' + i);
 4. }
 5. console.log('outside ' + i);
 ```
 
 If you run this code, it will print the following:
+```
 inside 0
 inside 1
 inside 2
 outside 3
+```
 
 The variable i was defined in the for loop block and was meant to just iterate through the loop. However, the variable i is still accessible outside the block.
 
@@ -481,7 +484,7 @@ To fix this, one can utilize IIFE as the following:
 ```javascript
 1. var array = [1,2,3];
 2. (function(){
-3. for(var i = 0; i < array.length; i++) {
+3. for(var i = 0; i ⟨ array.length; i++) {
 4. console.log('inside ' + i);
 5. }
 6. })();
@@ -489,25 +492,29 @@ To fix this, one can utilize IIFE as the following:
 ```
 
 If you run this code, it will print the following:
+```
 inside 0
 inside 1
 inside 2
 ReferenceError: i is not defined
+```
 
 In the same example, just use ES6 syntax with let instead of var:
 ```javascript
 1. var array = [1,2,3];
-2. for(let i = 0; i < array.length; i++) {
+2. for(let i = 0; i ⟨ array.length; i++) {
 3. console.log('inside ' + i);
 4. }
 5. console.log('outside ' + i);
 ```
 
 If you run this code, it will print the following:
+```
 inside 0
 inside 1
 inside 2
-ReferenceError: i is not defined",
+ReferenceError: i is not defined
+```",
   subject_id: javascript_id
 )
 
