@@ -1,14 +1,11 @@
 import React from 'react';
 import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route';
-import Async from 'react-code-splitting';
-
-// import Home from './home/home';
-
-import SignupContainer from './session/signup_container';
-import LoginContainer from './session/login_container';
 import NavigationContainer from './navigation/navigation_container';
 import Directory from './directory/directory';
+import Home from './home/home';
+import SignupContainer from './session/signup_container';
+import LoginContainer from './session/login_container';
 import SubjectIndexContainer from './subject/subject_index_container';
 import SubjectShowContainer from './subject/subject_show_container';
 import TopicShowContainer from './topic/topic_show_container';
@@ -17,8 +14,6 @@ import ResultContainer from './result/result_container';
 import SuggestionIndexContainer from './suggestion/suggestion_index_container';
 import SuggestionFormContainer from './suggestion/suggestion_form_container';
 import Confirmation from './confirmation/confirmation';
-
-const Home = () => <Async load={import('./home/home')} />;
 
 const App = () => (
 	<div id="app">

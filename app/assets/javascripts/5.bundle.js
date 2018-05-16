@@ -1,6 +1,6 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[5],{
 
-/***/ 281:
+/***/ 255:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _reactRedux = __webpack_require__(176);
 
-var _subject_show = __webpack_require__(282);
+var _subject_show = __webpack_require__(256);
 
 var _subject_show2 = _interopRequireDefault(_subject_show);
 
@@ -22,7 +22,7 @@ var _topics = __webpack_require__(151);
 
 var _images = __webpack_require__(169);
 
-var _selectors = __webpack_require__(261);
+var _selectors = __webpack_require__(244);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -54,7 +54,7 @@ exports.default = SubjectShowContainer;
 
 /***/ }),
 
-/***/ 282:
+/***/ 256:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70,17 +70,17 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactstrap = __webpack_require__(242);
+var _reactstrap = __webpack_require__(257);
 
-var _item = __webpack_require__(283);
+var _item = __webpack_require__(274);
 
 var _item2 = _interopRequireDefault(_item);
 
-var _image = __webpack_require__(284);
+var _image = __webpack_require__(275);
 
 var _image2 = _interopRequireDefault(_image);
 
-var _loader = __webpack_require__(285);
+var _loader = __webpack_require__(276);
 
 var _loader2 = _interopRequireDefault(_loader);
 
@@ -183,7 +183,44 @@ exports.default = SubjectShow;
 
 /***/ }),
 
-/***/ 284:
+/***/ 274:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(195);
+
+var _reactstrap = __webpack_require__(257);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Item = function Item(props) {
+	var itemId = props.itemId,
+	    item = props.item,
+	    path = props.path;
+
+	var element = _react2.default.createElement(
+		_reactstrap.NavLink,
+		{ tag: _reactRouterDom.Link, to: '/' + path + '/' + itemId },
+		item.title
+	);
+	return element;
+};
+
+exports.default = Item;
+
+/***/ }),
+
+/***/ 275:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -212,7 +249,62 @@ var Image = function Image(props) {
 
 exports.default = Image;
 
+/***/ }),
+
+/***/ 276:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Loader = function Loader(props) {
+	return _react2.default.createElement(
+		"div",
+		null,
+		_react2.default.createElement(
+			"div",
+			{ className: "loader" },
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" })
+		),
+		_react2.default.createElement(
+			"div",
+			{ className: "loader loader--reflect" },
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" }),
+			_react2.default.createElement("div", { className: "bar" })
+		)
+	);
+};
+
+exports.default = Loader;
+
 /***/ })
 
 }]);
-//# sourceMappingURL=1.bundle.js.map
+//# sourceMappingURL=5.bundle.js.map
