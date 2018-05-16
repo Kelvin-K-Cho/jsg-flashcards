@@ -1,5 +1,6 @@
 const path = require('path');
-var webpack = require('webpack');
+const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 var plugins = [];
 var devPlugins = [];
@@ -10,10 +11,15 @@ var prodPlugins = [
 			NODE_ENV: JSON.stringify('production')
 		}
 	}),
-	new webpack.optimize.UglifyJsPlugin({
-		compress: {
-			warnings: true
-		}
+	new UglifyJsPlugin({
+		cache: true,
+		parallel: true,
+		uglifyOptions: {
+			compress: false,
+			ecma: 6,
+			mangle: true
+		},
+		sourceMap: true
 	})
 ];
 
@@ -22,6 +28,7 @@ plugins = plugins.concat(
 );
 
 module.exports = {
+	mode: 'none',
 	context: __dirname,
 	entry: './frontend/entry.jsx',
 	output: {
@@ -30,7 +37,7 @@ module.exports = {
 	},
 	plugins: plugins,
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.jsx?$/,
 				exclude: /(node_modules|bower_components)/,
