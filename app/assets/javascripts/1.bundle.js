@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],{
 
-/***/ 511:
+/***/ 242:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _reactRedux = __webpack_require__(176);
 
-var _navigation = __webpack_require__(512);
+var _navigation = __webpack_require__(243);
 
 var _navigation2 = _interopRequireDefault(_navigation);
 
@@ -22,7 +22,7 @@ var _subjects = __webpack_require__(148);
 
 var _weeks = __webpack_require__(160);
 
-var _selectors = __webpack_require__(266);
+var _selectors = __webpack_require__(263);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -55,7 +55,7 @@ exports.default = NavigationContainer;
 
 /***/ }),
 
-/***/ 512:
+/***/ 243:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73,11 +73,11 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactstrap = __webpack_require__(244);
 
-var _search = __webpack_require__(513);
+var _search = __webpack_require__(261);
 
 var _search2 = _interopRequireDefault(_search);
 
-var _bullet = __webpack_require__(503);
+var _bullet = __webpack_require__(262);
 
 var _bullet2 = _interopRequireDefault(_bullet);
 
@@ -279,7 +279,7 @@ exports.default = Navigation;
 
 /***/ }),
 
-/***/ 513:
+/***/ 261:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -371,6 +371,121 @@ var Search = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = (0, _reactRouterDom.withRouter)(Search);
+
+/***/ }),
+
+/***/ 262:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(195);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Bullet = function Bullet(props) {
+	var bulletId = props.bulletId,
+	    bullet = props.bullet,
+	    path = props.path;
+
+	var element = _react2.default.createElement(
+		'li',
+		null,
+		_react2.default.createElement(
+			_reactRouterDom.Link,
+			{ to: '/' + path + '/' + bulletId },
+			bullet.title
+		)
+	);
+	return element;
+};
+
+exports.default = Bullet;
+
+/***/ }),
+
+/***/ 263:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.checkCards = exports.selectCorrectAnswers = exports.selectSuggestions = exports.selectImages = exports.selectResults = exports.selectDays = exports.selectWeeks = exports.selectAnswers = exports.selectQuestions = exports.selectTopics = exports.selectSubjects = undefined;
+
+var _values = __webpack_require__(264);
+
+var _values2 = _interopRequireDefault(_values);
+
+var _flattenDeep = __webpack_require__(270);
+
+var _flattenDeep2 = _interopRequireDefault(_flattenDeep);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var selectSubjects = function selectSubjects(state) {
+	return (0, _values2.default)(state.entities.subjects);
+};
+var selectTopics = function selectTopics(state) {
+	return (0, _values2.default)(state.entities.topics);
+};
+var selectQuestions = function selectQuestions(state) {
+	return (0, _values2.default)(state.entities.questions);
+};
+var selectAnswers = function selectAnswers(state) {
+	return (0, _values2.default)(state.entities.answers);
+};
+var selectWeeks = function selectWeeks(state) {
+	return (0, _values2.default)(state.entities.weeks);
+};
+var selectDays = function selectDays(state) {
+	return (0, _values2.default)(state.entities.days);
+};
+var selectResults = function selectResults(state) {
+	return (0, _values2.default)(state.entities.results);
+};
+var selectImages = function selectImages(state) {
+	return (0, _values2.default)(state.entities.images);
+};
+var selectSuggestions = function selectSuggestions(state) {
+	return (0, _values2.default)(state.entities.suggestions);
+};
+
+var selectCorrectAnswers = function selectCorrectAnswers(state) {
+	return (0, _values2.default)(state.entities.answers).filter(function (answer) {
+		return answer.correct === true;
+	});
+};
+
+var checkCards = function checkCards(cards) {
+	var sides = (0, _flattenDeep2.default)(cards);
+	return sides.every(function (side) {
+		return side !== undefined;
+	});
+};
+
+exports.selectSubjects = selectSubjects;
+exports.selectTopics = selectTopics;
+exports.selectQuestions = selectQuestions;
+exports.selectAnswers = selectAnswers;
+exports.selectWeeks = selectWeeks;
+exports.selectDays = selectDays;
+exports.selectResults = selectResults;
+exports.selectImages = selectImages;
+exports.selectSuggestions = selectSuggestions;
+exports.selectCorrectAnswers = selectCorrectAnswers;
+exports.checkCards = checkCards;
 
 /***/ })
 

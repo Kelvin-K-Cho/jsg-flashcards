@@ -7,16 +7,16 @@ import Loader from './loader/loader';
 // import NavigationContainer from './navigation/navigation_container';
 // import Directory from './directory/directory';
 // import Home from './home/home';
-import SignupContainer from './session/signup_container';
-import LoginContainer from './session/login_container';
-import SubjectIndexContainer from './subject/subject_index_container';
-import SubjectShowContainer from './subject/subject_show_container';
-import TopicShowContainer from './topic/topic_show_container';
-import WeekShowContainer from './week/week_show_container';
-import ResultContainer from './result/result_container';
-import SuggestionIndexContainer from './suggestion/suggestion_index_container';
-import SuggestionFormContainer from './suggestion/suggestion_form_container';
-import Confirmation from './confirmation/confirmation';
+// import SignupContainer from './session/signup_container';
+// import LoginContainer from './session/login_container';
+// import SubjectIndexContainer from './subject/subject_index_container';
+// import SubjectShowContainer from './subject/subject_show_container';
+// import TopicShowContainer from './topic/topic_show_container';
+// import WeekShowContainer from './week/week_show_container';
+// import ResultContainer from './result/result_container';
+// import SuggestionIndexContainer from './suggestion/suggestion_index_container';
+// import SuggestionFormContainer from './suggestion/suggestion_form_container';
+// import Confirmation from './confirmation/confirmation';
 
 const NavigationContainer = Loadable({
 	loader: () => import('./navigation/navigation_container'),
@@ -30,6 +30,56 @@ const Directory = Loadable({
 
 const Home = Loadable({
 	loader: () => import('./home/home'),
+	loading: Loader
+});
+
+const SignupContainer = Loadable({
+	loader: () => import('./session/signup_container'),
+	loading: Loader
+});
+
+const LoginContainer = Loadable({
+	loader: () => import('./session/login_container'),
+	loading: Loader
+});
+
+const SubjectIndexContainer = Loadable({
+	loader: () => import('./subject/subject_index_container'),
+	loading: Loader
+});
+
+const SubjectShowContainer = Loadable({
+	loader: () => import('./subject/subject_show_container'),
+	loading: Loader
+});
+
+const TopicShowContainer = Loadable({
+	loader: () => import('./topic/topic_show_container'),
+	loading: Loader
+});
+
+const WeekShowContainer = Loadable({
+	loader: () => import('./week/week_show_container'),
+	loading: Loader
+});
+
+const ResultContainer = Loadable({
+	loader: () => import('./result/result_container'),
+	loading: Loader
+});
+
+const SuggestionIndexContainer = Loadable({
+	loader: () => import('./suggestion/suggestion_index_container'),
+	loading: Loader
+});
+
+const SuggestionFormContainer = Loadable({
+	loader: () => import('./suggestion/suggestion_form_container'),
+	loading: Loader
+});
+
+const Confirmation = Loadable({
+	loader: () => import('./confirmation/confirmation'),
 	loading: Loader
 });
 
