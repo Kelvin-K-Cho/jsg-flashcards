@@ -1,0 +1,33 @@
+// Place all the styles related to the api/searches controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#search-form {
+	margin-left: -7vw;
+	min-width: 270px;
+	width: 14vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	justify-content: space-around;
+
+	.btn-secondary:hover {
+		background-color: inherit;
+	}
+}
+
+#search-bar {
+	margin-top: 1.7vh;
+	width: 20vw;
+}
+
+#search-button {
+	border-style: none;
+	padding: 0;
+	margin-left: 1vw;
+
+	img {
+		height: 3.6vh;
+	}
+}

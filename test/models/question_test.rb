@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: questions
+#
+#  id         :integer          not null, primary key
+#  sentence   :string           not null
+#  topic_id   :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+require 'test_helper'
+
+class QuestionTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end

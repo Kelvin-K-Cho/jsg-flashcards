@@ -1,0 +1,36 @@
+// Place all the styles related to the api/suggestions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.suggestions {
+	margin-left: 4vw;
+	text-align: left;
+}
+
+#suggestion {
+	margin-top: 10vh;
+}
+
+#suggestion-container {
+	height: 62vh;
+	width: 60vw;
+	justify-content: space-between;
+
+	.form-control {
+		margin-top: 2vh;
+		width: 50vw;
+		height: 44vh;
+		min-width: 230px;
+		min-height: 200px;
+	}
+
+	textarea {
+		margin-top: 1vh;
+		width: 50vw;
+		height: 44vh;
+		min-width: 230px;
+		min-height: 200px;
+		resize: none;
+		letter-spacing: 1px;
+	}
+}

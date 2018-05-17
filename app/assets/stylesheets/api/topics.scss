@@ -1,0 +1,51 @@
+// Place all the styles related to the api/topics controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.details-container {
+	margin: 4vh 4vw 8vh 4vw;
+	width: 100%;
+
+	div {
+		text-align: left;
+		white-space: pre-wrap;
+	}
+}
+
+.topic-notes {
+	img {
+		max-height: 50vh;
+		margin: 2vh 2vw;
+	}
+	img[alt$='>'] {
+		float: right;
+	}
+
+	img[alt$='<'] {
+		float: left;
+	}
+
+	img[alt$='<>'] {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: auto;
+		float: none !important;
+	}
+	em {
+		margin: 1vh 0;
+	}
+}
+
+.top-card {
+	width: 100%;
+	border-top: thick double lightgrey;
+	font-family: 'Jua';
+	margin-top: 2.5vh;
+	font-weight: 600;
+	font-size: 150%;
+}
+
+.col {
+	margin: 0.5% 0;
+}

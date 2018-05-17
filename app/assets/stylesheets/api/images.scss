@@ -1,0 +1,24 @@
+// Place all the styles related to the api/images controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.image {
+	height: 40vmin;
+	width: 50vmin;
+	border-radius: 4px;
+	box-shadow: 4px 4px 4px black;
+}
+
+.images-list {
+	list-style-type: none;
+	li {
+		padding-top: 4vh;
+	}
+}
+
+#subject-images {
+	margin-right: 10vw;
+	.image {
+		width: 40vmin;
+	}
+}
