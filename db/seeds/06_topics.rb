@@ -677,7 +677,64 @@ The React Lifecycle methods are as follows from birth to death:
 
 Topic.create(
   title: "React Review",
-  notes: "React is a popular frontend library developed in 2013 by Facebook.  It's written in JavaScript and used in the development of single-page applications.  React is designed around making reusable components which are basically plain old JavaScript objects.",
+  notes: "React is a popular frontend library developed in 2013 by Facebook.  It's written in JavaScript and used in the development of single-page applications.  React follows a few key fundamentals:
+
+1.  React is designed around making reusable components which are basically plain old JavaScript objects.
+  •  Components start out with a capital letter.  Lowercase names are reserved for HTML elements like &lt;div&gt;.
+  •  Every component receives a list of attributes called **props**.
+  •  In order to help simplify writing React Components, a popular extension known as **JSX** is used to name files.  JSX allows us write both JavaScript and HTML in one file.  That feature is called a **compromise**.
+
+2.  React can be written without JSX.  We can keep everything in JavaScript and write our components out using ```React.createElement```
+  •  ```React.createElement``` can accept multiple arguments are the first two arguments: 1st being the kind of tag it will be (like &lt;div&gt;) and the 2nd being an object holding the props you're trying to pass down.
+  •  You can nest multiple ```React.createElement``` as it is JavaScript
+  •  We can pass in null or an empty object for the second argument of ```React.createElement```
+  •  Since React's API is close to the DOM API, we use ```className``` instead of ```class```
+
+3.  JavaScript expressions can be used anywhere in JSX.  Any time we want to start writing JavaScript in a JSX file, we can start by putting the JavaScript in curly braces {}.  This is the equivalent to string interpolation for JavaSript.
+  •  The only constraint about using JavaScript in JSX is it has to be an expression.  For example, we cannot use an if statement, but we can use a ternary expression.
+  •  Variables, objects and even React elements are expressions.
+  •  Functional methods such as ```map```, ```reduce```, ```filter``` or ```concat``` can be used inside JSX.
+
+4.  React components can be written as JavaScript classes.  If we wanted to write Button component, we could do it by writing ```class Button extends React.Component```
+  •  React component classes contain a ```render``` function that returns a virtual DOM element.
+  •  Every element rendered through a class component gets the instance property of **props**.
+  •  After a React component is constructed, we can also bind additional functions or set state using the ```constructor``` function native to JavaScript classes.
+
+5.  Event Handling is different for React than it is for the DOM API in two ways.
+  •  All React elements are named using camelCase.
+  •  When we pass on an eventhandler, we pass in a JavaScript function reference instead of a string.  i.e. It’s ```onClick={handleClick}```, not ```onClick='handleClick'```
+
+6.  Lifecycle Methods Part 1.  These methods allow us to make React Components change dynamically during different times:
+  •  1st: A template for React to create elements is defined.
+  •  2nd: We instruct React to use the component somewhere usually in a ```render``` call or with ```ReactDOM.render```
+  •  3rd: React instantiates the element and passes **props** to it to access.
+  •  4th: If the ```constructor``` function was defined, it is then called here.
+  •  5th: React computes the render method of the component.
+  •  6th: React communicates with the browser using the DOM API to display the element.  This process is called **mounting**.
+  •  7th: At this point, React invokes the lifecycle method ```componentDidMount```.
+  •  8th: The **state** of any mounted component might change here.  The component could receive updated **props**.  The real magic of using React happens at this point.
+  •  9th: When a component is unmounted, it runs ```componentWillUnmount``` first.
+
+7.  Components that don't keep track of state are known as **dumb** components.  They are primarily used to render or present elements to the DOM.  However, components that keep track of **state** are known as smart components.
+  •  React monitors every component's state for changes.  We can change state using ```this.setState```
+  •  We can update state in two ways: 1.  Passing a function that returns an object or 2.  Passing a regular object inside a callback.
+  •  setState merges state with what you pass it.
+
+8.  React gets its name because it reacts to state changes...on a schedule.  However, the way we see it, it appears as though components get updated when it sees an update.
+  •  Render functions keep track of two inputs: props passed by parents and an internal private state.
+  •  React keeps a history of all renders.  When one render appears different from a previous one, it computes the difference between them and translates the change onto the DOM.
+
+9.  React handles communicating to the browser for us.
+
+10.  Lifecycle Methods Part 2.
+  •  Components re-render when React detects a state change or updated props.
+  •  If there are updated props, React invokes a lifecycle method called ```componentWillReceiveProps```
+  •  If React detects a change, it has to decide whether the DOM should be updated.  At this point, ```shouldComponentUpdate``` is called here.  This method must return true or false.
+  •  If ```shouldComponentUpdate``` is not defined, React makes the decision on its own by default.
+  •  When a component is updating, it calls another lifecycle method called ```componentWillUpdate```.
+  •  React compares the new rendered output and the last rendered output.  If it's the same, React does nothing.
+  •  If there is a difference, React takes the difference.
+  •  Once the update is done, React invokes a final lifecycle method called ```componentDidMount```.",
   subject_id: miscellaneous_id
 )
 
