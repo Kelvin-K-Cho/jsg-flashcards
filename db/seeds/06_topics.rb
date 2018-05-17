@@ -677,7 +677,7 @@ The React Lifecycle methods are as follows from birth to death:
 
 Topic.create(
   title: "React Review",
-  notes: "React is a popular frontend library developed in 2013 by Facebook.  It's written in JavaScript and used in the development of single-page applications.",
+  notes: "React is a popular frontend library developed in 2013 by Facebook.  It's written in JavaScript and used in the development of single-page applications.  React is designed around making reusable components which are basically plain old JavaScript objects.",
   subject_id: miscellaneous_id
 )
 

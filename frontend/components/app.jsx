@@ -1,72 +1,59 @@
 import React from 'react';
 import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route';
+import Wrapper from './loader/wrapper';
 import Loadable from 'react-loadable';
-import Loader from './loader/loader';
 
-const NavigationContainer = Loadable({
-	loader: () => import('./navigation/navigation_container'),
-	loading: Loader
+const NavigationContainer = Wrapper({
+	loader: () => import('./navigation/navigation_container')
 });
 
-const Directory = Loadable({
-	loader: () => import('./directory/directory'),
-	loading: Loader
+const Directory = Wrapper({
+	loader: () => import('./directory/directory')
 });
 
-const Home = Loadable({
-	loader: () => import('./home/home'),
-	loading: Loader
+const Home = Wrapper({
+	loader: () => import('./home/home')
 });
 
-const SignupContainer = Loadable({
-	loader: () => import('./session/signup_container'),
-	loading: Loader
+const SignupContainer = Wrapper({
+	loader: () => import('./session/signup_container')
 });
 
-const LoginContainer = Loadable({
-	loader: () => import('./session/login_container'),
-	loading: Loader
+const LoginContainer = Wrapper({
+	loader: () => import('./session/login_container')
 });
 
-const SubjectIndexContainer = Loadable({
-	loader: () => import('./subject/subject_index_container'),
-	loading: Loader
+const SubjectIndexContainer = Wrapper({
+	loader: () => import('./subject/subject_index_container')
 });
 
-const SubjectShowContainer = Loadable({
-	loader: () => import('./subject/subject_show_container'),
-	loading: Loader
+const SubjectShowContainer = Wrapper({
+	loader: () => import('./subject/subject_show_container')
 });
 
-const TopicShowContainer = Loadable({
-	loader: () => import('./topic/topic_show_container'),
-	loading: Loader
+const TopicShowContainer = Wrapper({
+	loader: () => import('./topic/topic_show_container')
 });
 
-const WeekShowContainer = Loadable({
-	loader: () => import('./week/week_show_container'),
-	loading: Loader
+const WeekShowContainer = Wrapper({
+	loader: () => import('./week/week_show_container')
 });
 
-const ResultContainer = Loadable({
-	loader: () => import('./result/result_container'),
-	loading: Loader
+const ResultContainer = Wrapper({
+	loader: () => import('./result/result_container')
 });
 
-const SuggestionIndexContainer = Loadable({
-	loader: () => import('./suggestion/suggestion_index_container'),
-	loading: Loader
+const SuggestionIndexContainer = Wrapper({
+	loader: () => import('./suggestion/suggestion_index_container')
 });
 
-const SuggestionFormContainer = Loadable({
-	loader: () => import('./suggestion/suggestion_form_container'),
-	loading: Loader
+const SuggestionFormContainer = Wrapper({
+	loader: () => import('./suggestion/suggestion_form_container')
 });
 
-const Confirmation = Loadable({
-	loader: () => import('./confirmation/confirmation'),
-	loading: Loader
+const Confirmation = Wrapper({
+	loader: () => import('./confirmation/confirmation')
 });
 
 Loadable.preloadAll();
