@@ -30,10 +30,23 @@ plugins = plugins.concat(
 module.exports = {
 	mode: 'none',
 	context: __dirname,
-	entry: './frontend/entry.jsx',
+	entry: {
+		index: './frontend/index.jsx'
+	},
 	output: {
 		path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
-		filename: 'bundle.js'
+		filename: '[name].bundle.js'
+	},
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				commons: {
+					test: /[\\/]node_modules[\\/]/,
+					name: 'vendors',
+					chunks: 'all'
+				}
+			}
+		}
 	},
 	plugins: plugins,
 	module: {
