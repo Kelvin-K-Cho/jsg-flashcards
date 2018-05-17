@@ -169,12 +169,6 @@ Topic.create(
 )
 
 Topic.create(
-  title: "Recursion",
-  notes: "The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called as recursive function.",
-  subject_id: algorithms_id
-)
-
-Topic.create(
   title: "Dijkastra's algorithm",
   notes: "![dijsktra_algorithm &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/dijkstra_algorithm.gif)
 Dijkstra's algorithm, conceived by Dutch computer scientist Edsger Dijkstra in 1956 and published in 1959, is a graph search algorithm that solves the single-source shortest path problem for a graph with nonnegative edge path costs, producing a shortest path tree.   This algorithm is often used in routing and as a subroutine in other graph algorithms.
@@ -190,6 +184,36 @@ For a given source vertex (node) in the graph, the algorithm finds the path with
         * iterate through adj vertices
         * if (distance from u + edge_u-v.weight) &lt; distance v, then update distance of v
 4. Return the set when it contains all the vertices.",
+  subject_id: algorithms_id
+)
+
+Topic.create(
+  title: "Recursion",
+  notes: "This is the process in which a function calls itself directly or indirectly. The corresponding function is called a recursive function.  Recursion allows us to make solving some propblems easier.
+
+Consider the following:
+![factorial_iterative](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/factorial_iterative.png)
+
+We can solve the above function using an iterative approach.  However, any algorithm that can be solved iteratively can also be solved recursively.
+
+![factorial_recursive](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/factorial_recursive.png)
+
+In recursion, we solve problems by first defining a base case.  A base case is the actual solution hardcoded to the smallest/simpliest input.  Once that's defined, we compose an algorithm that reduces the input and call the function again with the smaller input until we get to the base case.  Once the base case is reached, we take that answer and push it back up the previous functions to get the answer we want.
+
+Each subsequent function call is added to the call stack of the programming language.  If the input is too large or the base case is not properly defined, the engine will intentionally stop the program because it ran out of memory to hold all the functions.  This is known as *stack overflow*.
+
+What is the difference between direct and indirect recursion?
+  •  Direct recursion involves calling the same function over and over again.  Indirect recursion involves calling another function and having that function call the original function in some way.
+
+What is the difference between tailed and non-tailed recursion?
+  •  A recursive function is tail recursive when the recursive call is the last line executed by a function.
+
+What are the disadvantages of recursive programming over iterative programming?
+  •  Recursive programming often takes more space and time and can break a program due to stack overflow.
+
+What are the advantages of recursive programming over iterative programming?
+  •  Recursion allows us to easily solve problems such as Depth-First Search in a clean way.
+",
   subject_id: algorithms_id
 )
 
