@@ -88,6 +88,7 @@ In order to preserve the integrity of the flashcards' content and limit CSRF att
 * Finish seeding all eight weeks.
 * Deploy application on AWS.
 * Write my own tests.
+* Optimize for mobile.
 * Implement a study/test mode.
 * Clean up unnecessary code.
 

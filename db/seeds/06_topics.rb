@@ -212,8 +212,7 @@ What are the disadvantages of recursive programming over iterative programming?
   •  Recursive programming often takes more space and time and can break a program due to stack overflow.
 
 What are the advantages of recursive programming over iterative programming?
-  •  Recursion allows us to easily solve problems such as Depth-First Search in a clean way.
-",
+  •  Recursion allows us to easily solve problems such as Depth-First Search in a clean way.",
   subject_id: algorithms_id
 )
 
