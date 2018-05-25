@@ -337,7 +337,7 @@ UDP stands for User Datagram Protocol.  It uses a simple connectionless communic
 
 Topic.create(
   title: "HTTP",
-  notes: "HTTP stands for HyperText Transfer Protocol and it's the basis for sending data across the World Wide Web.  In order for clients to communicate with servers, there are several different kinds of methods that are used that allow the server to understand the action the client is trying to perform.  These method names are case sensitive and must be used in UPPERCASE.
+  notes: "HTTP stands for HyperText Transfer Protocol and it's the basis for sending data across the World Wide Web.  In order for clients to communicate with servers, there are several different kinds of methods that are used that allow the server to understand the action the client is trying to perform.  These method names are case-insensitive and must be used in UPPERCASE.
 
   •  GET: This method is used to retrieve information from any given server using a given Uniform Resource Identifier (URI).  This method should only retrieve data and should have no effect on the data.
   •  HEAD: This method is the same as GET except it only retrieves the status line and header section only.
