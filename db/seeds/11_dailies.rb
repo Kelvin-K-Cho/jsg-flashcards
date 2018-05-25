@@ -176,3 +176,13 @@ Daily.create(
   topic_id: Topic.where(title: "HTTP").pluck(:id).first,
   day_id: Day.where(week_id: "2", title: "Day 1").pluck(:id).first
 )
+
+Daily.create(
+  topic_id: Topic.where(title: "Hoisting").pluck(:id).first,
+  day_id: Day.where(week_id: "2", title: "Day 1").pluck(:id).first
+)
+
+Daily.create(
+  topic_id: Topic.where(title: "Redux").pluck(:id).first,
+  day_id: Day.where(week_id: "2", title: "Day 1").pluck(:id).first
+)

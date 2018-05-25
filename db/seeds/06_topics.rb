@@ -608,6 +608,35 @@ Lexical Scoping is a fancy way of saying you're passing the current context onto
 )
 
 Topic.create(
+  title: "Hoisting",
+  notes: "In JavaScript, variable and function declarations are moved to the top of their respective scopes during the compilation phase.
+
+Function declarations are entirely hoisted, but variables are only partially hoisted.  Consider the following:
+
+![function_hoisted](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/function_hoisted.png)
+
+If we run this code, it will print 25 onto the console.  This is because the function declaration is fully hoisted to the top and the actual code that is executed is similar to the following:
+
+```javascript
+  function square (n) {
+    return n*n;
+  }
+  console.log(square(5));
+```
+
+Now, consider the following:
+
+![variable_hoisted_1](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/variable_hoisted_1.png)
+
+If we run this code, we get undefined because variables are partially hoisted.  It is equivalent to the following:
+
+![variable_hoisted_2](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/variable_hoisted_2.png)
+
+It's important to note that 'let' and 'const' are **NOT** hoisted.  If we replace the var with either keywords, we will get 'ReferenceError: i is not defined'.",
+  subject_id: javascript_id
+)
+
+Topic.create(
   title: "new",
   notes: "The 'new' keyword is a constructor function that creates a new object from a class.",
   subject_id: javascript_id
@@ -772,6 +801,14 @@ Topic.create(
 
 Topic.create(
   title: "Redux",
-  notes: "Redux is a library that allows React application to have state. This state is represent as a giant javascript object (single immutable state tree)",
+  notes: "![redux &lt;&gt;](https://s3-us-west-1.amazonaws.com/jsg-flashcards/images/redux.gif)
+
+Redux is a JavaScript framework created by Dan Abramov in 2015 that allows one to manage state for a web application.  It aims to serve as a simplification of Flux (a coding pattern that works in a uni-directional way).  It is very lightweight, it works really quickly and handles data in a predictable way.  It follows three key design principles:
+
+1.  A Single Source of Truth: State is managed and stored in a single, plain old JavaScript Object.
+
+2.  State is Read-Only: State cannot be modified directly.  It can only be changed through dispatching actions.
+
+3.  Changes made by Pure Functions: Reducers receive actions and return an updated state.  These are pure functions that are deterministic, predictable and don't mutate input.",
   subject_id: miscellaneous_id
 )
