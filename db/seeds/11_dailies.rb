@@ -186,3 +186,12 @@ Daily.create(
   topic_id: Topic.where(title: "Redux").pluck(:id).first,
   day_id: Day.where(week_id: "2", title: "Day 1").pluck(:id).first
 )
+
+########
+# W2D2 #
+########
+
+Daily.create(
+  topic_id: Topic.where(title: "Recursion").pluck(:id).first,
+  day_id: Day.where(week_id: "2", title: "Day 2").pluck(:id).first
+)
