@@ -350,6 +350,32 @@ Topic.create(
   subject_id: world_wide_web_id
 )
 
+Topic.create(
+  title: "Status Codes",
+  notes: "Status codes are issued by a server in response to a client request.
+
+1xx - Informational responses: These indicate that the request was received and understood.
+
+2xx - Success: These indicate the action requested by the client was received, understood and accepted:
+  •  200 - OK: Standard response for successful HTTP requests.
+  •  201 - Created: The request was fulfilled and a new resource has been created.
+  •  204 - No Content: The server was able to process the request, but no content was returned.
+
+3xx - Redirection: These indicate the client needs to take additional action to complete the request.
+  •  304 - Not Modified: The resource was not modified since last requested.  This response MUST NOT contain a message-body.
+
+4xx - Client errors: An error was caused by the cleint.
+  •  400 - Bad Request: The server cannot/will not process the request due to client error such as incorrect route or excessive file size.
+  •  401 - Unauthorized: The client does not have the proper authentication to access the requested resource.
+  •  403 - Forbidden: Request was valid, but the server refused to honor it.  Similar to 401 where necessary permissions were not provided.
+  •  404 - Not Found: Requested resource could not be found, but may be available in the future.
+  •  409 - Conflict: Request was not honored due to confliciting issues such as multiple users attempting to edit the same resource.
+
+5xx - Server error: An error caused by the server.
+  •  500 - Internal Server Error: A generic error message given when an unexpected condition was encountered and no suitable message could be provided.",
+  subject_id: world_wide_web_id
+)
+
 #============#
 # JavaScript #
 #============#
