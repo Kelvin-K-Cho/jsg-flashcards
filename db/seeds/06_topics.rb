@@ -835,6 +835,40 @@ Redux is a JavaScript framework created by Dan Abramov in 2015 that allows one t
 
 2.  State is Read-Only: State cannot be modified directly.  It can only be changed through dispatching actions.
 
-3.  Changes made by Pure Functions: Reducers receive actions and return an updated state.  These are pure functions that are deterministic, predictable and don't mutate input.",
+3.  Changes made by Pure Functions: Reducers receive actions and return an updated state.  These are pure functions that are deterministic, predictable and don't mutate input.
+
+Data Flow:
+
+1.  Models (slices of state) reside in a container called a 'Store'.  Although you can have many stores in an application, Redux aims to only maintain one.
+
+2.  Communication in the store happens only through 'dispatch' functions.
+
+3.  In order to modify state, 'actions' which are simple JavaScript objects are dispatched.
+
+4.  The store receives the actions and passes them to the 'reducers'.  Reducers are pure functions intended to modify a copy of existing store's state.
+
+5.  State is immutable, so any modification will generate a new state.
+
+6.  The store will notify any subscribers about the new change.
+
+7.  UI re-renders itself based on detected state changes by using pure functions which accept store's state as a parameter.
+
+8.  Asynchronous network calls modify the store through actions.
+
+Advantages of Redux:
+
+1.  Predictable: Output is classified as deterministic due to the nature of pure functions.
+
+2.  Time Agnostic: Theoretically, since new states are created through pure functions, we can actually retrieve an old state from history and re-create it.
+
+3.  Action Logging: We are easily able to discern who modified state and when it happened.
+
+4.  Flexibility: Collaborative applications such as Google Docs can be created using Redux.
+
+5.  Debugging: Error handling is easy since actions are logged.
+
+6.  Deterministic UI: The same input will always generate the same output.
+
+7.  Unit Testing: Due to the nature of pure functions, we can easily write tests for reducers.",
   subject_id: miscellaneous_id
 )
