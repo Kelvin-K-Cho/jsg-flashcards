@@ -664,7 +664,13 @@ It's important to note that 'let' and 'const' are **NOT** hoisted.  If we replac
 
 Topic.create(
   title: "new",
-  notes: "The 'new' keyword is a constructor function that creates a new object from a class.",
+  notes: "The 'new' keyword invokes a constructor function which creates a new object from a class.  It does so in the following manner:
+
+1.  Creates a new object.
+2.  Sets the object's prototype to be the prototype of the constructor function.
+3.  Sets the 'this' variable to point to the newly created object.
+3.  Executes the construtor function using the newly created object wherever 'this' is mentioned.
+4.  Returns the created object.  If the constructor function returns a non-null object reference, then the reference to that object is returned instead.",
   subject_id: javascript_id
 )
 
