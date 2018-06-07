@@ -673,7 +673,7 @@ Topic.create(
 4.  Returns the created object.  If the constructor function returns a non-null object reference, then the reference to that object is returned instead.
 
 What happens if you try to create a new object without the 'new' keyword?
-  •  JavaScript attempts to execute the class as a function instead of trying to create a new object out of that class.",
+  -  JavaScript attempts to execute the class as a function instead of trying to create a new object out of that class.",
   subject_id: javascript_id
 )
 
