@@ -36,7 +36,6 @@ gem 'sprockets-rails'
 gem 'autoprefixer-rails'
 gem 'popper_js'
 gem 'bootstrap-tooltip-rails'
-gem 'bundler', '~> 1.16.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

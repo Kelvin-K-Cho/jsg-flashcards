@@ -670,7 +670,10 @@ Topic.create(
 2.  Sets the object's prototype to be the prototype of the constructor function.
 3.  Sets the 'this' variable to point to the newly created object.
 3.  Executes the construtor function using the newly created object wherever 'this' is mentioned.
-4.  Returns the created object.  If the constructor function returns a non-null object reference, then the reference to that object is returned instead.",
+4.  Returns the created object.  If the constructor function returns a non-null object reference, then the reference to that object is returned instead.
+
+What happens if you try to create a new object without the 'new' keyword?
+  •  JavaScript attempts to execute the class as a function instead of trying to create a new object out of that class.",
   subject_id: javascript_id
 )
 
