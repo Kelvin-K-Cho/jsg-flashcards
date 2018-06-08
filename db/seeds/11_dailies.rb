@@ -197,6 +197,11 @@ Daily.create(
 )
 
 Daily.create(
+  topic_id: Topic.where(title: "Status Codes").pluck(:id).first,
+  day_id: Day.where(week_id: "2", title: "Day 2").pluck(:id).first
+)
+
+Daily.create(
   topic_id: Topic.where(title: "new").pluck(:id).first,
   day_id: Day.where(week_id: "2", title: "Day 2").pluck(:id).first
 )
