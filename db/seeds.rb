@@ -21,6 +21,8 @@ Daily.destroy_all
 Image.destroy_all
 Label.destroy_all
 
+# Topologically seed every file from the seed directory.
+
 Dir[File.join(Rails.root, 'db', 'seeds/*')].sort.each do |seed|
   load seed
 end
