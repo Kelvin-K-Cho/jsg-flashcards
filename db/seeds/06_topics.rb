@@ -216,6 +216,12 @@ What are the advantages of recursive programming over iterative programming?
   subject_id: algorithms_id
 )
 
+Topic.create(
+  title: "Dynamic Programming",
+  notes: "A mathematical optimization approach to solving a complex problem by breaking it into smaller and simplier sub-problems",
+  subject_id: algorithms_id
+)
+
 #================#
 # World Wide Web #
 #================#
